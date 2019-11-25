@@ -27,7 +27,31 @@ module.exports = merge(common, {
               },
               canPrint: false
           })
-      ]
+      ],
+      splitChunks:
+          {
+              cacheGroups: {
+                  main: {
+                      chunks: 'all',
+                      name:
+                          'site',
+                      test:
+                          'main',
+                      enforce:
+                          true
+                  }
+                  ,
+                  vendors: {
+                      chunks: 'all',
+                      name:
+                          'dependencies',
+                      test:
+                          'vendors',
+                      enforce:
+                          true
+                  }
+              }
+          }
    },
    devtool: 'none',
    performance: {hints: false}
