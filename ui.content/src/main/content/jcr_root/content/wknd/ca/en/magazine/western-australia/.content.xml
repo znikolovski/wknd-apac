@@ -207,17 +207,6 @@
                                 fileReference="/content/dam/wknd/en/magazine/western-australia/Adobe_WAAdobe_WA_MG_3851.JPG"/>
                         </par4>
                     </contentfragment>
-                    <experiencefragment
-                        cq:lastRolledout="{Date}2019-10-28T11:02:41.571-07:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:created="{Date}2019-10-02T13:05:02.480-07:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2019-10-28T11:02:41.570-07:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wknd/components/content/experiencefragment"
-                        fragmentVariationPath="/content/experience-fragments/wknd/language-masters/en/contributors/sofia-sjoeberg/byline"/>
                 </responsivegrid>
                 <responsivegrid_223059690
                     cq:lastRolledout="{Date}2019-10-28T11:02:41.574-07:00"

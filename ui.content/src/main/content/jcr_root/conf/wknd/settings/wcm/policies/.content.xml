@@ -963,7 +963,6 @@
                         </cq:styleGroups>
                     </policy_1554341419430>
                 </breadcrumb>
-                <byline jcr:primaryType="nt:unstructured"/>
                 <teaser jcr:primaryType="nt:unstructured">
                     <policy_1555539430196
                         jcr:lastModified="{Date}2019-10-25T13:38:38.126-07:00"

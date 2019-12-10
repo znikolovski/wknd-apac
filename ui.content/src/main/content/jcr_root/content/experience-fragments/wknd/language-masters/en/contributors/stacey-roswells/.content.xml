@@ -13,5 +13,4 @@
         jcr:uuid="46300e62-8d54-41e6-ab7b-201643a7b7d9"
         sling:resourceType="cq/experience-fragments/components/experiencefragment"/>
     <master/>
-    <byline/>
 </jcr:root>

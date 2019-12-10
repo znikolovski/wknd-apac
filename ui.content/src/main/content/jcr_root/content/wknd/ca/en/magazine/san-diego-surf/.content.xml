@@ -170,17 +170,6 @@
                                 fileReference="/content/dam/wknd/en/magazine/san-diego-surf-spots/AdobeStock_272184938.jpeg"/>
                         </par5>
                     </contentfragment>
-                    <experiencefragment
-                        cq:lastRolledout="{Date}2019-10-28T11:02:41.963-07:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:created="{Date}2019-10-25T17:17:34.970-07:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2019-10-28T11:02:41.961-07:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wknd/components/content/experiencefragment"
-                        fragmentVariationPath="/content/experience-fragments/wknd/language-masters/en/contributors/justin-barr/byline"/>
                 </responsivegrid>
                 <responsivegrid_223059690
                     cq:lastRolledout="{Date}2019-10-28T11:02:41.965-07:00"

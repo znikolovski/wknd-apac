@@ -10,5 +10,4 @@
         jcr:title="Kumar Selveraj"
         sling:resourceType="cq/experience-fragments/components/experiencefragment"/>
     <master/>
-    <byline/>
 </jcr:root>

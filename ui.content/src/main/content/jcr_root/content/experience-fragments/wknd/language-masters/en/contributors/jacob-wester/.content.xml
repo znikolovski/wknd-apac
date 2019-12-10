@@ -10,5 +10,4 @@
         jcr:title="Jacob Wester"
         sling:resourceType="cq/experience-fragments/components/experiencefragment"/>
     <master/>
-    <byline/>
 </jcr:root>
