@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-12-12T09:12:57.291-08:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/wknd/settings/wcm/templates/content-page-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Component Basics"
+        sling:resourceType="wknd/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <helloworld
+                    jcr:created="{Date}2019-12-12T09:11:53.975-08:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-12-12T09:12:01.767-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/content/helloworld"
+                    text="World!"/>
+                <helloworld_255946243
+                    jcr:created="{Date}2019-12-12T09:12:04.872-08:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-12-12T09:12:57.290-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/content/helloworld"
+                    greeting="Good Afternoon"
+                    text="World in Upper Case!"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

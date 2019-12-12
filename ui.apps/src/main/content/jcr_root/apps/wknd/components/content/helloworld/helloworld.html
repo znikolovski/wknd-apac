@@ -13,9 +13,12 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<p data-sly-test="${properties.text}">Text property: ${properties.text}</p>
+<div class="cmp-helloworld" data-sly-use.hello="com.adobe.aem.guides.wknd.core.models.HelloWorldModel">
+	<h1 data-sly-test="${hello.textUpperCase}">${hello.greeting} ${hello.textUpperCase}</h1>
+	
+	<pre>
+	HelloWorldModel says:
+	${hello.message}
+	</pre>
+</div>
 
-<pre data-sly-use.hello="com.adobe.aem.guides.wknd.core.models.HelloWorldModel">
-HelloWorldModel says:
-${hello.message}
-</pre>

@@ -24,4 +24,5 @@
             cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
+    <component-basics/>
 </jcr:root>
