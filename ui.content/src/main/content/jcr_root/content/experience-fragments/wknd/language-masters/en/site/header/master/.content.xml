@@ -12,69 +12,39 @@
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <responsivegrid
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <cq:responsive jcr:primaryType="nt:unstructured"/>
-                    <languagenavigation
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wknd/components/content/languagenavigation"
-                        navigationRoot="/content/wknd"
-                        structureDepth="2">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                width="2"/>
-                            <phone
-                                jcr:primaryType="nt:unstructured"
-                                width="6"/>
-                            <tablet
-                                jcr:primaryType="nt:unstructured"
-                                width="6"/>
-                        </cq:responsive>
-                    </languagenavigation>
-                </responsivegrid>
-                <responsivegrid_1195249223
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <cq:responsive jcr:primaryType="nt:unstructured"/>
-                    <navigation
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wknd/components/structure/navigation"
-                        collectAllPages="false"
-                        navigationRoot="/content/wknd/language-masters/en"
-                        skipNavigationRoot="false"
-                        structureDepth="1">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                width="8"/>
-                            <tablet
-                                jcr:primaryType="nt:unstructured"
-                                behavior="hide"/>
-                        </cq:responsive>
-                    </navigation>
-                    <search
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wknd/components/structure/search"
-                        searchRoot="/content/wknd/en">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                width="2"/>
-                            <tablet
-                                jcr:primaryType="nt:unstructured"
-                                width="6"/>
-                            <phone
-                                jcr:primaryType="nt:unstructured"
-                                width="6"/>
-                        </cq:responsive>
-                    </search>
-                </responsivegrid_1195249223>
+           <responsivegrid
+               jcr:primaryType="nt:unstructured"
+               sling:resourceType="wcm/foundation/components/responsivegrid">
+               <cq:responsive jcr:primaryType="nt:unstructured"/>
+               <navigation
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="wknd/components/structure/navigation"
+                   collectAllPages="false"
+                   navigationRoot="/content/wknd/language-masters/en"
+                   skipNavigationRoot="false"
+                   structureDepth="1">
+                   <cq:responsive jcr:primaryType="nt:unstructured">
+                       <default
+                           jcr:primaryType="nt:unstructured"
+                           width="8"/>
+                   </cq:responsive>
+               </navigation>
+               <search
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="wknd/components/structure/search"
+                   searchRoot="/content/wknd/en">
+                   <cq:responsive jcr:primaryType="nt:unstructured">
+                       <default
+                           jcr:primaryType="nt:unstructured"
+                           width="2"/>
+                       <tablet
+                           jcr:primaryType="nt:unstructured"
+                           width="6"/>
+                       <phone
+                           jcr:primaryType="nt:unstructured"
+                           width="6"/>
+                   </cq:responsive>
+               </search>
             </responsivegrid>
         </root>
     </jcr:content>
