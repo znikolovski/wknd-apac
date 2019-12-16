@@ -12,39 +12,54 @@
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-           <responsivegrid
-               jcr:primaryType="nt:unstructured"
-               sling:resourceType="wcm/foundation/components/responsivegrid">
-               <cq:responsive jcr:primaryType="nt:unstructured"/>
-               <navigation
-                   jcr:primaryType="nt:unstructured"
-                   sling:resourceType="wknd/components/structure/navigation"
-                   collectAllPages="false"
-                   navigationRoot="/content/wknd/language-masters/en"
-                   skipNavigationRoot="false"
-                   structureDepth="1">
-                   <cq:responsive jcr:primaryType="nt:unstructured">
-                       <default
-                           jcr:primaryType="nt:unstructured"
-                           width="8"/>
-                   </cq:responsive>
-               </navigation>
-               <search
-                   jcr:primaryType="nt:unstructured"
-                   sling:resourceType="wknd/components/structure/search"
-                   searchRoot="/content/wknd/en">
-                   <cq:responsive jcr:primaryType="nt:unstructured">
-                       <default
-                           jcr:primaryType="nt:unstructured"
-                           width="2"/>
-                       <tablet
-                           jcr:primaryType="nt:unstructured"
-                           width="6"/>
-                       <phone
-                           jcr:primaryType="nt:unstructured"
-                           width="6"/>
-                   </cq:responsive>
-               </search>
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                <image
+                    jcr:created="{Date}2019-12-13T15:16:27.852-08:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-12-13T15:16:44.763-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/content/image"
+                    fileReference="/content/dam/wknd/en/site/wknd-logo-dk.png">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="2"/>
+                    </cq:responsive>
+                </image>
+                <navigation
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/structure/navigation"
+                    collectAllPages="false"
+                    navigationRoot="/content/wknd/language-masters/en"
+                    skipNavigationRoot="false"
+                    structureDepth="1">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="8"/>
+                    </cq:responsive>
+                </navigation>
+                <search
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/structure/search"
+                    searchRoot="/content/wknd/en">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="2"/>
+                        <tablet
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
+                    </cq:responsive>
+                </search>
             </responsivegrid>
         </root>
     </jcr:content>

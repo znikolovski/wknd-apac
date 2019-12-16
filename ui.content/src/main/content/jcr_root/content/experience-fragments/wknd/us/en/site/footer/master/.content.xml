@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2019-12-13T15:18:48.333-08:00"
+        cq:lastModifiedBy="admin"
         cq:tags="[]"
         cq:template="/conf/wknd/settings/wcm/templates/experience-fragment-web-variation-template"
         cq:xfMasterVariation="{Boolean}true"
@@ -16,6 +18,21 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <cq:responsive jcr:primaryType="nt:unstructured"/>
+                <image
+                    jcr:created="{Date}2019-12-13T15:18:23.176-08:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-12-13T15:18:39.856-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/content/image"
+                    fileReference="/content/dam/wknd/en/site/wknd-logo-light.png">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="2"/>
+                    </cq:responsive>
+                </image>
                 <navigation
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wknd/components/structure/navigation"

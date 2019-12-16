@@ -12,40 +12,55 @@
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-           <responsivegrid
-               jcr:primaryType="nt:unstructured"
-               sling:resourceType="wcm/foundation/components/responsivegrid">
-               <cq:responsive jcr:primaryType="nt:unstructured"/>
-               <navigation
-                   jcr:primaryType="nt:unstructured"
-                   sling:resourceType="wknd/components/structure/navigation"
-                   accessibilityLabel="Footer navigation"
-                   collectAllPages="false"
-                   navigationRoot="/content/wknd/language-masters/en"
-                   skipNavigationRoot="false"
-                   structureDepth="1">
-                   <cq:responsive jcr:primaryType="nt:unstructured">
-                       <default
-                           jcr:primaryType="nt:unstructured"
-                           offset="0"
-                           width="6"/>
-                       <tablet
-                           jcr:primaryType="nt:unstructured"
-                           width="8"/>
-                       <phone
-                           jcr:primaryType="nt:unstructured"
-                           width="8"/>
-                   </cq:responsive>
-               </navigation>
-               <separator
-                   jcr:primaryType="nt:unstructured"
-                   sling:resourceType="wknd/components/content/separator"/>
-               <text
-                   jcr:primaryType="nt:unstructured"
-                   sling:resourceType="wknd/components/content/text"
-                   text="&lt;p>Ⓒ 2019, WKND Site.&lt;/p>&#xd;&#xa;"
-                   textIsRich="true"/>
-           </responsivegrid>
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                <image
+                    jcr:created="{Date}2019-12-13T15:18:23.176-08:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-12-13T15:18:39.856-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/content/image"
+                    fileReference="/content/dam/wknd/en/site/wknd-logo-light.png">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="2"/>
+                    </cq:responsive>
+                </image>
+                <navigation
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/structure/navigation"
+                    accessibilityLabel="Footer navigation"
+                    collectAllPages="false"
+                    navigationRoot="/content/wknd/language-masters/en"
+                    skipNavigationRoot="false"
+                    structureDepth="1">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="6"/>
+                        <tablet
+                            jcr:primaryType="nt:unstructured"
+                            width="8"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            width="8"/>
+                    </cq:responsive>
+                </navigation>
+                <separator
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/content/separator"/>
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/content/text"
+                    text="&lt;p>Ⓒ 2019, WKND Site.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+            </responsivegrid>
         </root>
     </jcr:content>
 </jcr:root>
