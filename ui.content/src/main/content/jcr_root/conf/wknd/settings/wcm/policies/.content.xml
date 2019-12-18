@@ -9,10 +9,12 @@
                 <responsivegrid jcr:primaryType="nt:unstructured">
                     <content-default
                         jcr:description="Policy for editable layout containers"
+                        jcr:lastModified="{Date}2019-12-18T13:20:27.422-08:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="WKND Site Default"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:WKND.Content,/apps/wknd/components/form/container,group:WKND.Structure]"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:WKND.Content,/apps/wknd/components/form/container,group:WKND.Structure]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -58,6 +60,24 @@
                             </assetToComponentMapping>
                         </cq:authoring>
                     </policy_xfm>
+                    <policy_698758856499432
+                        jcr:lastModified="{Date}2019-12-18T13:21:46.299-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="WKND Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:WKND.Content]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_698758856499432>
+                    <policy_698758862459061
+                        jcr:lastModified="{Date}2019-12-18T13:27:06.636-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="WKND Article Sidebar"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/wknd/components/content/button,/apps/wknd/components/content/download,/apps/wknd/components/content/image,/apps/wknd/components/content/list,/apps/wknd/components/content/separator,/apps/wknd/components/content/sharing,/apps/wknd/components/content/text,/apps/wknd/components/content/title]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_698758862459061>
                 </responsivegrid>
             </components>
         </foundation>
@@ -281,8 +301,21 @@
                         jcr:title="WKND Site Experience Fragment - Footer"
                         sling:resourceType="wcm/core/components/policy/policy">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
-                </policy_footer>
+                    </policy_footer>
                 </experiencefragment>
+                <breadcrumb jcr:primaryType="nt:unstructured">
+                    <policy_1576703971872
+                        jcr:lastModified="{Date}2019-12-18T13:19:45.039-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="WKND Breadcrumb"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        hideCurrent="false"
+                        showHidden="false"
+                        startLevel="4">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1576703971872>
+                </breadcrumb>
             </content>
             <structure jcr:primaryType="nt:unstructured">
                 <page jcr:primaryType="nt:unstructured">
