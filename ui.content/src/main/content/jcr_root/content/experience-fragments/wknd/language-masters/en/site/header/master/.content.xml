@@ -29,6 +29,12 @@
                             jcr:primaryType="nt:unstructured"
                             offset="0"
                             width="2"/>
+                        <tablet
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
                     </cq:responsive>
                 </image>
                 <navigation
@@ -42,6 +48,12 @@
                         <default
                             jcr:primaryType="nt:unstructured"
                             width="8"/>
+                        <tablet
+                            jcr:primaryType="nt:unstructured"
+                            behavior="hide"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            behavior="hide"/>
                     </cq:responsive>
                 </navigation>
                 <search

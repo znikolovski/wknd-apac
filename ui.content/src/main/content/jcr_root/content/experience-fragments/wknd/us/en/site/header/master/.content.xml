@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-12-13T15:17:22.799-08:00"
+        cq:lastModified="{Date}2019-12-18T14:20:47.972-08:00"
         cq:lastModifiedBy="admin"
         cq:tags="[]"
         cq:template="/conf/wknd/settings/wcm/templates/experience-fragment-web-variation-template"
@@ -29,8 +29,13 @@
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
                             jcr:primaryType="nt:unstructured"
-                            offset="0"
                             width="2"/>
+                        <tablet
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
                     </cq:responsive>
                 </image>
                 <navigation
@@ -44,6 +49,12 @@
                         <default
                             jcr:primaryType="nt:unstructured"
                             width="8"/>
+                        <tablet
+                            jcr:primaryType="nt:unstructured"
+                            behavior="hide"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            behavior="hide"/>
                     </cq:responsive>
                 </navigation>
                 <search
