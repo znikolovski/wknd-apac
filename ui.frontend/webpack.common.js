@@ -23,7 +23,7 @@ module.exports = {
         },
         output: {
             filename: (chunkData) => {
-                return chunkData.chunk.name === 'dependencies' ? 'clientlib-dependencies/[name].js' : 'clientlib-site/[name].js';
+                return chunkData.chunk.name === 'dependencies' ? 'clientlib-dependencies/js/[name].js' : 'clientlib-site/js/[name].js';
             },
             path: path.resolve(__dirname, 'dist')
         },
@@ -86,7 +86,7 @@ module.exports = {
             new CleanWebpackPlugin(),
             new webpack.NoEmitOnErrorsPlugin(),
             new MiniCssExtractPlugin({
-                filename: 'clientlib-[name]/[name].css'
+                filename: 'clientlib-[name]/css/[name].css'
             }),
             new TSLintPlugin({
                 files: [SOURCE_ROOT + '/**/*.ts', SOURCE_ROOT + '/**/*.tsx'],

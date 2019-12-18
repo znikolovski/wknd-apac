@@ -15,10 +15,10 @@ module.exports = {
             jsProcessor: ["default:none", "min:none"],
             assets: {
                 js: [
-                    "dist/clientlib-dependencies/*.js",
+                    "dist/clientlib-dependencies/js/*.js",
                 ],
                 css: [
-                    "dist/clientlib-dependencies/*.css"
+                    "dist/clientlib-dependencies/css/*.css"
                 ]
             }
         },
@@ -32,10 +32,10 @@ module.exports = {
             jsProcessor: ["default:none", "min:none"],
             assets: {
                 js: [
-                    "dist/clientlib-site/*.js",
+                    "dist/clientlib-site/js/*.js",
                 ],
                 css: [
-                    "dist/clientlib-site/*.css"
+                    "dist/clientlib-site/css/*.css"
                 ],
                 resources: [
                     {src: "dist/clientlib-site/resources/images/*.*", dest: "images/"}, 
