@@ -1,6 +1,6 @@
 # WKND Sites Project
 
-This is the code companion to a multi-part series on HelpX:
+This is the code companion to a multi-part series on Adobe Docs:
 
 ### [Getting Started with AEM Sites - WKND Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
@@ -11,8 +11,6 @@ This is the code companion to a multi-part series on HelpX:
 5. [Style a Component](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
 6. [Custom Component](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/custom-component.html)
 7. [Unit Testing](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/unit-testing.html)
-8. [Header and Footer](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/header-footer.html)
-9. [Landing Page](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/landing-page.html)
 
 ## Modules
 
