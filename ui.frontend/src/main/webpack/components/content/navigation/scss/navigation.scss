@@ -28,7 +28,8 @@
     }
 }
 
-.cmp-navigation__item--active {
+/* highlight only level 1 */
+.cmp-navigation__item--level-1.cmp-navigation__item--active {
 
     .cmp-navigation__item-link {
         background-color: $brand-primary;
