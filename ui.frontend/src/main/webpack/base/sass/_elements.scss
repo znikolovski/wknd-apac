@@ -9,7 +9,7 @@ body {
   line-height: $line-height-base;
 
   .root {
-     max-width: $max-width;
+     max-width: $max-body-width;
      margin: 0 auto;
      padding-top: 12px;
   }

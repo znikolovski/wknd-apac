@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
-        cq:lastModified="{Date}2019-12-13T15:33:27.570-08:00"
+        cq:lastModified="{Date}2019-12-20T00:41:29.051-08:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd/settings/wcm/templates/article-page-template"
         jcr:primaryType="cq:PageContent"
@@ -16,6 +16,7 @@
                 sling:resourceType="wknd/components/content/experiencefragment"
                 fragmentVariationPath="/content/experience-fragments/wknd/us/en/site/header/master"/>
             <responsivegrid
+                cq:styleIds="[1576804654364]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <image

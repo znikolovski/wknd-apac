@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-12-15T12:55:28.070-08:00"
+        cq:lastModified="{Date}2019-12-20T00:40:35.695-08:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd/settings/wcm/templates/article-page-template"
         jcr:primaryType="cq:PageContent"
@@ -56,15 +56,17 @@
                         text="&lt;p>Contrary to popular belief skateboarding, the sport as we know it was not invented by Marty McFly as depicted in the box office hit Back to the Future. It is widely considered that the sport was invented in California by surfers who wanted something to do when the ocean waves went &amp;quot;flat&amp;quot; or in non-surfer terms when there were no waves in the early 1950s. This was termed &amp;quot;sidewalk surfing&amp;quot; as a never ending wave that surfers could drop in on, unless it was raining. Los Angeles is long considered the epicenter of this alternative sport. The sport grew slowly, mostly on the west coast, finally becoming mainstream into the 1980s. In the summer of 2020 skateboarding will make its debut in the Olympics. In honor of this historic achievement we tracked down the top skate spots in greater Los Angeles.&lt;/p>&#xd;&#xa;"
                         textIsRich="true"/>
                     <text_1077829377
+                        cq:styleIds="[1576792426673]"
                         jcr:created="{Date}2019-12-15T12:32:50.100-08:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2019-12-15T12:52:26.640-08:00"
+                        jcr:lastModified="{Date}2019-12-19T14:14:07.879-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="wknd/components/content/text"
-                        text="&lt;blockquote>&amp;quot;There is no better place to shred then Los Angeles&amp;quot;&lt;/blockquote>&#xd;&#xa;&lt;div>Jacob Wester - Pro Skater&lt;/div>&#xd;&#xa;"
+                        text="&lt;blockquote>&amp;quot;There is no better place to shred then Los Angeles&amp;quot;&lt;/blockquote>&#xd;&#xa;&lt;p>Jacob Wester - Pro Skater&lt;/p>&#xd;&#xa;"
                         textIsRich="true"/>
                     <title_981531179
+                        cq:styleIds="[1576788131592]"
                         jcr:created="{Date}2019-12-15T12:52:36.224-08:00"
                         jcr:createdBy="admin"
                         jcr:lastModified="{Date}2019-12-15T12:52:45.655-08:00"
@@ -91,6 +93,7 @@
                         sling:resourceType="wknd/components/content/image"
                         fileReference="/content/dam/wknd/en/magazine/la-skateparks/article_01_picture_01.png"/>
                     <title_1037477990
+                        cq:styleIds="[1576788131592]"
                         jcr:created="{Date}2019-12-15T12:53:55.587-08:00"
                         jcr:createdBy="admin"
                         jcr:lastModified="{Date}2019-12-15T12:54:04.692-08:00"
@@ -109,6 +112,7 @@
                         text="&lt;p>&lt;b>Moorpark Skate Park &lt;/b>located in Ventura County, Moorpark is considered the area's premier skatepark. Moorpark skate park, &amp;quot;M.P.&amp;quot; for short, offers a wide variety of challenges and terrain for different skill sets. An isolated beginner area features low walls for beginners just getting their feet wet and ensures a safe space for learning progression. M.P. also includes an incredible bowl that was specifically designed to look like a backyard pool. Nearby you can also visit the Skateboarding Hall of Fame Museum, featuring a great collection of historic skateboarding memorabilia.&amp;nbsp;&lt;/p>&#xd;&#xa;"
                         textIsRich="true"/>
                     <title_1104461573
+                        cq:styleIds="[1576788131592]"
                         jcr:created="{Date}2019-12-15T12:54:45.004-08:00"
                         jcr:createdBy="admin"
                         jcr:lastModified="{Date}2019-12-15T12:54:55.740-08:00"

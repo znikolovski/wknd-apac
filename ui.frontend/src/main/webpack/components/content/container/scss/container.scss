@@ -1,1 +1,12 @@
-.cmp-container {}
+/* WKND Layout Container - Fixed Width */
+
+.cmp-layout-container--fixed {
+    @media (min-width: $screen-medium + 1) {
+        display:block;
+        max-width:  $max-width !important;
+        float: unset !important;
+        margin: 0 auto !important;
+        padding: 0 $gutter-padding;
+        clear: both !important; 
+    }
+}
