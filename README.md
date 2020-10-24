@@ -1,8 +1,33 @@
-# WKND Sites Project
+# WKND Sites Project - Tutorial Branch
 
-This is the code for the WKND Reference site: [https://www.wknd.site/](https://www.wknd.site/)
+You are on the Tutorial branch for the WKND Site. This branch contains chapter starter and solution code for the various chapters of the tutorial.
 
-There is also a corresponding tutorial where you can learn how to implement a website using the latest standards and technologies in Adobe Experience Manager (AEM): 
+```
+| 02-component-basics
+    |-- start
+    |-- solution
+| 03-pages-templates
+    |-- start
+    |-- solution
+| 04-front-end-workflow
+| 05-style-system
+| 06-custom-component
+| 07-unit-testing
+```
+
+## Building for AEM 6.5/6.4
+
+The projects has been designed for **AEM as a Cloud Service**. The project is also backward compatible with AEM **6.4.8** and **6.5.5** by adding the `classic` profile when executing a build, i.e:
+
+    mvn clean install -PautoInstallSinglePackage -Pclassic
+
+## Content Reset
+
+By design the **start** and **solution** branches will reset any content and configurations on the target AEM environment. This is not standard for a real-world implementation. Review the `ui.content/filter.xml` file and the various [modes](https://jackrabbit.apache.org/filevault/importmode.html#Modes) that can be set.
+
+## Tutorial Chapters
+
+The tutorial where you can learn how to implement a website using the latest standards and technologies in Adobe Experience Manager (AEM):
 
 1. [WKND Tutorial Overview](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 2. [Project Setup](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/project-setup.html)
@@ -13,29 +38,24 @@ There is also a corresponding tutorial where you can learn how to implement a we
 7. [Custom Component](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/custom-component.html)
 8. [Unit Testing](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/unit-testing.html)
 
-## Modules
-
-The main parts of the project are:
-
-* **core**: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
-* **ui.apps**: contains the /apps (and /etc) parts of the project, ie JS & CSS clientlibs, components, templates, runmode specific configs as well as Hobbes-tests
-* **ui.content**: contains mutable content (not /apps) that is integral to the running of the WKND site. This include template types, templates, policies and base-line organization page and asset structures.
-* **ui.content.sample**: WKND is often used as a pre-built reference site for demos and training; making it useful to have a full sample site with content and assets. HOWEVER the storage of authored content (pages, assets) in git is rare and not recommended for real-world implementations.
-* **ui.tests**: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
-* **ui.launcher**: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
-* **dispatcher**: contains dispatcher configurations for AEM as a Cloud Service
-* **repository-structure**:  Empty package that defines the structure of the Adobe Experience Manager repository the Code packages in this project deploy into.
-* **all**: An empty module that embeds the above sub-modules and any vendor dependencies into a single deployable package.
 
 ## How to build
+
+Navigate into the project folder for the desired chapter and version:
+
+    cd /02-component-basics/start
 
 To build all the modules run in the project root directory the following command with Maven 3:
 
     mvn clean install
 
-To build all the modules and deploy the `all` package to a local instance of AEM, run in the project root directory the following command:
+To build all the modules and deploy the `all` package to a local instance of AEM (Cloud Service), run in the project root directory the following command:
 
     mvn clean install -PautoInstallSinglePackage
+
+To build all the modules and deploy the `all` package to a local instance of AEM **6.5/6.4**, run in the project root directory the following command:
+
+    mvn clean install -PautoInstallSinglePackage -Pclassic
 
 Or to deploy it to a publish instance, run
 
