@@ -1,4 +1,7 @@
-# WKND Sites Project
+# WKND APAC Sites Project 
+
+(customised by Mark Szulc)
+![Cloud Manager Sync](https://github.com/markszulc/wknd-apac/workflows/Cloud%20Manager%20Sync/badge.svg)
 
 This is the code for the WKND Reference site: [https://www.wknd.site/](https://www.wknd.site/)
 
