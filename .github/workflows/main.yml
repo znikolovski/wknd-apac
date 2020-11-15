@@ -1,0 +1,51 @@
+  
+name: Cloud Manager Sync
+env:
+  USER_NAME: Mark Szulc
+  USER_EMAIL: mszulc@adobe.com
+  PROJECT_DIR: wknd
+  MAIN_REPOSITORY: git.cloudmanager.adobe.com/mark-szulc/WKNDAPAC-p24704
+ 
+# Only run on a push to this branch
+on:
+  push:
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout this project into a sub folder
+      - uses: actions/checkout@v2
+        with:
+          path: sub
+      # Cleanup sub project
+      - name: Clean project
+        run: |
+          git -C sub log --format="%an : %s" -n 1 > commit.txt
+          rm -rf sub/.git
+          rm -rf sub/.github
+      # Set global git configuration
+      - name: Set git config
+        run: |
+          git config --global credential.helper cache
+          git config --global user.email ${USER_EMAIL}
+          git config --global user.name ${USER_NAME}
+      # Checkout the main project
+      - name: Checkout main project
+        run: 
+          git clone https://mszulc-adobe-com:${{ secrets.cm_pass }}@${MAIN_REPOSITORY} main
+      # Move sub project
+      - name: Move project to main
+        run: |
+          rm -rf main/${PROJECT_DIR}
+          mv sub main/${PROJECT_DIR}
+      - name: Commit Changes
+        run: |        
+          git -C main add ${PROJECT_DIR}
+          git -C main commit -F ../commit.txt
+          git -C main push
