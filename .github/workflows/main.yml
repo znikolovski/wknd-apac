@@ -3,8 +3,8 @@ name: Cloud Manager Sync
 env:
   USER_NAME: Mark Szulc
   USER_EMAIL: mszulc@adobe.com
-  PROJECT_DIR: wknd
   MAIN_REPOSITORY: git.cloudmanager.adobe.com/mark-szulc/WKNDAPAC-p24704
+  CMGITUSERNAME: mszulc-adobe-com
  
 # Only run on a push to this branch
 on:
@@ -42,10 +42,11 @@ jobs:
       # Move sub project
       - name: Move project to main
         run: |
-          rm -rf main/${PROJECT_DIR}
-          mv sub main/${PROJECT_DIR}
+          rm -rf main/*
+          mv sub/* main/
+          rm -rf sub
       - name: Commit Changes
         run: |        
-          git -C main add ${PROJECT_DIR}
+          git -C main add --all
           git -C main commit -F ../commit.txt
           git -C main push
