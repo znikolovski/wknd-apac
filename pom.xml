@@ -19,8 +19,8 @@
     <groupId>com.adobe.aem.guides</groupId>
     <artifactId>aem-guides-wknd</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.1-SNAPSHOT</version>
-    <name>WKND Sites Project - Reactor Project</name>
+    <version>0.2.1-SNAPSHOT</version>
+     <name>WKND Sites Project - Reactor Project</name>
     <description>WKND Sites Project</description>
     <url>https://github.com/adobe/aem-guides-wknd</url>
     <inceptionYear>2019</inceptionYear>
@@ -58,9 +58,9 @@
         <bnd.version>5.1.2</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <aem.sdk.api>2020.9.4277.20200929T030741Z-200924</aem.sdk.api>
+        <aem.sdk.api>2020.11.4506.20201112T235200Z-201028</aem.sdk.api>
         <componentGroupName>WKND Site</componentGroupName>
-        <core.wcm.components.version>2.13.0</core.wcm.components.version>
+        <core.wcm.components.version>2.13.2</core.wcm.components.version>
         <uber.jar.version>6.4.4</uber.jar.version>
     </properties>
 
@@ -597,7 +597,7 @@ Bundle-DocURL:
                 </pluginManagement>
             </build>
         </profile>
-         <profile>
+        <profile>
             <id>release</id>
             <activation>
                 <property>
@@ -701,7 +701,7 @@ Bundle-DocURL:
     <dependencyManagement>
         <dependencies>
 
-            <!-- AEM as a Cloud Service SDK -->
+        <!-- AEM as a Cloud Service SDK -->
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>aem-sdk-api</artifactId>
@@ -709,7 +709,7 @@ Bundle-DocURL:
                 <scope>provided</scope>
             </dependency>
 
-            <!-- AEM Core Components -->
+             <!-- AEM Core Components -->
             <dependency>
                 <groupId>com.adobe.cq</groupId>
                 <artifactId>core.wcm.components.core</artifactId>
