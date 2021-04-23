@@ -1,6 +1,6 @@
 # WKND APAC Demo Site 
 
-![Cloud Manager Sync](https://github.com/markszulc/wknd-apac/workflows/Cloud%20Manager%20Sync/badge.svg)
+[![Cloud Manager Sync from GitHub](https://github.com/markszulc/wknd-apac/actions/workflows/main.yml/badge.svg)](https://github.com/markszulc/wknd-apac/actions/workflows/main.yml)
 
 (customized by Mark Szulc)
 
