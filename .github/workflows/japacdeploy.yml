@@ -1,5 +1,5 @@
   
-name: Cloud Manager Sync from GitHub
+name: JAPAC CM Sync from GitHub
 env:
   USER_NAME: Mark Szulc
   USER_EMAIL: mszulc@adobe.com
