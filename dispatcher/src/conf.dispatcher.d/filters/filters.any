@@ -22,9 +22,6 @@ $include "./default_filters.any"
 # Allow webmanifest files
 /0105 { /type "allow" /extension "webmanifest" /path "/content/*/manifest" }
 
-# Allow components JSON model
-/0106 { /type "allow" /extension '(mp4|mov|m4v)' /path "/content/*" }
-
 
 # Allow GraphQL global endpoint & preflight requests
 # GraphQL also supports GET requests, if you intend to use GET include it in the rule below
@@ -34,3 +31,6 @@ $include "./default_filters.any"
 # GraphQL Persisted Queries
 /0170 { /type "allow" /method '(POST|OPTIONS)' /url "/graphql/execute.json/*" }
 /0171 { /type "allow" /url "/graphql/execute.json/*" }
+
+# Allow video files
+/0176 { /type "allow" /extension '(mp4|mov|m4v)' /path "/content/*" }
