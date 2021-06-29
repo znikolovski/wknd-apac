@@ -1,0 +1,34 @@
+    /* elements */
+
+    .cmp-contentfragment--banner {
+
+        
+        .cmp-contentfragment__elements {
+            flex: auto;
+
+            .cmp-contentfragment__element--heroImage{
+                display: none;
+            }
+
+            .cmp-contentfragment__element {
+
+            }
+    
+            .cmp-contentfragment__element-title {
+                display: none;
+            }
+    
+            .cmp-contentfragment__element-value {
+
+            }
+    
+            //mobile
+            @media (max-width: $screen-medium) {
+                .cmp-contentfragment__element {
+             
+                }
+    
+            }
+
+        }
+    }
