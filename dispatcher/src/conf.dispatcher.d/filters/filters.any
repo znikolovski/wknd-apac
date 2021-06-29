@@ -23,7 +23,7 @@ $include "./default_filters.any"
 /0105 { /type "allow" /extension "webmanifest" /path "/content/*/manifest" }
 
 # Allow components JSON model
-/0106 { /type "allow" /extension "mp4" /path "/content/*" }
+/0106 { /type "allow" /extension "mp4|mov|m4v" /path "/content/*" }
 
 
 # Allow GraphQL global endpoint & preflight requests
