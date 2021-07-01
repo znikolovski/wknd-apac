@@ -1,22 +1,25 @@
     /* elements */
 
-    .cmp-contentfragment--banner {
+    .cmp-contentfragment--ds_hd_portait {
 
         article {
             background-size: cover;
+            background-position: center;
             font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
-            height: 600px;
+            height: 1920px;
+            width: 1080px;
             overflow: hidden;
         }
 
         .cmp-contentfragment__elements {
             display: flex;
             flex-direction: column;
-            width: 400px;
-            padding-top: 120px;
+            width: 100%;
+            padding-top: 220px;
             color: white;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 100) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%); 
+            //background-color: rgba(0, 0, 0, 0.3);
             margin: 0px;
             
 
@@ -25,10 +28,6 @@
                 display: none;
             }
 
-            .cmp-contentfragment__picture{
-                width:100%;
-                height: 500px;
-            }
 
             .cmp-contentfragment__element {
 
@@ -40,37 +39,26 @@
     
             .cmp-contentfragment__element-value {
                 margin-top: 10px;
-                margin-left: 40px;
-                margin-right: 40px;
+                margin-left: 80px;
+                margin-right: 80px;
             }
     
             .cmp-contentfragment__element--headline {
-                font-size: 36px;
+                font-size: 170px;
+                line-height: 160px;
                 text-transform: uppercase;
                 font-weight: 900;
             }
 
             .cmp-contentfragment__element--callToAction {
-                background-color: #ffea00;
-                color: #202020;
-                margin-left: 40px;
-                margin-top: 30px;
-                text-transform: uppercase;
-                font-size: 14px;
-                font-weight: 600;
-                width: 8pc;
-                padding: 15px;
-
-                .cmp-contentfragment__element-value {
-                    margin: 0;
-                    text-align: center;
-                }
+                display: none;
 
             }
 
             .cmp-contentfragment__element--detail {
                 font-size: 25px;
-                text-transform: capitalize;
+                text-transform:none;
+                width: 500px;
             }
 
             //mobile
