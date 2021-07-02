@@ -33,3 +33,7 @@ $include "./default_filters.any"
 
 # Allow to download web manifest for PWA
 /0180 { /type "allow" /extension "webmanifest" }
+
+#Allow Screens Fragment usage
+/0190 { /type "allow" /method "GET" /query "wcmmode=*" }
+/0192 { /type "allow" /extension "html" /selectors "standalone" /path "/content/*" }
