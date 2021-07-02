@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:lastModified="{Date}2021-04-21T10:19:57.867Z"
+    jcr:lastModifiedBy="MSZULC@ADOBE.COM"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="sling:Folder">
+    <jcr:content
+        cq:conf="/conf/wknd"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Offers"
+        postProcessWF="System Default"
+        processingProfile="None"
+        sourcing="false">
+        <policies jcr:primaryType="nt:unstructured">
+            <cfm
+                jcr:primaryType="nt:unstructured"
+                policy-cfm-allowedModelsByPaths="[/conf/wknd/settings/dam/cfm/models/offers]"/>
+        </policies>
+    </jcr:content>
+</jcr:root>
