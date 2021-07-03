@@ -4,5 +4,5 @@
     <!-- WKND Member Group-->
     <filter root="/home/groups/wknd" mode="merge" />
     <!-- Sample User-->
-    <filter root="/home/users/wknd" />
+    <filter root="/home/users/wknd" mode="merge" />
 </workspaceFilter>
