@@ -2,7 +2,7 @@
 
 [![Cloud Manager Sync from GitHub](https://github.com/markszulc/wknd-apac/actions/workflows/main.yml/badge.svg)](https://github.com/markszulc/wknd-apac/actions/workflows/main.yml)
 
-(customized by Mark Szulc)
+(customized by Mark Szulc for additional demos)
 
 This is the code for the WKND Reference site: [https://www.wknd.site/](https://www.wknd.site/)
 
