@@ -716,7 +716,7 @@
             <contentfragment jcr:primaryType="nt:unstructured">
                 <policy_1571166588834
                     cq:styleDefaultElement="article"
-                    jcr:lastModified="{Date}2021-07-03T00:15:08.815+10:00"
+                    jcr:lastModified="{Date}2020-07-09T08:10:48.812-07:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="WKND Content Fragment"
@@ -734,18 +734,6 @@
                                     cq:styleElement="div"
                                     cq:styleId="1571166694176"
                                     cq:styleLabel="Elements"
-                                    jcr:primaryType="nt:unstructured"/>
-                                <item2
-                                    cq:styleClasses="cmp-contentfragment--banner"
-                                    cq:styleElement="div"
-                                    cq:styleId="1625235181848"
-                                    cq:styleLabel="Banner"
-                                    jcr:primaryType="nt:unstructured"/>
-                                <item3
-                                    cq:styleClasses="cmp-contentfragment--ds_hd_portait"
-                                    cq:styleElement="div"
-                                    cq:styleId="1625235187010"
-                                    cq:styleLabel="Signage - Portrait"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
