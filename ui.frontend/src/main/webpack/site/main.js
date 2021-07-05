@@ -12,3 +12,5 @@ import '../components/form/sign-in-form/sign-in-form.js';
 import '../components/contentfragment/js/contributor.js';
 import '../components/contentfragment/js/image.js';
 import '../components/contentfragment/js/dshdportrait.js';
+import '../components/contentfragment/js/nativeapp.js';
+import '../components/contentfragment/js/alexa.js';

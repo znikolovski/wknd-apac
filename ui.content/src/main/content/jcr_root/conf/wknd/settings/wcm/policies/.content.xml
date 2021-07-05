@@ -716,7 +716,7 @@
             <contentfragment jcr:primaryType="nt:unstructured">
                 <policy_1571166588834
                     cq:styleDefaultElement="article"
-                    jcr:lastModified="{Date}2021-07-04T22:26:51.725+10:00"
+                    jcr:lastModified="{Date}2021-07-05T20:00:28.703+10:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="WKND Content Fragment"
@@ -746,6 +746,18 @@
                                     cq:styleElement="div"
                                     cq:styleId="1625401537516"
                                     cq:styleLabel="Signage - Portrait"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-contentfragment--alexa"
+                                    cq:styleElement="div"
+                                    cq:styleId="1625479044538"
+                                    cq:styleLabel="Alexa"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-contentfragment--nativeapp"
+                                    cq:styleElement="div"
+                                    cq:styleId="1625479048319"
+                                    cq:styleLabel="Native App"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
