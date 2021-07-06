@@ -26,7 +26,7 @@
      * @param {*} responsiveGridEl the responsive grid element to look under for instances of content fragments that have the contributor style applied
      */
     function applyComponentStyles(responsiveGridEl) {
-        responsiveGridEl.querySelectorAll(".cmp-contentfragment--nativeapp .cmp-contentfragment[data-cmp-contentfragment-model=\"wknd/models/offers\"]:not([data-cmp-offer-processed='true'])").forEach(function (cf) {
+        responsiveGridEl.querySelectorAll(".cmp-contentfragment--nativeapp .cmp-contentfragment[data-cmp-contentfragment-model=\"wknd/models/offer\"]:not([data-cmp-offer-processed='true'])").forEach(function (cf) {
             // Mark the content fragment as processed, since we don't want to accidentally apply the JS adjustments multiple times
             cf.setAttribute("data-cmp-offer-processed", true);
 

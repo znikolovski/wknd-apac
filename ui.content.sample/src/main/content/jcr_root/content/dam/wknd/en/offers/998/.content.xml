@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="b5fb17a3-9833-4c0c-883c-e1c06566f768">
+    <jcr:content
+        cq:name="998"
+        cq:parentPath="/content/dam/wknd/en/offers"
+        jcr:lastModified="{Date}2021-07-06T10:15:24.005+10:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="998"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2021-07-06T10:15:24.005+10:00">
+        <data
+            cq:model="/conf/wknd/settings/dam/cfm/models/offer"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                callToAction="Sign Up Now"
+                callToAction_x0040_LastModified="{Date}2021-07-06T10:15:23.994+10:00"
+                ctaUrl="/content/wknd/language-masters/en"
+                ctaUrl_x0040_LastModified="{Date}2021-07-06T10:15:23.994+10:00"
+                detail="Subscribe to our newsletter and save on your next purchase"
+                detail_x0040_ContentType="text/plain"
+                detail_x0040_LastModified="{Date}2021-07-06T10:15:23.994+10:00"
+                headline="Become a VIP &amp; get $10 off"
+                headline_x0040_LastModified="{Date}2021-07-06T10:15:23.993+10:00"
+                heroImage="/content/dam/wknd/en/activities/hiking/equipment_6.jpg"
+                heroImage_x0040_LastModified="{Date}2021-07-06T10:15:23.994+10:00"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

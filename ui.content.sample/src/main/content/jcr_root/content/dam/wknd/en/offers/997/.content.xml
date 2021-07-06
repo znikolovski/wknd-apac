@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="981856eb-c49f-4687-a2b2-ba278476ec3c">
+    <jcr:content
+        cq:name="997"
+        cq:parentPath="/content/dam/wknd/en/offers"
+        jcr:lastModified="{Date}2021-07-06T10:16:31.393+10:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="997"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2021-07-06T10:16:31.393+10:00">
+        <data
+            cq:model="/conf/wknd/settings/dam/cfm/models/offer"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                callToAction="Click Here"
+                callToAction_x0040_LastModified="{Date}2021-07-06T10:16:31.370+10:00"
+                ctaUrl="/content/wknd/language-masters/en/adventures"
+                ctaUrl_x0040_LastModified="{Date}2021-07-06T10:16:31.370+10:00"
+                detail="Its awesome"
+                detail_x0040_ContentType="text/plain"
+                detail_x0040_LastModified="{Date}2021-07-06T10:16:31.370+10:00"
+                headline="Buy one get one free"
+                headline_x0040_LastModified="{Date}2021-07-06T10:16:31.369+10:00"
+                heroImage="/content/dam/wknd/en/activities/skiing/skitouring.jpg"
+                heroImage_x0040_LastModified="{Date}2021-07-06T10:16:31.371+10:00"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
