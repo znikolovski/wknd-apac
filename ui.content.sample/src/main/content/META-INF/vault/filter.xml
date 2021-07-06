@@ -7,6 +7,7 @@
     <filter root="/content/wknd" mode="merge"/>
     -->
     <filter root="/content/dam/wknd" mode="update"/>
+    <filter root="/content/screens/wknd" mode="merge"/>
     <filter root="/content/experience-fragments/wknd"/>
     <filter root="/content/cq:tags/wknd" mode="update"/>
 
