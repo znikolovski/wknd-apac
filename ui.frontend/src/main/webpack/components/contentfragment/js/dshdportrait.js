@@ -34,8 +34,16 @@
             var cfEls = cf.querySelector('.cmp-contentfragment__elements');
             var assetPath = cfEls.querySelector(".cmp-contentfragment__element--heroImage .cmp-contentfragment__element-value").innerText.trim();
 
+            var yellowStrip = document.createElement("div"); 
+            yellowStrip.setAttribute("class", "cmp-contentfragment__yellow-strip"); 
+                
             if (assetPath && assetPath.indexOf("/content/dam/") === 0) {
                 cf.style.backgroundImage = "url('" + assetPath + "')";
+                cfEls.insertBefore(yellowStrip, cfEls.querySelector(".cmp-contentfragment__elements"));
+                var pictureEl = document.createElement("img"); 
+                pictureEl.setAttribute("class", "cmp-contentfragment__logo"); 
+				pictureEl.setAttribute("src", "/content/dam/wknd/en/site/wknd-logo-light.svg");
+                cfEls.insertBefore(pictureEl, cfEls.querySelector(".cmp-contentfragment__yellow-strip"));
             }
         });
     }

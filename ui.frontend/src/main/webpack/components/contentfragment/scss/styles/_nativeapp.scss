@@ -6,7 +6,6 @@
             background-size: cover;
             background-position: center;
             font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
-            height: 500px;
             width: 750px;
             overflow: hidden;
         }
@@ -15,11 +14,9 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding-top: 220px;
-            color: white;
+            padding-top: 0px;
+            color: black;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 100) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%); 
-            //background-color: rgba(0, 0, 0, 0.3);
             margin: 0px;
             
 
@@ -39,15 +36,15 @@
     
             .cmp-contentfragment__element-value {
                 margin-top: 10px;
-                margin-left: 80px;
-                margin-right: 80px;
+                margin-left: 0px;
+                margin-right: 0px;
             }
     
             .cmp-contentfragment__element--headline {
-                font-size: 170px;
-                line-height: 160px;
+                font-size: 60px;
+                line-height: 60px;
                 text-transform: uppercase;
-                font-weight: 900;
+                font-weight: 500;
             }
 
             .cmp-contentfragment__element--callToAction {

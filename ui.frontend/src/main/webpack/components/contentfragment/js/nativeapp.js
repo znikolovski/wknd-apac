@@ -34,8 +34,12 @@
             var cfEls = cf.querySelector('.cmp-contentfragment__elements');
             var assetPath = cfEls.querySelector(".cmp-contentfragment__element--heroImage .cmp-contentfragment__element-value").innerText.trim();
 
+        
             if (assetPath && assetPath.indexOf("/content/dam/") === 0) {
-                cf.style.backgroundImage = "url('" + assetPath + "')";
+                var pictureEl = document.createElement("img"); 
+                pictureEl.setAttribute("class", "cmp-contentfragment__picture"); 
+				pictureEl.setAttribute("src", assetPath);
+                cfEls.insertBefore(pictureEl, cfEls.querySelector(".cmp-contentfragment__element--headline"));
             }
         });
     }

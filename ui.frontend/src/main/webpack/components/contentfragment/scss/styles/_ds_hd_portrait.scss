@@ -1,7 +1,14 @@
     /* elements */
 
+
+    .cmp-contentfragment--ds_hd_portait.aem-GridColumn{
+        padding: 0px;
+    }
+
     .cmp-contentfragment--ds_hd_portait {
 
+        width: 1080px;
+            
         article {
             background-size: cover;
             background-position: center;
@@ -15,10 +22,9 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding-top: 220px;
             color: white;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 100) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%); 
+            background: linear-gradient(to top, rgba(0, 0, 0, 100) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 10) 100%); 
             //background-color: rgba(0, 0, 0, 0.3);
             margin: 0px;
             
@@ -48,6 +54,8 @@
                 line-height: 160px;
                 text-transform: uppercase;
                 font-weight: 900;
+                padding-top: 220px;
+            
             }
 
             .cmp-contentfragment__element--callToAction {
@@ -59,6 +67,20 @@
                 font-size: 25px;
                 text-transform:none;
                 width: 500px;
+            }
+
+            .cmp-contentfragment__yellow-strip {
+                width: 24px;
+                background-color: $brand-primary;
+                height: 100%;
+                position: fixed;
+            }
+
+            .cmp-contentfragment__logo {
+                width: 358px;
+                position: absolute;
+                margin-left: 634px;
+                margin-top: 1690px;
             }
 
             //mobile
