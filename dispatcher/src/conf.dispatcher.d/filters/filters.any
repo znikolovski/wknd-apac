@@ -35,6 +35,5 @@ $include "./default_filters.any"
 /0180 { /type "allow" /extension "webmanifest" /path "/content/*/manifest"}
 
 #Allow Screens Fragment usage
-/0180 { /type "allow" /extension "webmanifest" /path "/content/*/manifest" }
-
+/0190 { /type "allow" /method "GET" /query "wcmmode=*" }
 /0192 { /type "allow" /extension "html" /selectors "standalone" /path "/content/*" }
