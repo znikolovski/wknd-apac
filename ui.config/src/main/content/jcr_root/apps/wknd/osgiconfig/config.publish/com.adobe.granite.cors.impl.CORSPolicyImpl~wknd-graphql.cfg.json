@@ -20,7 +20,9 @@
   "allowedpaths":[
     "/content/graphql/global/endpoint.json",
     "/content/graphql/endpoint.gql",
-    "/content/cq:graphql/wknd/endpoint.json"
+    "/content/cq:graphql/wknd/endpoint.json",
+    "/content/wknd-spa/home.model.json",
+    "/content/wknd-spa/*"   
   ],
   "supportedheaders":[
     "Origin",
