@@ -19,6 +19,7 @@
   ],
   "allowedpaths":[
     "/content/graphql/global/endpoint.json",
+    "/content/graphql/endpoint.gql",
     "/content/cq:graphql/wknd/endpoint.json"
   ],
   "supportedheaders":[
