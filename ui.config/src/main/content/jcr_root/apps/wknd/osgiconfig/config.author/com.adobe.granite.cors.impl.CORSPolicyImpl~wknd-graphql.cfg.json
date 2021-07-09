@@ -7,22 +7,18 @@
   "supportedmethods":[
     "GET",
     "HEAD",
-    "POST"
+    "POST",
+    "OPTIONS"
   ],
   "alloworigin":[
-    ""
+    "https://delightful-moss-09b85441e.azurestaticapps.net", "localhost:3000"
   ],
   "maxage:Integer":1800,
   "alloworiginregexp":[
-    "http://localhost:.*",
-    "https://delightful-moss-09b85441e.azurestaticapps.net"
+    ".*"
   ],
   "allowedpaths":[
-    "/content/graphql/global/endpoint.json",
-    "/content/graphql/endpoint.gql",
-    "/content/cq:graphql/wknd/endpoint.json",
-    "/content/wknd-spa/home.model.json",
-    "/content/wknd-spa/*"
+    ".*"
   ],
   "supportedheaders":[
     "Origin",
