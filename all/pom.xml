@@ -67,6 +67,16 @@
                             <target>/apps/wknd-packages/application/install</target>
                         </embedded>
                         <embedded>
+                            <groupId>com.adobe.aem</groupId>
+                            <artifactId>spa.project.core.core</artifactId>
+                            <target>/apps/wknd-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem</groupId>
+                            <artifactId>spa.project.core.ui.apps</artifactId>
+                            <target>/apps/wknd-packages/application/install</target>
+                        </embedded>
+                        <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
                             <artifactId>aem-guides-wknd.ui.content</artifactId>
                             <type>zip</type>
@@ -263,6 +273,16 @@
             <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
+        </dependency>
+        <!-- SPA Project Core (includes hierarchy page) -->
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.ui.apps</artifactId>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.core</artifactId>
         </dependency>
          <!-- Core Component Dependency (6.x only)-->
         <dependency>

@@ -1213,6 +1213,14 @@
                         components="[/libs/cq/experience-fragments/editor/components/buildingblock,/apps/wknd/components/contentfragment,/apps/wknd/components/image,/apps/wknd/components/text]">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </social-media>
+                    <spa-default
+                        jcr:description="Includes only SPA-Enabled components."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SPA Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd/components/text]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </spa-default>
                 </responsivegrid>
             </components>
         </foundation>

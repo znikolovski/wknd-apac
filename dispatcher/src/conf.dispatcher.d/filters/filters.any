@@ -32,7 +32,7 @@ $include "./default_filters.any"
 /0176 { /type "allow" /extension '(mp4|mov|m4v)' /path "/content/*" }
 
 # Allow to download web manifest for PWA
-/0180 { /type "allow" /extension "webmanifest" }
+/0180 { /type "allow" /extension "webmanifest" /path "*"}
 
 #Allow Screens Fragment usage
 /0190 { /type "allow" /method "GET" /query "wcmmode=*" }
