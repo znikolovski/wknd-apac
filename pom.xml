@@ -59,6 +59,7 @@
         <bnd.version>5.1.2</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spa.project.core.version>1.2.0</spa.project.core.version>
         <aem.sdk.api>2020.11.4506.20201112T235200Z-201028</aem.sdk.api>
         <componentGroupName>WKND Site</componentGroupName>
         <core.wcm.components.version>2.13.2</core.wcm.components.version>
@@ -701,6 +702,19 @@ Bundle-DocURL:
     <!-- ====================================================================== -->
     <dependencyManagement>
         <dependencies>
+
+        <!-- SPA Project Core (includes hierarchy page model) -->
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.ui.apps</artifactId>
+            <type>zip</type>
+            <version>${spa.project.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.core</artifactId>
+            <version>${spa.project.core.version}</version>
+        </dependency>
 
         <!-- AEM as a Cloud Service SDK -->
             <dependency>

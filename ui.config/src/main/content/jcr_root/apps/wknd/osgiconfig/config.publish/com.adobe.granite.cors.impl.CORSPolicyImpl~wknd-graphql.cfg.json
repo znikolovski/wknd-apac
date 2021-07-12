@@ -1,4 +1,3 @@
-// Configuration created by Apache Sling JCR Installer
 {
   "supportscredentials":false,
   "exposedheaders":[
@@ -25,6 +24,7 @@
     "Accept",
     "X-Requested-With",
     "Content-Type",
+    "content-type",
     "Access-Control-Request-Method",
     "Access-Control-Request-Headers"
   ]
