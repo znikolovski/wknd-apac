@@ -712,26 +712,31 @@ Bundle-DocURL:
     <dependencyManagement>
         <dependencies>
 
-        <!-- SPA Project Core (includes hierarchy page model) -->
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.ui.apps</artifactId>
-            <type>zip</type>
-            <version>${spa.project.core.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.core</artifactId>
-            <version>${spa.project.core.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.scr.annotations</artifactId>
-            <version>1.9.8</version>
-            <scope>provided</scope>
-        </dependency>
+            <!-- SPA Project Core (includes hierarchy page model) -->
+            <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>spa.project.core.ui.apps</artifactId>
+                <type>zip</type>
+                <version>${spa.project.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>spa.project.core.core</artifactId>
+                <version>${spa.project.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr.annotations</artifactId>
+                <version>1.9.8</version>
+                <scope>provided</scope>
+            </dependency>
 
-        <!-- CSS Parser -->
+            <!-- CSS Parser -->
+            <dependency>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-runtime</artifactId>
+                <version>4.5.3</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.servicemix.bundles</groupId>
                 <artifactId>org.apache.servicemix.bundles.xmlresolver</artifactId>
@@ -773,7 +778,7 @@ Bundle-DocURL:
 				<version>1.1.5.RELEASE</version>
 			</dependency>
 
-        <!-- AEM as a Cloud Service SDK -->
+            <!-- AEM as a Cloud Service SDK -->
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>aem-sdk-api</artifactId>

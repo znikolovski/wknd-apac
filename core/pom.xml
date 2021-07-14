@@ -37,7 +37,7 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeArtifactIds>nekohtml,jstyleparser,unbescape,org.apache.servicemix.bundles.jsoup,cssbox,xml-apis,org.apache.servicemix.bundles.xerces,org.apache.servicemix.bundles.xmlresolver</includeArtifactIds>
+                            <includeArtifactIds>antlr4-runtime,nekohtml,jstyleparser,unbescape,org.apache.servicemix.bundles.jsoup,cssbox,xml-apis,org.apache.servicemix.bundles.xerces,org.apache.servicemix.bundles.xmlresolver</includeArtifactIds>
                         </configuration>
                     </execution>
                 </executions>
@@ -57,7 +57,7 @@
                         </goals>
                         <configuration>
                             <bnd><![CDATA[
-                                    Include-Resource: 3rdparty/antlr4-runtime-4.5.3.jar,target/dependency/nekohtml-${nekohtml}.jar,target/dependency/jstyleparser-${jstyleparser}.jar,target/dependency/unbescape-${unbescape}.jar,target/dependency/org.apache.servicemix.bundles.xmlresolver-${xmlresolver}.jar,target/dependency/org.apache.servicemix.bundles.xerces-${xerces.bundle}.jar,target/dependency/cssbox-${cssbox}.jar,target/dependency/org.apache.servicemix.bundles.jsoup-${jsoup}.jar
+                                    Include-Resource: target/dependency/antlr4-runtime-4.5.3.jar,target/dependency/nekohtml-${nekohtml}.jar,target/dependency/jstyleparser-${jstyleparser}.jar,target/dependency/unbescape-${unbescape}.jar,target/dependency/org.apache.servicemix.bundles.xmlresolver-${xmlresolver}.jar,target/dependency/org.apache.servicemix.bundles.xerces-${xerces.bundle}.jar,target/dependency/cssbox-${cssbox}.jar,target/dependency/org.apache.servicemix.bundles.jsoup-${jsoup}.jar
                                     Bundle-ClassPath: .,nekohtml-${nekohtml}.jar,antlr4-runtime-4.5.3.jar,jstyleparser-${jstyleparser}.jar,unbescape-${unbescape}.jar,org.apache.servicemix.bundles.xmlresolver-${xmlresolver}.jar,org.apache.servicemix.bundles.xerces-${xerces.bundle}.jar,cssbox-${cssbox}.jar,org.apache.servicemix.bundles.jsoup-${jsoup}.jar
                                     Import-Package: !sun.io,javax.annotation;version=0.0.0,!org.antlr.v4.gui,*
                                 ]]></bnd>
@@ -113,6 +113,11 @@
         </dependency>
 
         <!-- CSS Parser -->
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>4.5.3</version>
+        </dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.bundles</groupId>
 			<artifactId>org.apache.servicemix.bundles.xmlresolver</artifactId>
