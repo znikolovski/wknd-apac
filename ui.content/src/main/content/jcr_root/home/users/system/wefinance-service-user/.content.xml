@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="750187e3-dc7f-33c6-b47d-fabb973f8e11"
+    rep:authorizableId="wefinance-service-user"
+    rep:principalName="wefinance-service-user"
+    memberAction="memberOf"
+    memberEntry="[administrators,projects-administrators]"/>

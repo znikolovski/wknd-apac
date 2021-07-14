@@ -1,0 +1,25 @@
+<!--/*
+  ~ ADOBE CONFIDENTIAL
+  ~ __________________
+  ~
+  ~ Copyright 2017 Adobe Systems Incorporated
+  ~ All Rights Reserved.
+  ~
+  ~ NOTICE:  All information contained herein is, and remains
+  ~ the property of Adobe Systems Incorporated and its suppliers,
+  ~ if any.  The intellectual and technical concepts contained
+  ~ herein are proprietary to Adobe Systems Incorporated and its
+  ~ suppliers and are protected by trade secret or copyright law.
+  ~ Dissemination of this information or reproduction of this material
+  ~ is strictly forbidden unless prior written permission is obtained
+  ~ from Adobe Systems Incorporated.
+  */-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='cq.experience-fragments.web,gss-commons.libs.bootstrap.3.3.6,gss-commons.libs.grid,gss-commons.components'}"/>
+
+<sly data-sly-test.clientlibs="${request.requestParameterMap['clientlibs'][0].toString}">
+    <sly data-sly-call="${clientlib.css @ categories=clientlibs}"/>
+</sly> 
+<sly data-sly-test="${!request.requestParameterMap['clientlibs'][0].toString && properties.xfTheme}">
+  <sly data-sly-call="${clientlib.css @ categories=properties.xfTheme}"/>
+</sly> 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-07-06T10:19:07.745+10:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/wknd/settings/wcm/templates/experience-fragment-web-variation-template"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Alexa"
+        sling:resourceType="wknd/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wknd/components/container"
+            layout="responsiveGrid">
+            <container
+                cq:styleIds="[1570043787082]"
+                jcr:created="{Date}2019-09-13T14:22:51.213-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-09-13T14:23:01.260-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wknd/components/container"
+                layout="responsiveGrid">
+                <contentfragment
+                    cq:styleIds="[1625479044538]"
+                    jcr:created="{Date}2021-07-06T00:42:38.963+10:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-07-06T10:19:06.928+10:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/contentfragment"
+                    displayMode="multi"
+                    fragmentPath="/content/dam/wknd/en/offers/999"
+                    text="999 Headline Take $50 off! Detail when you spend $299 or more. Use discount code WKND50 at checkout. Call to Action Shop Now CTA URL http://www.markszulc.com Hero Image /content/dam/wknd/en/activities/camping/camp-summer-night.jpg"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

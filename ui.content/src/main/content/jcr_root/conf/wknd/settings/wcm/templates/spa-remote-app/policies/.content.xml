@@ -9,7 +9,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/core/components/policies/mapping">
             <responsivegrid
-                cq:policy="wcm/foundation/components/responsivegrid/spa-default"
+                cq:policy="wcm/foundation/components/responsivegrid/policy_13928703649428"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/core/components/policies/mapping"/>
         </root>

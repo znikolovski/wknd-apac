@@ -1213,6 +1213,15 @@
                         components="[/libs/cq/experience-fragments/editor/components/buildingblock,/apps/wknd/components/contentfragment,/apps/wknd/components/image,/apps/wknd/components/text]">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </social-media>
+                    <policy_13928703649428
+                        jcr:lastModified="{Date}2021-07-13T07:03:53.668Z"
+                        jcr:lastModifiedBy="nikolovs@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="WKND SPA Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd/components/button,/apps/wknd/components/container,/apps/wknd/components/image,/apps/wknd/components/list,/apps/wknd/components/separator,/apps/wknd/components/tabs,/apps/wknd/components/teaser,/apps/wknd/components/text,/apps/wknd/components/title]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_13928703649428>
                     <spa-default
                         jcr:description="Includes only SPA-Enabled components."
                         jcr:primaryType="nt:unstructured"

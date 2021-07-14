@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}false"
+    jcr:primaryType="cq:WorkflowModel"
+    jcr:uuid="15149fa3-f778-4ecd-b672-1c28e1da67f0"
+    sling:resourceType="cq/workflow/components/model"
+    description="Workflow for requesting a new job."
+    title="Creative Job Workflow">
+    <metaData
+        cq:generatingPage="/conf/wknd/settings/workflow/models/job/jcr:content"
+        cq:lastModified="{Long}1521350721809"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"/>
+    <nodes jcr:primaryType="nt:unstructured">
+        <node0
+            jcr:primaryType="cq:WorkflowNode"
+            title="Start"
+            type="START">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0>
+        <node1
+            jcr:primaryType="cq:WorkflowNode"
+            title="Create Job Workspace"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.aem.guides.wknd.core.workflow.step.CreateJobWorkflowStep"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node1>
+        <node2
+            jcr:primaryType="cq:WorkflowNode"
+            description="Project Task Creation Step"
+            title="Copywriter Update Step"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                argTaskName="Prepare Job Assets"
+                argTaskPriority="Medium"
+                PROCESS="com.adobe.cq.projects.impl.workflow.ProjectTaskWorkflowProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                PROCESS_PERSIST_ANONYMOUS_WORKITEM="true"/>
+        </node2>
+        <node3
+            jcr:primaryType="cq:WorkflowNode"
+            title="End"
+            type="END">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node3>
+    </nodes>
+    <transitions jcr:primaryType="nt:unstructured">
+        <node0_x0023_node1
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node0"
+            rule=""
+            to="node1">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0_x0023_node1>
+        <node1_x0023_node2
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node1"
+            rule=""
+            to="node2">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node1_x0023_node2>
+        <node2_x0023_node3
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node2"
+            rule=""
+            to="node3">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node2_x0023_node3>
+    </transitions>
+</jcr:root>

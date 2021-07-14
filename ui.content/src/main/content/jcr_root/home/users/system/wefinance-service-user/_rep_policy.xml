@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ /*******************************************************************************
+  ~  * ADOBE CONFIDENTIAL
+  ~  * ___________________
+  ~  *
+  ~  * Copyright 2016 Adobe Systems Incorporated
+  ~  * All Rights Reserved.
+  ~  *
+  ~  * NOTICE:  All information contained herein is, and remains
+  ~  * the property of Adobe Systems Incorporated and its suppliers,
+  ~  * if any.  The intellectual and technical concepts contained
+  ~  * herein are proprietary to Adobe Systems Incorporated and its
+  ~  * suppliers and are protected by trade secret or copyright law.
+  ~  * Dissemination of this information or reproduction of this material
+  ~  * is strictly forbidden unless prior written permission is obtained
+  ~  * from Adobe Systems Incorporated.
+  ~  ******************************************************************************/
+  -->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+  jcr:primaryType="rep:ACL">
+  <allow
+    jcr:primaryType="rep:GrantACE"
+    rep:principalName="wefinance-service-user"
+    rep:privileges="{Name}[jcr:read,rep:write]"/>
+</jcr:root>

@@ -27,6 +27,21 @@
     <description>Core bundle for WKND Sites Project</description>
     <build>
         <plugins>
+             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependency</id>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <includeArtifactIds>nekohtml,jstyleparser,unbescape,org.apache.servicemix.bundles.jsoup,cssbox,xml-apis,org.apache.servicemix.bundles.xerces,org.apache.servicemix.bundles.xmlresolver</includeArtifactIds>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>sling-maven-plugin</artifactId>
@@ -42,7 +57,9 @@
                         </goals>
                         <configuration>
                             <bnd><![CDATA[
-Import-Package: javax.annotation;version=0.0.0,*
+                                    Include-Resource: 3rdparty/antlr4-runtime-4.5.3.jar,target/dependency/nekohtml-${nekohtml}.jar,target/dependency/jstyleparser-${jstyleparser}.jar,target/dependency/unbescape-${unbescape}.jar,target/dependency/org.apache.servicemix.bundles.xmlresolver-${xmlresolver}.jar,target/dependency/org.apache.servicemix.bundles.xerces-${xerces.bundle}.jar,target/dependency/cssbox-${cssbox}.jar,target/dependency/org.apache.servicemix.bundles.jsoup-${jsoup}.jar
+                                    Bundle-ClassPath: .,nekohtml-${nekohtml}.jar,antlr4-runtime-4.5.3.jar,jstyleparser-${jstyleparser}.jar,unbescape-${unbescape}.jar,org.apache.servicemix.bundles.xmlresolver-${xmlresolver}.jar,org.apache.servicemix.bundles.xerces-${xerces.bundle}.jar,cssbox-${cssbox}.jar,org.apache.servicemix.bundles.jsoup-${jsoup}.jar
+                                    Import-Package: !sun.io,javax.annotation;version=0.0.0,!org.antlr.v4.gui,*
                                 ]]></bnd>
                         </configuration>
                     </execution>
@@ -89,6 +106,44 @@ Import-Package: javax.annotation;version=0.0.0,*
             <groupId>uk.org.lidalia</groupId>
             <artifactId>slf4j-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr.annotations</artifactId>
+        </dependency>
+
+        <!-- CSS Parser -->
+		<dependency>
+			<groupId>org.apache.servicemix.bundles</groupId>
+			<artifactId>org.apache.servicemix.bundles.xmlresolver</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.servicemix.bundles</groupId>
+			<artifactId>org.apache.servicemix.bundles.xerces</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.cssbox</groupId>
+			<artifactId>cssbox</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.servicemix.bundles</groupId>
+			<artifactId>org.apache.servicemix.bundles.jsoup</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.cssbox</groupId>
+            <artifactId>jstyleparser</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.unbescape</groupId>
+            <artifactId>unbescape</artifactId>
         </dependency>
 
         <!-- Testing -->
