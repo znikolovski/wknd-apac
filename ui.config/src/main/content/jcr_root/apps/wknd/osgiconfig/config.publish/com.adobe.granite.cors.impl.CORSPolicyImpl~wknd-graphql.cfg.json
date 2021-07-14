@@ -26,6 +26,7 @@
     "content-type",
     "Access-Control-Request-Method",
     "Access-Control-Request-Headers",
+    "Access-Control-Request-Origin",
     "authorization"
   ]
 }
