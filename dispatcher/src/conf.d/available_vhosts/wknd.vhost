@@ -38,6 +38,7 @@ Include conf.d/variables/custom.vars
 		SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
 		# Make sure proxies don't deliver the wrong content
 		Header append Vary User-Agent env=!dont-vary
+		Header set Access-Control-Allow-Origin *
 		# Prevent clickjacking
 		Header always append X-Frame-Options SAMEORIGIN
 	</Directory>
