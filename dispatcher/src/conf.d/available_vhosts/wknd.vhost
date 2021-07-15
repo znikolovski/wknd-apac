@@ -40,7 +40,7 @@ Include conf.d/variables/custom.vars
 		Header append Vary User-Agent env=!dont-vary
 		# Prevent clickjacking
 		Header always append X-Frame-Options SAMEORIGIN
-		Header always append Access-Control-Allow-Origin "*"
+		Header set Access-Control-Allow-Origin "*"
 	</Directory>
 	<Directory "${DOCROOT}">
 		AllowOverride None
