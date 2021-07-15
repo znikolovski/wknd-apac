@@ -17,6 +17,7 @@ Include conf.d/variables/custom.vars
 	# Add header breadcrumbs for help in troubleshooting
 	<IfModule mod_headers.c>
 		Header add X-Vhost "publish"
+		Header set Access-Control-Allow-Origin "*"
 	</IfModule>
 	<Directory />
 		<IfModule disp_apache2.c>
@@ -40,7 +41,6 @@ Include conf.d/variables/custom.vars
 		Header append Vary User-Agent env=!dont-vary
 		# Prevent clickjacking
 		Header always append X-Frame-Options SAMEORIGIN
-		Header always append Access-Control-Allow-Origin "*"
 	</Directory>
 	<Directory "${DOCROOT}">
 		AllowOverride None

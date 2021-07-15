@@ -20,7 +20,6 @@ Include conf.d/variables/custom.vars
 	# Add header breadcrumbs for help in troubleshooting
 	<IfModule mod_headers.c>
 		Header add X-Vhost "publish"
-		Header always append Access-Control-Allow-Origin "*"
 	</IfModule>
 	<Directory />
 		<IfModule disp_apache2.c>
