@@ -6,6 +6,7 @@
         cq:lastModified="{Date}2019-10-02T12:16:41.831-07:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd/settings/wcm/templates/experience-fragment-web-variation-template"
+        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="wknd/components/page">
         <root
