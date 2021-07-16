@@ -12,7 +12,7 @@
         pwaCachestrategy="staleWhileRevalidate"
         pwaDisplay="standalone"
         pwaOrientation="any"
-        remoteSPAUrl="https://node.au.ngrok.io">
+        remoteSPAUrl="http://localhost:3000">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
