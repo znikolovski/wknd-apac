@@ -15,7 +15,8 @@
   "maxage:Integer":1800,
   "alloworiginregexp":[
     "http://localhost:.*",
-    "https://delightful-moss-09b85441e.azurestaticapps.net"
+    "https://delightful-moss-09b85441e.azurestaticapps.net",
+    "https://white-moss-0f6103d1e.azurestaticapps.net"
   ],
   "allowedpaths":[
     ".*"

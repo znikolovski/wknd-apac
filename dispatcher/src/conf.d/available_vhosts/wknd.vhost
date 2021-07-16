@@ -4,10 +4,8 @@
 # It has been modified to let Apache handle errors 400, 500
 # It uses error pages created in AEM as the 404 and 500x pages defined by variables in custom.vars
 # 
-
 # Include customer defined variables
 Include conf.d/variables/custom.vars
-
 <VirtualHost *:80>
 	ServerName	"publish"
 	# Put names of which domains are used for your published site/content here
@@ -17,6 +15,7 @@ Include conf.d/variables/custom.vars
 	# Add header breadcrumbs for help in troubleshooting
 	<IfModule mod_headers.c>
 		Header add X-Vhost "publish"
+		Header set Access-Control-Allow-Origin "*"
 	</IfModule>
 	<Directory />
 		<IfModule disp_apache2.c>
@@ -60,5 +59,4 @@ Include conf.d/variables/custom.vars
     ErrorDocument 502 ${500_PAGE}
     ErrorDocument 503 ${500_PAGE}
     ErrorDocument 504 ${500_PAGE}
-
 </VirtualHost>
