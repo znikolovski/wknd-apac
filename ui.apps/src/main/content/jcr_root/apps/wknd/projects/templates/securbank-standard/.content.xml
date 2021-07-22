@@ -58,18 +58,7 @@
                 consolePath="/aem/experience-fragments.html"
                 name="websites"
                 projectPath="/content/projects/of"
-                suffix="/content/experience-fragments/wknd/offers/en"
-                wizard="/etc/projects/dashboard/gadgets/experiences/mobile"
-                wizard_x005f_x0040_Delete=""/>
-            <Messages
-                jcr:primaryType="nt:unstructured"
-                jcr:title="Messages"
-                sling:resourceType="cq/gui/components/projects/admin/card/linkcard"
-                class="card-page"
-                consolePath="/aem/experience-fragments.html"
-                name="websites"
-                projectPath="/content/projects/of"
-                suffix="/content/experience-fragments/wknd/messages/en"
+                suffix="/content/experience-fragments/wknd/language-masters/en/offers"
                 wizard="/etc/projects/dashboard/gadgets/experiences/mobile"
                 wizard_x005f_x0040_Delete=""/>
         </experiences>
