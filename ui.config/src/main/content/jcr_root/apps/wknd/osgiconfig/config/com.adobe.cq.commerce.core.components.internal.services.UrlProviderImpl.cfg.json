@@ -1,0 +1,4 @@
+{
+  "productPageUrlFormat":"{{page}}.html/{{url_key}}.html#{{variant_sku}}",
+  "categoryPageUrlFormat":"{{page}}.html/{{url_path}}.html"
+}

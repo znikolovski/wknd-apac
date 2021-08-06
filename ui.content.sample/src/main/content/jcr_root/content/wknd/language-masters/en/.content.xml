@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
+    <products/>
+    <search/>
+    <my-account/>
+    <reset-password/>
     <errors/>
     <jcr:content
-        cq:lastModified="{Date}2020-09-30T17:28:29.020-07:00"
+        cq:cifAddressBookPage="/content/wknd/language-masters/en/my-account/address-book"
+        cq:cifCategoryPage="/content/wknd/language-masters/en/products/category-page"
+        cq:cifMyAccountPage="/content/wknd/language-masters/en/my-account"
+        cq:cifProductPage="/content/wknd/language-masters/en/products/product-page"
+        cq:cifSearchResultsPage="/content/wknd/language-masters/en/search"
+        cq:lastModified="{Date}2021-08-06T09:36:41.123+10:00"
         cq:lastModifiedBy="admin"
         cq:tags="[wknd:customer-journey/attract]"
         cq:template="/conf/wknd/settings/wcm/templates/landing-page-template"
@@ -11,7 +20,12 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="WKND Adventures and Travel"
         sling:resourceType="wknd/components/page"
-        pageTitle="Home">
+        navRoot="{Boolean}true"
+        pageTitle="Home"
+        pageType="landing"
+        pwaCachestrategy="staleWhileRevalidate"
+        pwaDisplay="standalone"
+        pwaOrientation="any">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wknd/components/container">

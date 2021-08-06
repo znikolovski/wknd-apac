@@ -40,6 +40,37 @@
     <!-- ====================================================================== -->
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.coderplus.maven.plugins</groupId>
+                <artifactId>copy-rename-maven-plugin</artifactId>
+                <version>1.0.1</version>
+                <executions>
+                    <execution>
+                        <id>copy-cq-conf-content</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Copies the right .content.xml file depending on the profile -->
+                            <sourceFile>${basedir}/src/main/content/jcr_root/conf/wknd/settings/cloudconfigs/commerce/.content-${project.classifier}.xml</sourceFile>
+                            <destinationFile>${basedir}/src/main/content/jcr_root/conf/wknd/settings/cloudconfigs/commerce/.content.xml</destinationFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-cq-var-content</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Copies the right filter.xml file depending on the profile -->
+                            <sourceFile>${basedir}/src/main/content/filter-templates/filter-${project.classifier}.xml</sourceFile>
+                            <destinationFile>${basedir}/src/main/content/META-INF/vault/filter.xml</destinationFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <!-- ====================================================================== -->
             <!-- V A U L T   P A C K A G E   P L U G I N S                              -->
             <!-- ====================================================================== -->
@@ -69,6 +100,12 @@
                             <version>${project.version}</version>
                         </dependency>
                     </dependencies>
+                    <excludes>
+                        <!-- Depending on the profile, one of these two files is copied to .content.xml -->
+                        <!-- but they are both excluded from the content package -->
+                        <exclude>**/.content-cloud.xml</exclude>
+                        <exclude>**/.content-classic.xml</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
             <plugin>

@@ -1,0 +1,15 @@
+{
+  "identifier": "default",
+  "httpMethod": "GET",
+  "url": "https://mark-szulc-mag.adobedemo.com/graphql",
+  "connectionTimeout": 5000,
+  "socketTimeout": 5000,
+  "maxHttpConnections": 20,
+  "requestPoolTimeout": 2000,
+  "acceptSelfSignedCertificates": false,
+  "cacheConfigurations": [
+    "wknd/components/commerce/navigation:true:5:300",
+    "com.adobe.cq.commerce.core.search.services.SearchFilterService:true:10:300",
+    "wknd/components/commerce/breadcrumb:true:1000:300"
+  ]
+}

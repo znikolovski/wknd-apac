@@ -1,6 +1,8 @@
 // Stylesheets
 import './main.scss';
 
+import '../components/index';
+
 // Typescript/Javascript
 import './util.js';
 import './scroll-indicator';
