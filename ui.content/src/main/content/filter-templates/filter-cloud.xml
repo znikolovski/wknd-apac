@@ -2,7 +2,12 @@
 <workspaceFilter version="1.0">
     <filter root="/conf/wknd" mode="update"/>
     <filter root="/content/wknd" mode="merge"/>
+    <filter root="/content/wknd-spa" mode="merge"/>
     <filter root="/content/dam/wknd" mode="merge"/>
     <filter root="/content/experience-fragments/wknd" mode="merge"/>
     <filter root="/etc/map.publish" mode="merge"/>
+    <filter root="/content/dam/collections/public" mode="merge"/>
+    <filter root="/home/groups/projects" mode="merge"/>
+    <filter root="/home/users/system/wefinance-service-user" mode="merge"/>
+    <filter root="/var/workflow/models/conf/wknd"/>
 </workspaceFilter>
