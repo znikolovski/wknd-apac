@@ -2,27 +2,49 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2021-08-09T15:18:56.642+10:00"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2021-08-09T15:18:56.643+10:00"
+        cq:lastRolledoutBy="admin"
         cq:template="/conf/wknd/settings/wcm/templates/content-page-template"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="WKND Demo Store - Search Results"
         sling:resourceType="wknd/components/page-cif"
         hideInNav="true">
         <root
+            cq:lastRolledout="{Date}2021-08-09T15:18:56.636+10:00"
+            cq:lastRolledoutBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wknd/components/container"
             layout="responsiveGrid">
             <container
+                cq:lastRolledout="{Date}2021-08-09T15:18:56.638+10:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wknd/components/container">
                 <container
+                    cq:lastRolledout="{Date}2021-08-09T15:18:56.641+10:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wknd/components/container"
                     layout="responsiveGrid">
                     <searchresults
+                        cq:lastRolledout="{Date}2021-08-09T15:18:56.643+10:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="wknd/components/commerce/searchresults"/>
                 </container>
             </container>
         </root>
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}true"
+            cq:master="/content/wknd/language-masters/en/search"
+            cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
+            jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
 </jcr:root>

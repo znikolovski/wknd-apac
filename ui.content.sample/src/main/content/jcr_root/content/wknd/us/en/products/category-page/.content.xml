@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-08-09T15:18:56.658+10:00"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2021-08-09T15:18:56.660+10:00"
+        cq:lastRolledoutBy="admin"
+        cq:template="/conf/wknd/settings/wcm/templates/category-page"
+        jcr:mixinTypes="[cq:LiveRelationship]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="WKND Demo Store - Category page"
+        sling:resourceType="wknd/components/page-cif">
+        <root
+            cq:lastRolledout="{Date}2021-08-09T15:18:56.651+10:00"
+            cq:lastRolledoutBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wknd/components/container"
+            layout="responsiveGrid">
+            <container
+                cq:lastRolledout="{Date}2021-08-09T15:18:56.653+10:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wknd/components/container">
+                <container
+                    cq:lastRolledout="{Date}2021-08-09T15:18:56.656+10:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/container"
+                    layout="responsiveGrid">
+                    <productlist
+                        cq:lastRolledout="{Date}2021-08-09T15:18:56.659+10:00"
+                        cq:lastRolledoutBy="admin"
+                        cq:styleIds="[1570700958199]"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wknd/components/commerce/productlist"/>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>
