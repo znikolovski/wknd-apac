@@ -850,6 +850,47 @@ Bundle-DocURL:
                 <version>${core.wcm.components.version}</version>
             </dependency>
 
+        <!-- Adobe CIF Dependencies -->
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-apps</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-extensions-product-recs-content</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-config</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-core</artifactId>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-extensions-product-recs-bundle</artifactId>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>graphql-client</artifactId>
+                <version>${graphql.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>magento-graphql</artifactId>
+                <version>${magento.graphql.version}</version>
+            </dependency>
+
+
             <!-- Testing -->
             <dependency>
                 <groupId>org.junit</groupId>

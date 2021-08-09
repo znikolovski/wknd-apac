@@ -271,6 +271,11 @@
                                     <artifactId>core.wcm.components.core</artifactId>
                                     <target>/apps/wknd-vendor-packages/application/install</target>
                                 </embedded>
+                                <embedded>
+                                    <groupId>com.adobe.commerce.cif</groupId>
+                                    <artifactId>graphql-client</artifactId>
+                                    <target>/apps/venia-vendor-packages/application/install</target>
+                                </embedded>
                             </embeddeds>
                         </configuration>
                     </plugin>
