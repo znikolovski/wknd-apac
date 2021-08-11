@@ -2,46 +2,46 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2021-08-09T15:16:48.650+10:00"
-        cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2021-08-09T15:18:56.620+10:00"
-        cq:lastRolledoutBy="admin"
+        cq:lastModified="{Date}2021-08-10T23:33:18.328Z"
+        cq:lastModifiedBy="nikolovs@adobe.com"
+        cq:lastRolledout="{Date}2021-08-10T23:33:18.329Z"
+        cq:lastRolledoutBy="nikolovs@adobe.com"
         cq:template="/conf/wknd/settings/wcm/templates/content-page-template"
         jcr:mixinTypes="[cq:LiveRelationship]"
         jcr:primaryType="cq:PageContent"
         jcr:title="My Account Details"
         sling:resourceType="wknd/components/page-cif">
         <root
-            cq:lastRolledout="{Date}2021-08-09T15:16:48.640+10:00"
-            cq:lastRolledoutBy="admin"
+            cq:lastRolledout="{Date}2021-08-10T23:33:18.312Z"
+            cq:lastRolledoutBy="nikolovs@adobe.com"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wknd/components/container">
             <container
-                cq:lastRolledout="{Date}2021-08-09T15:16:48.644+10:00"
-                cq:lastRolledoutBy="admin"
+                cq:lastRolledout="{Date}2021-08-10T23:33:18.319Z"
+                cq:lastRolledoutBy="nikolovs@adobe.com"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wknd/components/container">
                 <title
-                    cq:lastRolledout="{Date}2021-08-09T15:16:48.646+10:00"
-                    cq:lastRolledoutBy="admin"
+                    cq:lastRolledout="{Date}2021-08-10T23:33:18.322Z"
+                    cq:lastRolledoutBy="nikolovs@adobe.com"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wknd/components/title"/>
                 <container
-                    cq:lastRolledout="{Date}2021-08-09T15:16:48.648+10:00"
-                    cq:lastRolledoutBy="admin"
+                    cq:lastRolledout="{Date}2021-08-10T23:33:18.324Z"
+                    cq:lastRolledoutBy="nikolovs@adobe.com"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wknd/components/container"
                     layout="responsiveGrid">
                     <accountdetails
-                        cq:lastRolledout="{Date}2021-08-09T15:16:48.650+10:00"
-                        cq:lastRolledoutBy="admin"
+                        cq:lastRolledout="{Date}2021-08-10T23:33:18.329Z"
+                        cq:lastRolledoutBy="nikolovs@adobe.com"
                         jcr:created="{Date}2020-09-16T18:17:59.971+03:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2021-08-09T15:16:48.649+10:00"
+                        jcr:lastModified="{Date}2021-08-10T23:33:18.327Z"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
