@@ -1,0 +1,130 @@
+<sly data-sly-use.edm="com.adobe.aem.guides.wknd.core.models.InlineExperienceFragmentModel">
+	<sly data-sly-test.isEdm="${edm.mode == 'edm'}">
+		<style type="text/css">
+			.inlineexperiencefragment .container {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+			.inlineexperiencefragment .root.responsivegrid {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+			.inlineexperiencefragment .cf-offer.contentfragment.aem-GridColumn.aem-GridColumn--default--12 {
+                float: none !important;
+                clear: both !important;
+            }
+
+			.inlineexperiencefragment .offer-web-hero.we-HeroImage.full-width.ratio-16by9 {
+                width: fit-content !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            #ac-column-left-cell .inlineexperiencefragment .container {
+                width: 100% !important;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+                padding-top: 0px !important;
+            }
+            #ac-column-left-cell .inlineexperiencefragment .root.responsivegrid {
+                width: 100% !important;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+            #ac-column-left-cell .offer-web-banner.full-width {
+                width: 100% !important;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+            .inlineexperiencefragment .we-HeroImage-wrapper {
+                max-width: 430px !important;
+            }
+		</style>
+    	${edm.inlineHtml @ context='unsafe'}
+	</sly>
+	<sly data-sly-test="${!isEdm}">
+		<script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(event) { 
+              	document.getElementById("copyButton").addEventListener("click", function() {
+                    copyToClipboardMsg(document.getElementById("copyTarget"), "msg");
+                });
+            });
+
+            function copyToClipboardMsg(elem, msgElem) {
+            	var succeed = copyToClipboard(elem);
+                var msg;
+                if (!succeed) {
+                    msg = "Copy not supported or blocked.  Press Ctrl+c to copy."
+                } else {
+                    msg = "Text copied to the clipboard."
+                }
+                if (typeof msgElem === "string") {
+                    msgElem = document.getElementById(msgElem);
+                }
+                msgElem.innerHTML = msg;
+                setTimeout(function() {
+                    msgElem.innerHTML = "";
+                }, 2000);
+            }
+
+			
+			function copyToClipboard(elem) {
+				  // create hidden text element, if it doesn't already exist
+			    var targetId = "_hiddenCopyText_";
+			    var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+			    var origSelectionStart, origSelectionEnd;
+			    if (isInput) {
+			        // can just use the original source element for the selection and copy
+			        target = elem;
+			        origSelectionStart = elem.selectionStart;
+			        origSelectionEnd = elem.selectionEnd;
+			    } else {
+			        // must use a temporary form element for the selection and copy
+			        target = document.getElementById(targetId);
+			        if (!target) {
+			            var target = document.createElement("textarea");
+			            target.style.position = "absolute";
+			            target.style.left = "-9999px";
+			            target.style.top = "0";
+			            target.id = targetId;
+			            document.body.appendChild(target);
+			        }
+			        target.textContent = elem.textContent;
+			    }
+			    // select the content
+			    var currentFocus = document.activeElement;
+			    target.focus();
+			    target.setSelectionRange(0, target.value.length);
+			    
+			    // copy the selection
+			    var succeed;
+			    try {
+			    	  succeed = document.execCommand("copy");
+			    } catch(e) {
+			        succeed = false;
+			    }
+			    // restore original focus
+			    if (currentFocus && typeof currentFocus.focus === "function") {
+			        currentFocus.focus();
+			    }
+			    
+			    if (isInput) {
+			        // restore prior selection
+			        elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+			    } else {
+			        // clear temporary content
+			        target.textContent = "";
+			    }
+			    return succeed;
+			}
+		</script>
+		<div style="clear: both; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; margin: 1em 0; background-color: #000000; color: green;">
+			<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">
+		    	<code style="font-family: Courier, 'New Courier', monospace; font-size: 12px;" id="copyTarget">${edm.inlineHtml}</code>
+		    </pre>
+		</div>
+		<button id="copyButton">Copy</button><span style="padding-left: 15px; font-family: adobe-clean,Helvetica,Arial,sans-serif; font-weight: normal; font-style: normal;" id="msg"></span><br>
+	</sly>
+</sly>
+

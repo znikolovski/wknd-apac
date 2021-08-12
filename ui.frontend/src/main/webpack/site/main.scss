@@ -3,6 +3,8 @@
 @import '../base/sass/shared';
 @import './google-webfonts.scss';
 
+@import url('~@adobe/aem-core-cif-react-components/dist/main.css');
+@import url('~@adobe/aem-core-cif-product-recs-extension/dist/main.css');
 
 /* Elements */
 @import './elements.scss';
@@ -29,9 +31,19 @@
 @import '../components/text/scss/text.scss';
 @import '../components/title/scss/title.scss';
 
-/* Commerce */
-@import '../components/productteaser/scss/styles.scss';
-
+/* CIF */
+@import '../components/commerce/carousel';
+@import '../components/commerce/categorycarousel';
+@import '../components/commerce/featuredcategorylist';
+@import '../components/commerce/loadingindicator';
+@import '../components/commerce/minicart-flow';
+@import '../components/commerce/minicart-icons';
+@import '../components/commerce/minicart';
+@import '../components/commerce/product';
+@import '../components/commerce/productcarousel';
+@import '../components/commerce/productcollection';
+@import '../components/commerce/productlist';
+@import '../components/commerce/productteaser';
 
 /* Form */
 @import '../components/form/sign-in-form/scss/sign-in-form.scss';

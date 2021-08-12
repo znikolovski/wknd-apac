@@ -12,7 +12,7 @@ const SOURCE_ROOT = __dirname + '/src/main/webpack';
 
 module.exports = {
         resolve: {
-            extensions: ['.js', '.ts'],
+            extensions: ['.webpack.js', '.web.js', '.mjs', '.json','.js', '.ts'],
             plugins: [new TSConfigPathsPlugin({
                 configFile: "./tsconfig.json"
             })]
@@ -49,13 +49,19 @@ module.exports = {
                     ]
                 },
                 {
+                    test: /\.js$/,
+                    include: /src/,
+                    loader: ['babel-loader']
+                },
+                {
                     test: /\.scss$/,
                     use: [
                         MiniCssExtractPlugin.loader,
                         {
                             loader: "css-loader",
                             options: {
-                                url: false
+                                url: false,
+                                import: true
                             }
                         },
                         {
@@ -83,6 +89,11 @@ module.exports = {
                     ]
                 },
                 {
+                    test: /\.mjs$/,
+                    include: /node_modules/,
+                    type: "javascript/auto",
+                },
+                {
                     test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
                     use: {
                       loader: 'file-loader',
@@ -104,7 +115,9 @@ module.exports = {
                 config: './tslint.json'
             }),
             new CopyWebpackPlugin([
-                { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site/resources' }
+                { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site/resources' },
+                { from: path.resolve(__dirname, 'node_modules/@adobe/aem-core-cif-react-components/i18n'), to: './clientlib-site/resources/i18n' },
+                { from: path.resolve(__dirname, 'node_modules/@adobe/aem-core-cif-product-recs-extension/i18n'), to: './clientlib-site/resources/i18n' }
             ])
         ],
         stats: {

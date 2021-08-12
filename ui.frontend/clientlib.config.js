@@ -10,6 +10,7 @@ module.exports = {
             name: "clientlib-site",
             allowProxy: true,
             categories: ["wknd.site"],
+            dependencies: ['aem-core-cif-react-components'],
             serializationFormat: "xml",
             cssProcessor : ["default:none", "min:none"],
             jsProcessor: ["default:none", "min:none"],

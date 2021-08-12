@@ -59,7 +59,23 @@
                         </repositoryStructurePackage>
                     </repositoryStructurePackages>
                     <dependencies>
+                        <dependency>
+                            <groupId>com.adobe.commerce.cif</groupId>
+                            <artifactId>core-cif-components-apps</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.adobe.commerce.cif</groupId>
+                            <artifactId>core-cif-components-config</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.adobe.commerce.cif</groupId>
+                            <artifactId>core-cif-components-extensions-product-recs-content</artifactId>
+                        </dependency>
                     </dependencies>
+                    <excludes>
+                        <exclude>**/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl-default.config</exclude>
+                        <exclude>**/com.adobe.cq.commerce.graphql.magento.GraphqlDataServiceImpl-default.config</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
             <plugin>
@@ -127,7 +143,7 @@
             <artifactId>aem-sdk-api</artifactId>
         </dependency>
 
-                <!-- Adobe CIF Dependencies -->
+        <!-- Adobe CIF Dependencies -->
         <dependency>
             <groupId>com.adobe.commerce.cif</groupId>
             <artifactId>core-cif-components-apps</artifactId>
@@ -155,7 +171,6 @@
             <groupId>com.adobe.commerce.cif</groupId>
             <artifactId>magento-graphql</artifactId>
         </dependency>
-        
 
         <!-- HTL dependencies needed for the HTL Maven Plugin source code generation -->
         <dependency>

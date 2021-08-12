@@ -15,6 +15,7 @@
   "maxage:Integer":1800,
   "alloworiginregexp":[
     "http://localhost:.*",
+    "https://node.au.ngrok.io",
     "https://delightful-moss-09b85441e.azurestaticapps.net",
     "https://polite-water-082fe1e00.azurestaticapps.net",
     "https://white-moss-0f6103d1e.azurestaticapps.net"
@@ -29,6 +30,7 @@
     "content-type",
     "Access-Control-Request-Method",
     "Access-Control-Request-Headers",
+    "Access-Control-Request-Origin",
     "authorization"
   ]
 }

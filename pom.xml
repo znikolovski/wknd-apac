@@ -61,12 +61,22 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spa.project.core.version>1.2.0</spa.project.core.version>
         <aem.sdk.api>2020.11.4506.20201112T235200Z-201028</aem.sdk.api>
-        <componentGroupName>WKND Site</componentGroupName>
-        <core.wcm.components.version>2.16.4</core.wcm.components.version>
         <core.cif.components.version>2.0.0</core.cif.components.version>
         <graphql.client.version>1.7.2</graphql.client.version>
         <magento.graphql.version>9.0.0-magento242ee</magento.graphql.version>
+        <componentGroupName>WKND Site</componentGroupName>
+        <core.wcm.components.version>2.17.2</core.wcm.components.version>
         <uber.jar.version>6.4.4</uber.jar.version>
+        <xerces>2.6.2</xerces>
+        <xerces.bundle>2.12.0_1</xerces.bundle>
+        <xmlresolver>1.2_5</xmlresolver>
+        <xml.apis>1.4.01</xml.apis>
+        <cssbox>4.14</cssbox>
+        <jsoup>1.5.2_2</jsoup>
+        <nekohtml>1.9.22</nekohtml>
+        <jstyleparser>3.2</jstyleparser>
+        <unbescape>1.1.5.RELEASE</unbescape>
+        <project.classifier>cloud</project.classifier>
     </properties>
 
     <organization>
@@ -706,20 +716,113 @@ Bundle-DocURL:
     <dependencyManagement>
         <dependencies>
 
-        <!-- SPA Project Core (includes hierarchy page model) -->
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.ui.apps</artifactId>
-            <type>zip</type>
-            <version>${spa.project.core.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.core</artifactId>
-            <version>${spa.project.core.version}</version>
-        </dependency>
+            <!-- SPA Project Core (includes hierarchy page model) -->
+            <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>spa.project.core.ui.apps</artifactId>
+                <type>zip</type>
+                <version>${spa.project.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>spa.project.core.core</artifactId>
+                <version>${spa.project.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr.annotations</artifactId>
+                <version>1.9.8</version>
+                <scope>provided</scope>
+            </dependency>
 
-        <!-- AEM as a Cloud Service SDK -->
+            <!-- Adobe CIF Dependencies -->
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-apps</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-extensions-product-recs-content</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-config</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-core</artifactId>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-extensions-product-recs-bundle</artifactId>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>graphql-client</artifactId>
+                <version>${graphql.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>magento-graphql</artifactId>
+                <version>${magento.graphql.version}</version>
+            </dependency>
+
+            <!-- CSS Parser -->
+            <dependency>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-runtime</artifactId>
+                <version>4.5.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.xmlresolver</artifactId>
+                <version>1.2_5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.xerces</artifactId>
+                <version>2.12.0_1</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>1.4.01</version>
+            </dependency>
+			<dependency>
+				<groupId>net.sf.cssbox</groupId>
+				<artifactId>cssbox</artifactId>
+				<version>4.14</version>
+			</dependency>
+            <dependency>
+				<groupId>org.apache.servicemix.bundles</groupId>
+				<artifactId>org.apache.servicemix.bundles.jsoup</artifactId>
+				<version>1.5.2_2</version>
+			</dependency>
+            <dependency>
+				<groupId>net.sourceforge.nekohtml</groupId>
+				<artifactId>nekohtml</artifactId>
+				<version>1.9.22</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.cssbox</groupId>
+				<artifactId>jstyleparser</artifactId>
+				<version>3.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.unbescape</groupId>
+				<artifactId>unbescape</artifactId>
+				<version>1.1.5.RELEASE</version>
+			</dependency>
+
+            <!-- AEM as a Cloud Service SDK -->
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>aem-sdk-api</artifactId>
