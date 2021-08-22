@@ -17,7 +17,7 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Catalog Page"
+        jcr:title="Shop"
         jcr:uuid="3072d6e8-9386-4a78-9c93-2ceb8e924952"
         sling:resourceType="wknd/components/commerce/catalogpage"
         pwaCachestrategy="staleWhileRevalidate"
