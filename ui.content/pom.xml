@@ -46,18 +46,6 @@
                 <version>1.0.1</version>
                 <executions>
                     <execution>
-                        <id>copy-cq-conf-content</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <!-- Copies the right .content.xml file depending on the profile -->
-                            <sourceFile>${basedir}/src/main/content/jcr_root/conf/wknd/settings/cloudconfigs/commerce/.content-${project.classifier}.xml</sourceFile>
-                            <destinationFile>${basedir}/src/main/content/jcr_root/conf/wknd/settings/cloudconfigs/commerce/.content.xml</destinationFile>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>copy-cq-var-content</id>
                         <phase>generate-resources</phase>
                         <goals>
