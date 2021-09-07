@@ -1,0 +1,11 @@
+{
+  articleList {
+    items{
+        _path
+        author
+        main {
+            json
+        }
+    }
+  }
+}

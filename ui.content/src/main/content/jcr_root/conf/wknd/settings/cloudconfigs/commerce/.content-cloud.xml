@@ -11,5 +11,5 @@
         magentoRootCategoryId="Mg=="
         magentoGraphqlEndpoint="/api/graphql"
         magentoStore="default"
-        enableUIDSupport="false"/>
+        enableUIDSupport="true"/>
 </jcr:root>
