@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="b9257303-66c7-4fa1-a944-141373e078de">
+    <jcr:content
+        cq:lastModified="{Date}2020-10-05T15:12:17.424+05:30"
+        cq:lastModifiedBy="admin"
+        dam:assetState="processed"
+        dam:processingId="66295574-85e1-41fb-a7a2-a648937881c0"
+        dam:processingRenditions="[cq5dam.thumbnail.48.48.png,cqdam.text.txt,cq5dam.thumbnail.319.319.png,cq5dam.web.1280.1280.jpeg,cqdam.metadata.xml,cq5dam.thumbnail.140.100.png]"
+        dam:processingRequestedDate="{Date}2020-08-31T13:15:22.473Z"
+        dam:runPostProcess="{Boolean}true"
+        jcr:lastModified="{Date}2020-09-28T07:26:20.040+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <dam:failedRenditions jcr:primaryType="nt:unstructured">
+            <cq5dam.thumbnail.48.48.png
+                jcr:primaryType="nt:unstructured"
+                message="Format png is not supported for ttf files"
+                reason="RenditionFormatUnsupported"/>
+            <cq5dam.thumbnail.140.100.png
+                jcr:primaryType="nt:unstructured"
+                message="Format png is not supported for ttf files"
+                reason="RenditionFormatUnsupported"/>
+            <cq5dam.web.1280.1280.jpeg
+                jcr:primaryType="nt:unstructured"
+                message="Format jpeg is not supported for ttf files"
+                reason="RenditionFormatUnsupported"/>
+            <cq5dam.thumbnail.319.319.png
+                jcr:primaryType="nt:unstructured"
+                message="Format png is not supported for ttf files"
+                reason="RenditionFormatUnsupported"/>
+        </dam:failedRenditions>
+        <metadata
+            dam:extracted="{Date}2020-09-28T07:26:16.992+05:30"
+            dam:sha1="6dd57896b919d94ebda21d002ca417ed6c17780c"
+            dam:size="{Long}659716"
+            dc:format="application/x-font-ttf"
+            dc:modified="{Date}2020-09-03T19:27:43.712+05:30"
+            jcr:lastModified="{Date}2020-09-28T07:26:20.040+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

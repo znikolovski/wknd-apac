@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    dam:processingId="f7de0bb5-bea8-4740-9410-4a7623cc502f"
+    dam:sha1="3083e4ba14082d3f19509988e33c1dad681e8633"
+    dam:size="{Long}21"
+    dc:format="application/octet-stream"
+    jcr:primaryType="nt:unstructured"/>

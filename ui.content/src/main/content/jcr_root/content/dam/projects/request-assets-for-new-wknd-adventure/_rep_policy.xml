@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:ACL">
+    <deny
+        jcr:primaryType="rep:DenyACE"
+        rep:principalName="projects-administrators"
+        rep:privileges="{Name}[jcr:all]"/>
+    <deny1
+        jcr:primaryType="rep:DenyACE"
+        rep:principalName="projects-users"
+        rep:privileges="{Name}[jcr:all]"/>
+    <allow2
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="projects-request_assets_for_new_wknd_adventure"
+        rep:privileges="{Name}[jcr:read,jcr:readAccessControl]"/>
+    <allow3
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="projects-request_assets_for_new_wknd_adventure-owner"
+        rep:privileges="{Name}[jcr:all]"/>
+    <allow4
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="projects-request_assets_for_new_wknd_adventure-editor"
+        rep:privileges="{Name}[jcr:versionManagement,rep:write]"/>
+</jcr:root>

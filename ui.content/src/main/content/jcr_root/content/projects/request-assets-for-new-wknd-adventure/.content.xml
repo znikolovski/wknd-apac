@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[cq:Project,mix:created,mix:lastModified,rep:AccessControllable]"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/projects/admin/card/projectcard"
+    role_editor="projects-request_assets_for_new_wknd_adventure-editor"
+    role_observer="projects-request_assets_for_new_wknd_adventure"
+    role_owner="projects-request_assets_for_new_wknd_adventure-owner">
+    <jcr:content
+        cq:template="/apps/wknd/projects/templates/wknd-assets-project"
+        jcr:description=""
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Request Assets for New WKND Adventure"
+        sling:resourceType="cq/gui/components/projects/admin/card/projectcontent"
+        active="{Boolean}true"
+        coverUrl="/content/dam/projects/request-assets-for-new-wknd-adventure/cover"
+        damFolderPath="/content/dam/projects/request-assets-for-new-wknd-adventure"
+        detailsHref="/projects/details.html"
+        project.startDate="{Date}2020-10-08T12:19:01.438+05:30"
+        targetPath="/content/dam/wknd-assets/asset-library/approved-assets"
+        taskid=""
+        templateorproject="/apps/wknd/projects/templates/wknd-assets-project"
+        user=""
+        username="">
+        <links jcr:primaryType="nt:unstructured"/>
+        <dashboard jcr:primaryType="nt:unstructured">
+            <gadgets jcr:primaryType="nt:unstructured">
+                <team
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Team"
+                    sling:resourceType="cq/gui/components/projects/admin/pod/teampod"
+                    cardWeight="60"/>
+                <projectinfo
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Project Info"
+                    sling:resourceType="cq/gui/components/projects/admin/pod/projectinfopod"
+                    cardWeight="80"/>
+                <asset
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Assets"
+                    sling:resourceType="cq/gui/components/projects/admin/pod/assetpod"
+                    cardWeight="90"/>
+                <work
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Workflows"
+                    sling:resourceType="cq/gui/components/projects/admin/pod/workpod"
+                    cardWeight="100"/>
+            </gadgets>
+        </dashboard>
+    </jcr:content>
+</jcr:root>

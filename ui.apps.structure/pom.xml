@@ -35,6 +35,9 @@
                         <filter><root>/apps</root></filter>
                         <filter><root>/apps/wknd</root></filter>
 
+                        <!-- Custom workflow scripts -->
+                        <filter><root>/apps/workflow</root></filter>
+
                         <!-- Common overlay roots -->
                         <filter><root>/apps/sling</root></filter>
                         <filter><root>/apps/cq</root></filter>

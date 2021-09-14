@@ -1,0 +1,9 @@
+/*
+ * 
+ * This implementation evaluates the initiator of a workflow instance as the
+ * dynamic participant.
+ * 
+ */
+function getParticipant() {
+	return workItem.getWorkflow().getInitiator();
+}

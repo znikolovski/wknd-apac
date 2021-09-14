@@ -1,0 +1,14 @@
+{
+    "skip.token.refresh":[
+      "/libs/granite/csrf/token.json",
+      "/mnt/overlay/granite/ui/content/shell/header/actions/pulse.data.json"
+    ],
+    "token.samesite.cookie.attr":"None",
+    "token.alternate.url":"",
+    "path":"/",
+    "useragents.samesite.exempt.attr":[
+      ""
+    ],
+    "token.required.attr":"none",
+    "token.encapsulated":false
+  }

@@ -2,5 +2,8 @@
 <workspaceFilter version="1.0">
     <filter root="/apps/wknd"/>
     <filter root="/apps/wknd/i18n"/>
+    <filter root="/apps/workflow"/>
+    <filter root="/apps/workflow/scripts"/>
+    <filter root="/apps/cq"/>
     <filter root="/apps/msm/wknd_blueprint" mode="merge"/>
 </workspaceFilter>

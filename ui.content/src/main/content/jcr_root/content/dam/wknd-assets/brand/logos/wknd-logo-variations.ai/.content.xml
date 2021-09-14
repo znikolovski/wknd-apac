@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:illustrator="http://ns.adobe.com/illustrator/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpG="http://ns.adobe.com/xap/1.0/g/" xmlns:xmpGImg="http://ns.adobe.com/xap/1.0/g/img/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#" xmlns:xmpTPg="http://ns.adobe.com/xap/1.0/t/pg/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="ab68313a-58f3-4dc6-9a3f-f81bd8698f77">
+    <jcr:content
+        cq:lastModified="{Date}2020-10-05T15:12:17.508+05:30"
+        cq:lastModifiedBy="admin"
+        cq:name="wknd-logo-variations.ai"
+        cq:parentPath="/content/dam/wknd-demo-assets1/brand/logos"
+        dam:assetState="processed"
+        dam:processingId="08e15414-3e1e-4f78-a1aa-281eb0367ce6"
+        dam:processingRenditions="[cqdam.text.txt,cq5dam.thumbnail.48.48.png,cqdam.metadata.xml,cq5dam.web.1280.1280.jpeg,cq5dam.thumbnail.140.100.png,cq5dam.thumbnail.319.319.png]"
+        dam:processingRequestedDate="{Date}2020-08-31T13:15:37.450Z"
+        dam:runPostProcess="{Boolean}true"
+        jcr:lastModified="{Date}2020-09-28T07:27:22.066+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2020-09-28T07:26:17.063+05:30"
+            dam:numPages="{Long}3"
+            dam:Physicalheightininches="{Decimal}4.166666666666667"
+            dam:Physicalwidthininches="{Decimal}8.333333333333334"
+            dam:Producer="Adobe PDF library 15.00"
+            dam:sha1="2b0f5e0d05a7e1ad0c5be7280fb846787823a28a"
+            dam:size="{Long}49900"
+            dc:format="application/postscript"
+            dc:modified="{Date}2020-09-03T19:27:39.240+05:30"
+            dc:title="wknd-logo-variations"
+            illustrator:CreatorSubTool="AIRobin"
+            illustrator:Type="Document"
+            jcr:lastModified="{Date}2020-09-28T07:27:19.796+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="wknd-logo-variations"
+            pdf:Producer="Adobe PDF library 15.00"
+            xmp:CreateDate="{Date}2020-08-31T12:50:51.000+05:30"
+            xmp:CreatorTool="Adobe Illustrator 24.2 (Macintosh)"
+            xmp:MetadataDate="{Date}2020-09-03T19:27:46.000+05:30"
+            xmp:ModifyDate="{Date}2020-09-03T19:27:46.000+05:30"
+            xmpMM:DocumentID="uuid:88185eaa-a550-8b48-a5e6-1fa14bd1c384"
+            xmpMM:InstanceID="uuid:9db30549-e6c4-274c-9200-a8e84b5bbf45"
+            xmpMM:RenditionClass="proof:pdf"
+            xmpTPg:HasVisibleOverprint="False"
+            xmpTPg:HasVisibleTransparency="False"
+            xmpTPg:NPages="{Long}1"
+            xmpTPg:PlateNames="[Cyan,Magenta,Yellow,Black]"
+            xmpTPg:PlateNames_xmpArrayType="rdf:Seq">
+            <xmpTPg:MaxPageSize
+                jcr:primaryType="nt:unstructured"
+                stDim:h="{Decimal}300.000000"
+                stDim:unit="Points"
+                stDim:w="{Decimal}600.000000"
+                xmpNodeType="xmpStruct"/>
+            <xmpTPg:SwatchGroups
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}1"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    xmpG:groupName="Default Swatch Group"
+                    xmpG:groupType="{Long}0"
+                    xmpNodeType="xmpStruct"/>
+            </xmpTPg:SwatchGroups>
+            <xmp:Thumbnails
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}1"
+                xmpArrayType="rdf:Alt"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    xmpGImg:format="JPEG"
+                    xmpGImg:height="{Long}36"
+                    xmpGImg:image="/9j/4AAQSkZJRgABAgEASABIAAD/7QAsUGhvdG9zaG9wIDMuMAA4QklNA+0AAAAAABAASAAAAAEA&#xa;AQBIAAAAAQAB/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoK&#xa;DBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8f&#xa;Hx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgAJAEAAwER&#xa;AAIRAQMRAf/EAaIAAAAHAQEBAQEAAAAAAAAAAAQFAwIGAQAHCAkKCwEAAgIDAQEBAQEAAAAAAAAA&#xa;AQACAwQFBgcICQoLEAACAQMDAgQCBgcDBAIGAnMBAgMRBAAFIRIxQVEGE2EicYEUMpGhBxWxQiPB&#xa;UtHhMxZi8CRygvElQzRTkqKyY3PCNUQnk6OzNhdUZHTD0uIIJoMJChgZhJRFRqS0VtNVKBry4/PE&#xa;1OT0ZXWFlaW1xdXl9WZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo+Ck5SVlpeYmZ&#xa;qbnJ2en5KjpKWmp6ipqqusra6voRAAICAQIDBQUEBQYECAMDbQEAAhEDBCESMUEFURNhIgZxgZEy&#xa;obHwFMHR4SNCFVJicvEzJDRDghaSUyWiY7LCB3PSNeJEgxdUkwgJChgZJjZFGidkdFU38qOzwygp&#xa;0+PzhJSktMTU5PRldYWVpbXF1eX1RlZmdoaWprbG1ub2R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo&#xa;+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8A9U4q7FXYq7FXYq7FXYq7&#xa;FXYq7FXYqk/mrzZo3lbTU1TWZHg04zx28t0qM6QmY8VkmKg8Iw1AXOwriqbRyRyxrJGweNwGR1IK&#xa;lSKggjqDirBPyleR/wDGfqMzcfNOpKvIk0UelQCvbFWe4q7FXYq7FXYq7FXYq7FXYq7FXYqko86+&#xa;VTraaEupQtrD3DWgsVJaQTJbm6ZGAB4/uFLgtQHtvirz3W/zd8x2X5w6d5Nh0G9dJYbgG2VYSlwr&#xa;SQ+hfLcE/BFHGs/MeIoRWlFXrmKuxV2KuxV2KvifVvz4/MPRNE07TrnXrmTWdM8x6hBqcpKGSSzs&#xa;xbBI5Nvss7yj7Pb6MVZdq/5nefZfy/8AzS80WWuXCQ2fmGGw8vyRspEFulyQyxHcfHFKlcVZz+UH&#xa;m7zl561XzP51lv7iDyhaQtp/l/TjRVlmhjBlunFK8tq+FXI/ZxV5D5f/AD38+Xv5TXgl124PmKx8&#xa;wWCm+JUStY3kUg9LpQqJIGr8xirKvPnmL82p/PH5lXXl7zdNpll5Ijtb2HS2RZIZY3hDyICwYLTg&#xa;zUKsGJptir6G/L/zDc+Y/I2g69dIsd1qdhb3NwibIJZIwz8QSfh5Vpiqf4q7FXYq7FXYqpXVrbXd&#xa;tLa3UST206NHPBIodHRxRlZTUEEGhBxV47puleZbXX9Q/LTyLrM1hoGklLrU9XuFS5m06O7UNDpV&#xa;h6laniDJzk5emjAdaVVS3864tf8Ay48l6Lq2keY9Yult9ft5NWmvblpZJbaSMh43MaxD0+US/Dx/&#xa;aOKvHtU/PTzq6fmNa2uu3gnvdWgTy6VmYG2hW9mJjt2r8CtFxU06gYqzD8y/zU87eU/zH8zeWLDU&#xa;ry91G90rTtM0C1Ds6rf3KQLJcIp2EhXmQf5yMVTD8+/Mfn38tfKP5eRWvmC8n1WGSZtYumndvrks&#xa;fpSuspJq8fN2VVPRdsVQ3nL8zPM0+q/mteaPrd5Fptto2iX+hLHKyrbi8js5GeIA/AXEprTxxVNf&#xa;yp1z8yfL/wCZvlvy5r3maXzLpHm7QxrCfW1Pq27mJpQqszSN8JjK7NRga8QcVfR2KuxV2KuxV2Kq&#xa;F9fWlhY3F9eSCG0tInnuJmrRI41LOxp4KK4q8k1v8qhqOvQ/mv5I16XUvMyn65pkV29tJptzbvG8&#xa;Ztg0UUcihoZWSN2kYr+IVSjUfOKedfN1rJoxuNK8wQeWPMFpdWLkxXmn6gpteKNShBV6MjjZhv7Y&#xa;q8o8v/n95oHmD8s/retXUtqtuY/MMTTMVnkkv7m3Uz7HkREkbVI2xVGL+ZnnvSvyr8jeadU8wag4&#xa;1PzJcTahKJZC8ljAyRvBQn4k/cvRelScVZ95W17z/qP5NeffzI1TVLu3uNYgvLny5ZLKwjsbWAOI&#xa;2hG3Fi21aVIUHvirE/JX5vea9c0z8qYW1m6N6fMFxpmvt6rcruMPBLF6/wDOPSn47+BxVJ9S87fm&#xa;3pMXmbz/AGPm65lsdA8zzaUfL90Xlt3hMhZftMV40ITjxBA3DVxVjn5p/l9Nc/nL+Ytqitw060u/&#xa;MQoDSkkcVyzbEftT0J8cVZRDpRsv+cLLu6YUfVdTF4x7ki+S3qfot8VZj+Q8115I8w+cPyq1GZpI&#xa;vqx1nQ5n+H1I5YF9QAbipRkNB3V8VeDXnlmex8geR/MtrVbXWZ7iw1FR9kz2l80kLt/lMjlR7Lir&#xa;1Lz5508veXvOf532Gp3Bjvdds7Sz0u3VGZpZWtuJ3A4qE5gsWI26VO2Kvo38obK6svyt8p2t3E0N&#xa;zFpVoJYnFGUmFTxYHoRXcYqy7FXYq7FXYq7FWDXn5e+ap7yeeL8wNat45ZHdLdItOKRqzEhFrak0&#xa;XoK4qlf5fyroX5k+cvLGozO+oanNb63pt3PxD3ls1rFbTFeIRawywEMFApXpTFW/+cktHGq/kt5l&#xa;iC1ktoY7yM+H1aZJXP8AyLVhir5F8m+QifNv5WSFaxeY5Y7m4UkdLfVJo5Kbf74iU4qz/wDPPyhq&#xa;Ou/nJ551PTZni1DyxpFlrFsqdWMAtuZr24RM7j3AxVlv5h+YNM/MeL8ltRnRWtddvpYNRgXorv6M&#xa;F1EK+D8gPbFXlGhWGqaboX5v6VqjF73StPs9OdmFPhsr6G2jp7cIlp7Yq9R/LrzRpHm387fILaA7&#xa;3sHlzyqtpq1wsbLHFMLd1ZasBXi8qrXpXpir6gxV2KuxV2KuxVIvO3lkeZPLl3pizyW1yyM9nNFP&#xa;cWwW4VSIjI1s8UjR8j8S8txiry4flB+XH5ceRUuNf1rVylqP38ttqN5bfWLqU19O3tbeVFLyPsii&#xa;p/mPU4qkf5W+S9V0T85tP1zVIZrG48w6RqEsGlXNxNeXFrbQS2qwrcXE7yO0zByXUbL08cVfOWsf&#xa;l9JbJ+YMyxkJ5Q1GK1JANAs13Lbr02oeApir1z8xvKcR/Jz8mPL0zNDHqVzbidlFHT9IqsrkBv2h&#xa;65698VTTyTrd9Zfkh+Zv5baw3+5fybb30MdT9u1lDkFQdyqyBjX+VlxVgfl/y1PoX5lflNPD8Ome&#xa;YI9H1JYx9kXSKsE9PduAdv8AWxVS8zeZdJPkrz15OjkaXzJqvnWWay0+NHZ3jEnHlUDju44gVqT2&#xa;xV9qzeWPLU99d38+k2Ut9f27WV9dvbxNLPauAGglkK8niIUVRjTFVsnlPyrJoi6DJo1i+hJThpTW&#xa;0JtBRuYpAV9MUf4vs9d8VXy+WPLU2qQ6tLpNnJqltEbe3v3t4muI4SrKY0lK81Qq7DiDShPjiqHb&#xa;yR5LbSoNHbQNNbSbWX6xbacbSA20U3xfvY4eHBX+NviArucVW3HkTyRc6sdYufL2mTauzCRtRks7&#xa;d7kuoAVjMUL1AAANcVTzFXYq7FXYq7FXYqlXmnzAnl/QrrVTZ3OoPAAIrGyiaaeaR2CpGiqD9piK&#xa;k7DqdsVYTZflnf8AmrS5NQ/MWVjrt1Mt1p0FhKYTogUUSKzuY6SepTeZ60du1AMVQP5feV31m91W&#xa;bUvMmv6lZaFql5o/6K1C8gltblIUCM1ykVvAZlf1T8Dkjxrir0mPy9oET2bx6ZaI+nBl09lgjBt1&#xa;bZhCQv7sHvxpiqp+htH+uT331G3+u3Ufo3V16SerLFQD05HpyZaDoTTFUPB5V8r26WyQaPYxJZSG&#xa;ezVLaFRDK1KyRAL8DHiN13xVdL5Y8tTPdyS6TZySagAL93t4mM4UggTEr+8oQD8VcVX6V5f0HRxI&#xa;NJ02104TUMotII4A5Xpy9NVrSvfFUfirsVdirsVdirsVeSN+REC/nHa/mGktp6Ud3LcS6esHp/C9&#xa;pIglLfH6s5upBJybjxA+HfFUs8y63+Ycf5+6NcW/l5Z9JtbK8tYIRMguZ7RprUXV4lSI14SSR8I2&#xa;NSqN0LLir1yTyx5akS9STSbN01JlfUVa3iIuHRuatMCv7wq24LV3xVVudD0S6S1jutPtp0sWVrJJ&#xa;YY3EDJQKYgwPArQU44qpyeW/LstzdXUml2b3N9GYb6doIjJPEQAY5WK1dfhGzbbYq2fLvl9jYltM&#xa;tCdM/wCOaTBH/o3T+4+H939kfZp0xVRg8o+VLfUP0jb6LYQ6hzaT65HbQrNzapZvUC8qmu5riqbY&#xa;q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYqwP8pvSr5z9PlT/FGpcuVPtUi5Up2r0xVnmKuxV2KuxV2K&#xa;uxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV//Z"
+                    xmpGImg:width="{Long}256"
+                    xmpNodeType="xmpStruct"/>
+            </xmp:Thumbnails>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

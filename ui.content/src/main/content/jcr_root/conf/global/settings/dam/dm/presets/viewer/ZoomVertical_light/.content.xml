@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:conf="/conf/global"
+        cq:lastReplicated="{Date}2020-10-12T16:28:13.480Z"
+        cq:lastReplicatedBy="dynamic-media-s7sync"
+        cq:lastReplicationAction="Activate"
+        dam:lastS7Synced="{Date}2020-10-12T16:28:13.670Z"
+        dam:lastS7SyncStatus="success"
+        dam:s7damType="ViewerPreset"
+        dam:scene7LastPublished="{Date}2020-10-12T16:28:13.460Z"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="dffb0fcd-ec98-4162-92ca-66373f6737e9"
+        category="VERTICAL_ZOOM"
+        isactive="{Boolean}true"
+        iscustom="{Boolean}false"
+        platform="HTML5">
+        <metadata
+            dam:scene7CloudConfigPath="/conf/global/settings/cloudconfigs/dmscene7"
+            dam:scene7File="DynamicMediaNA/ZoomVertical_light"
+            dam:scene7ID="a|581715015"
+            dam:scene7RootID="DynamicMediaNA"
+            jcr:primaryType="nt:unstructured"/>
+        <userdata
+            jcr:primaryType="nt:unstructured"
+            style="content/dam/_CSS/_OOTB/html5_zoomverticalviewer_light.css"/>
+    </jcr:content>
+</jcr:root>

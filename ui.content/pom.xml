@@ -63,11 +63,6 @@
                         <goals>
                             <goal>copy</goal>
                         </goals>
-                        <configuration>
-                            <!-- Copies the right filter.xml file depending on the profile -->
-                            <sourceFile>${basedir}/src/main/content/filter-templates/filter-${project.classifier}.xml</sourceFile>
-                            <destinationFile>${basedir}/src/main/content/META-INF/vault/filter.xml</destinationFile>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
