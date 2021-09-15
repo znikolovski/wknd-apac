@@ -1,0 +1,32 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2015 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+  Base page component. It includes the head and body templates
+
+*/-->
+<div data-sly-use.api="com.day.cq.wcm.foundation.ResponsiveGrid"
+     data-sly-use.dateFormatter="../dateFormatter.js"
+     class="cq-Sequence"
+     data-duration="${properties.duration}"
+     data-schedule="${properties.schedule}"
+     data-startdate="${dateFormatter.startDate}"
+     data-enddate="${dateFormatter.endDate}"
+     data-strategy="${properties.strategy || 'normal'}">
+    <sly data-sly-repeat.child="${api.paragraphs}"
+         data-sly-resource="${child.path @ decorationTagName='div', cssClassName='cq-Sequence-item'}" />
+    <div class="new section aem-Grid-newComponent" data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*'}"></div>
+</div>

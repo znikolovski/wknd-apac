@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Page"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.common.wcm,cq.siteadmin.admin.properties]"
+    mode="edit">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container"
+        class="cq-dialog-content-page">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                rel="cq-siteadmin-admin-properties-tabs"
+                size="L">
+                <items jcr:primaryType="nt:unstructured">
+                    <personalization
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Personalization"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/mnt/overlay/wcm/foundation/components/basicpage/v1/basicpage/tabs/personalization"/>
+                    <channel
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Channel"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <force-remote-content
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        allowBulkEdit="{Boolean}true"
+                                        name="./forceRemoteContent"
+                                        renderReadOnly="{Boolean}true"
+                                        required="{Boolean}false"
+                                        text="Developer mode (force channel to be online)"
+                                        value="{Boolean}true"/>
+                                    <cssClass
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="CSS Class"
+                                        name="./cq:cssClass"
+                                        renderReadOnly="{Boolean}true"
+                                        required="{Boolean}false"/>
+                                </items>
+                            </column>
+                        </items>
+                    </channel>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

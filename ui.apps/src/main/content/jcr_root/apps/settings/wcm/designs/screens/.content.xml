@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:doctype="html_5"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Screens Design"
+        sling:resourceType="wcm/core/components/designer">
+        <channel jcr:primaryType="nt:unstructured">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens/core/components/channel/sequence"
+                components="group:Screens">
+                <section jcr:primaryType="nt:unstructured"/>
+                <cq:authoring jcr:primaryType="nt:unstructured">
+                    <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="media"
+                            assetMimetype="image/*"
+                            droptarget="image"
+                            resourceType="screens/core/components/content/image"
+                            type="Images"/>
+                        <video
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="media"
+                            assetMimetype="video/*"
+                            droptarget="video"
+                            resourceType="screens/core/components/content/video"
+                            type="Images"/>
+                        <page
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="pages"
+                            assetMimetype=".*"
+                            droptarget="page"
+                            resourceType="screens/core/components/content/iframe"
+                            type="Pages"/>
+                    </assetToComponentMapping>
+                </cq:authoring>
+            </par>
+        </channel>
+        <sequencechannel jcr:primaryType="nt:unstructured">
+            <par jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}false"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </par>
+        </sequencechannel>
+        <multiscreenchannel
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="screens/core/components/channel/sequence"
+            components="[group:Screens,/libs/wcm/foundation/components/responsivegrid]">
+            <r1c1 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}true"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </r1c1>
+            <r1c2 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}true"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </r1c2>
+            <r1c3 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}true"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </r1c3>
+            <r2c1 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}true"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </r2c1>
+            <r2c2 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}true"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </r2c2>
+            <r2c3 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}true"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </r2c3>
+            <r3c1 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}true"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </r3c1>
+            <r3c2 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}true"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </r3c2>
+            <r3c3 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}true"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </r3c3>
+            <cq:authoring jcr:primaryType="nt:unstructured">
+                <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        assetGroup="media"
+                        assetMimetype="image/*"
+                        droptarget="image"
+                        resourceType="screens/core/components/content/image"
+                        type="Images"/>
+                    <video
+                        jcr:primaryType="nt:unstructured"
+                        assetGroup="media"
+                        assetMimetype="video/*"
+                        droptarget="video"
+                        resourceType="screens/core/components/content/video"
+                        type="Images"/>
+                    <page
+                        jcr:primaryType="nt:unstructured"
+                        assetGroup="pages"
+                        assetMimetype=".*"
+                        droptarget="page"
+                        resourceType="screens/core/components/content/iframe"
+                        type="Pages"/>
+                </assetToComponentMapping>
+            </cq:authoring>
+        </multiscreenchannel>
+        <sequencechannelportrait jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2021-09-15T17:25:36.026+10:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wknd/components/screens/sequencechannelportrait/sequence"
+                components="[/libs/screens/core/components/content/dynamicsubsequence,/libs/screens/core/components/content/page,/libs/screens/core/components/content/subsequence,/libs/screens/core/components/content/experiencefragment,/apps/wknd/components/screens/experiencefragmentportrait,/apps/wknd/components/screens/imageportrait,/libs/screens/core/components/content/transition,/libs/screens/core/components/content/video]">
+                <section jcr:primaryType="nt:unstructured"/>
+                <cq:authoring jcr:primaryType="nt:unstructured">
+                    <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="media"
+                            assetMimetype="image/*"
+                            droptarget="image"
+                            resourceType="wknd/components/screens/imageportrait"
+                            type="Images"/>
+                        <video
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="media"
+                            assetMimetype="video/*"
+                            droptarget="video"
+                            resourceType="screens/core/components/content/video"
+                            type="Images"/>
+                        <page
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="pages"
+                            assetMimetype=".*"
+                            droptarget="page"
+                            resourceType="screens/core/components/content/iframe"
+                            type="Pages"/>
+                    </assetToComponentMapping>
+                </cq:authoring>
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    loop="{Boolean}false"
+                    noControls="{Boolean}true"
+                    profiles="[fullhd_hp,fullhd_bp,format_aac]"
+                    wmode="opaque"/>
+            </par>
+        </sequencechannelportrait>
+    </jcr:content>
+</jcr:root>

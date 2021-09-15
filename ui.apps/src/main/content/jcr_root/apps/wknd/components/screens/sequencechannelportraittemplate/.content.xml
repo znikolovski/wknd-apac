@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Template for a sequence channel"
+    jcr:primaryType="cq:Template"
+    jcr:title="Sequence Channel - Portrait"
+    allowedParents="[/libs/screens/core/templates/channelfolder,/libs/screens/core/templates/locationfolder,/libs/screens/core/templates/location,/libs/screens/core/templates/folder]"
+    allowedPaths="[/content/screens(/.*)?]"
+    ranking="{Long}1000">
+    <jcr:content
+        cq:cssClass="aem-Layout aem-Layout--1x1"
+        cq:designPath="/apps/settings/wcm/designs/screens"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceSuperType="screens/core/components/channel"
+        sling:resourceType="wknd/components/screens/sequencechannelportrait">
+        <par
+            cq:cssClass="aem-LayoutCell--1-1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wknd/components/screens/sequencechannelportrait/sequence"/>
+        <offline-config/>
+    </jcr:content>
+</jcr:root>
