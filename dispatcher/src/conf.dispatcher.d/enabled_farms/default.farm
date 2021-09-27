@@ -30,11 +30,11 @@
 	# if the package is installed on publishers to generate a list of all content with a vanityurl attached
 	# this section will auto-allow the items to bypass the normal dispatcher filters
 	# Reference: https://docs.adobe.com/docs/en/dispatcher/disp-config.html#Enabling%20Access%20to%20Vanity%20URLs%20-%20/vanity_urls
-	# /vanity_urls {
-	#	/url    "/libs/granite/dispatcher/content/vanityUrls.html"
-	#	/file   "/tmp/vanity_urls"
-	#	/delay  300
-	# }
+	/vanity_urls {
+		/url    "/libs/granite/dispatcher/content/vanityUrls.html"
+		/file   "/tmp/vanity_urls"
+		/delay  300
+	}
 	# allow propagation of replication posts (should seldomly be used)
 	/propagateSyndPost "0"
 	# the cache is used to store requests from the renders for faster delivery
