@@ -16,6 +16,7 @@ import org.apache.sling.api.resource.PersistenceException;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
+import org.apache.sling.jcr.resource.api.JcrResourceConstants;
 import org.apache.sling.resource.collection.ResourceCollection;
 import org.apache.sling.resource.collection.ResourceCollectionManager;
 import org.osgi.framework.Constants;
@@ -37,6 +38,7 @@ import com.adobe.granite.workflow.exec.WorkflowData;
 import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.day.cq.commons.jcr.JcrConstants;
+import com.day.cq.commons.jcr.JcrUtil;
 import com.day.cq.dam.api.Asset;
 import com.day.cq.dam.api.DamConstants;
 import com.day.cq.search.PredicateGroup;
@@ -116,14 +118,17 @@ public class CreateContentFragmentWorkflowStep implements WorkflowProcess {
 			contentFragmentPath = contentFragmentPath + "/" + Type.MESSAGE.getDestination();
 		}
 
-		Resource parent = resourceResolver.getResource(contentFragmentPath);
+		Session jcrSession = resourceResolver.adaptTo(Session.class);
+		JcrUtil.createPath(contentFragmentPath + "/" + contentFragmentName, true, JcrResourceConstants.NT_SLING_FOLDER, JcrResourceConstants.NT_SLING_FOLDER, jcrSession, true);
+
+		Resource parent = resourceResolver.getResource(contentFragmentPath + "/" + contentFragmentName);
 		String templatePath = workflowData.getMetaDataMap().get("template", String.class) + "/jcr:content";
 		Resource template = resourceResolver.getResource(templatePath);
 
 		ContentFragment fragment = template.adaptTo(FragmentTemplate.class).createFragment(parent, contentFragmentName,
 				contentFragmentTitle);
 		fragment.setDescription(contentFragmentDescription);
-		Session jcrSession = resourceResolver.adaptTo(Session.class);
+		
 		jcrSession.save();
 
 		if (resourceResolver.hasChanges()) {

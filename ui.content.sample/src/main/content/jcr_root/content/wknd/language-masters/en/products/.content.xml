@@ -2,6 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:allowedTemplates="[/conf/wknd/settings/wcm/templates/category-page,/conf/wknd/settings/wcm/templates/product-page]"
         cq:lastModified="{Date}2021-08-10T06:58:42.138Z"
         cq:lastModifiedBy="nikolovs@adobe.com"
         cq:lastReplicated="{Date}2021-08-10T07:04:41.020Z"
