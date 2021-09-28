@@ -43,3 +43,5 @@ $include "./default_filters.any"
 #
 /0200 { /type "allow" /method "GET" /path "/content/wknd/*" /selectors '[0-9-]+' /extension "html" }
 /0201 { /type "allow" /method "GET" /path "/conf/wknd/settings/wcm/templates/*" /extension "svg" }
+
+/0202 { /type "allow" /method "GET" /url "/libs/granite/dispatcher/content/vanityUrls.html" }  # allow vanity URL info to be retrieved
