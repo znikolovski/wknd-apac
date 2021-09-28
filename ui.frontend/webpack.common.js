@@ -29,8 +29,17 @@ module.exports = {
         entry: {
             site: SOURCE_ROOT + '/site/main.js'
         },
+        // output: {
+        //     filename: 'clientlib-site/js/[name].bundle.js',
+        //     path: path.resolve(__dirname, 'dist')
+        // },
         output: {
-            filename: 'clientlib-site/js/[name].bundle.js',
+            filename: chunkData => {
+                return chunkData.chunk.name === 'dependencies'
+                    ? 'clientlib-dependencies/[name].js'
+                    : 'clientlib-site/[name].js';
+            },
+            chunkFilename: 'clientlib-site/[name].js',
             path: path.resolve(__dirname, 'dist')
         },
         optimization: {
