@@ -201,7 +201,7 @@
                                 "install", so unless you need to run some other npm command,
                                 you can remove this whole <configuration> section.
                                 -->
-                                <arguments>install --legacy-peer-deps</arguments>
+                                <arguments>install</arguments>
                             </configuration>
                         </execution>
                     </executions>
