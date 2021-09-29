@@ -16,15 +16,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="canonical" href="https://wknd.site${currentPage.path @ extension= 'html' }" />
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
-     data-sly-call="${clientlib.css @ categories='wknd.base'}"/>
+     data-sly-call="${clientlib.css @ categories='wknd.base,wknd.cif'}"/>
 
 <!--/* Include Context Hub 
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 */-->
-
-<!--/* Manifest */-->
-<meta name="theme-color" content="#FFEA00">
-<link rel="manifest" href="/etc.clientlibs/wknd/clientlibs/clientlib-site/resources/manifest.json">
 
 <!--/* Favicons */-->
 <sly data-sly-include="favicons.html"></sly>

@@ -1,0 +1,4 @@
+{
+  "enabled":true,
+  "detectMetadataField":"dam:sha1"
+}

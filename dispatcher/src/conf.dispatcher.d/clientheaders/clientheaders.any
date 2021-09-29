@@ -3,5 +3,9 @@
 #
 # By default, it includes the default client headers.
 #
+"access-control-request-headers"
+"access-control-request-method"
+"access-control-request-origin"
+"origin"
 
 $include "./default_clientheaders.any"

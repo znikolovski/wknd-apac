@@ -1,0 +1,73 @@
+    /* elements */
+
+    .cmp-contentfragment--alexa {
+
+        article {
+            background-size: cover;
+            background-position: center;
+            font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+            height: 600px;
+            width: 1024px;
+            overflow: hidden;
+        }
+
+        .cmp-contentfragment__elements {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-top: 220px;
+            color: white;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 100) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%); 
+            //background-color: rgba(0, 0, 0, 0.3);
+            margin: 0px;
+            
+
+            
+            .cmp-contentfragment__element--heroImage{
+                display: none;
+            }
+
+
+            .cmp-contentfragment__element {
+
+            }
+    
+            .cmp-contentfragment__element-title {
+                display: none;
+            }
+    
+            .cmp-contentfragment__element-value {
+                margin-top: 10px;
+                margin-left: 80px;
+                margin-right: 80px;
+            }
+    
+            .cmp-contentfragment__element--headline {
+                font-size: 170px;
+                line-height: 160px;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+
+            .cmp-contentfragment__element--callToAction {
+                display: none;
+
+            }
+
+            .cmp-contentfragment__element--detail {
+                font-size: 25px;
+                text-transform:none;
+                width: 500px;
+            }
+
+            //mobile
+            @media (max-width: $screen-medium) {
+                .cmp-contentfragment__element {
+             
+                }
+    
+            }
+
+        }
+    }

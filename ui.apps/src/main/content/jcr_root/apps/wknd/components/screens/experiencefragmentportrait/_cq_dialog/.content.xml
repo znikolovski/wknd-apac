@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Experience Fragment - Portrait"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        size="L">
+        <items jcr:primaryType="nt:unstructured">
+            <xf
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Experience Fragment"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <experiencefragment
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldLabel="Experience Fragment"
+                                name="./pagePath"
+                                rootPath="/content/experience-fragments"/>
+                            <duration
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                defaultValue=""
+                                fieldDescription="Amount of time the fragment will be shown in the sequence, in milliseconds"
+                                fieldLabel="Duration (ms)"
+                                min="0"
+                                name="./duration"/>
+                        </items>
+                    </column>
+                </items>
+            </xf>
+            <includeClientlibsTab
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/include"
+                path="/libs/screens/core/components/content/clientlibs/cq:dialog/content/items/clientlibs"/>
+        </items>
+    </content>
+</jcr:root>

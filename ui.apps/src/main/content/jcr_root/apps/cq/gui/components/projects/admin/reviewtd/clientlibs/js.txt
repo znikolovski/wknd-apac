@@ -1,0 +1,6 @@
+#base=js
+
+reviewasset.js
+annotation.js
+compareAssets.js
+requestchangesasset.js

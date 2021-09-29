@@ -1,0 +1,5 @@
+// script to set the assignee based on workflow wizard
+var assignee = workflowData.getMetaDataMap().get("assignee", Packages.java.lang.String);
+var contentPath = workflowData.getPayload().toString(); 
+task.setCurrentAssignee(assignee);
+task.setProperty("contentPath", contentPath);

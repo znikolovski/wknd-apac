@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="3e3fcee4-375a-362c-8cf0-49db51e0de06"
+    rep:authorizableId="projects-wefinance_offer_creation-owner"
+    rep:members="{WeakReference}[21232f29-7a57-35a7-8389-4a0e4a801fc3]"
+    rep:principalName="projects-wefinance_offer_creation-owner">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        alternateTitle="Owners"
+        givenName="weFinance Offer Creation Owners"/>
+</jcr:root>

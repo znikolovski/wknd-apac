@@ -1,0 +1,70 @@
+    /* elements */
+
+    .cmp-contentfragment--nativeapp {
+
+        article {
+            background-size: cover;
+            background-position: center;
+            font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+            width: 750px;
+            overflow: hidden;
+        }
+
+        .cmp-contentfragment__elements {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-top: 0px;
+            color: black;
+            height: 100%;
+            margin: 0px;
+            
+
+            
+            .cmp-contentfragment__element--heroImage{
+                display: none;
+            }
+
+
+            .cmp-contentfragment__element {
+
+            }
+    
+            .cmp-contentfragment__element-title {
+                display: none;
+            }
+    
+            .cmp-contentfragment__element-value {
+                margin-top: 10px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+    
+            .cmp-contentfragment__element--headline {
+                font-size: 60px;
+                line-height: 60px;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+            .cmp-contentfragment__element--callToAction {
+                display: none;
+
+            }
+
+            .cmp-contentfragment__element--detail {
+                font-size: 25px;
+                text-transform:none;
+                width: 500px;
+            }
+
+            //mobile
+            @media (max-width: $screen-medium) {
+                .cmp-contentfragment__element {
+             
+                }
+    
+            }
+
+        }
+    }

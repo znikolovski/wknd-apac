@@ -1,6 +1,7 @@
 'use strict';
 
 const path                    = require('path');
+const pkg = require('./package.json');
 const webpack                 = require('webpack');
 const MiniCssExtractPlugin    = require("mini-css-extract-plugin");
 const TSConfigPathsPlugin     = require('tsconfig-paths-webpack-plugin');
@@ -9,19 +10,36 @@ const CopyWebpackPlugin       = require('copy-webpack-plugin');
 const { CleanWebpackPlugin }  = require('clean-webpack-plugin');
 
 const SOURCE_ROOT = __dirname + '/src/main/webpack';
+const alias = Object.keys(pkg.dependencies)
+    .reduce((obj, key) => ({ ...obj, [key]: path.resolve('node_modules', key) }), {});
+
 
 module.exports = {
         resolve: {
-            extensions: ['.js', '.ts'],
+            extensions: ['.webpack.js', '.web.js', '.mjs', '.json','.js', '.ts'],
             plugins: [new TSConfigPathsPlugin({
                 configFile: "./tsconfig.json"
-            })]
+            })],
+            alias: {
+                ...alias,
+                // messages are all in ast already, so we can save some bytes like that
+                '@formatjs/icu-messageformat-parser': '@formatjs/icu-messageformat-parser/no-parser'
+            }
         },
         entry: {
             site: SOURCE_ROOT + '/site/main.js'
         },
+        // output: {
+        //     filename: 'clientlib-site/js/[name].bundle.js',
+        //     path: path.resolve(__dirname, 'dist')
+        // },
         output: {
-            filename: 'clientlib-site/js/[name].bundle.js',
+            filename: chunkData => {
+                return chunkData.chunk.name === 'dependencies'
+                    ? 'clientlib-dependencies/[name].js'
+                    : 'clientlib-site/[name].js';
+            },
+            chunkFilename: 'clientlib-site/[name].js',
             path: path.resolve(__dirname, 'dist')
         },
         optimization: {
@@ -49,13 +67,19 @@ module.exports = {
                     ]
                 },
                 {
+                    test: /\.js$/,
+                    include: /src/,
+                    loader: ['babel-loader']
+                },
+                {
                     test: /\.scss$/,
                     use: [
                         MiniCssExtractPlugin.loader,
                         {
                             loader: "css-loader",
                             options: {
-                                url: false
+                                url: false,
+                                import: true
                             }
                         },
                         {
@@ -83,6 +107,11 @@ module.exports = {
                     ]
                 },
                 {
+                    test: /\.mjs$/,
+                    include: /node_modules/,
+                    type: "javascript/auto",
+                },
+                {
                     test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
                     use: {
                       loader: 'file-loader',
@@ -104,7 +133,9 @@ module.exports = {
                 config: './tslint.json'
             }),
             new CopyWebpackPlugin([
-                { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site/resources' }
+                { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site/resources' },
+                { from: path.resolve(__dirname, 'node_modules/@adobe/aem-core-cif-react-components/i18n'), to: './clientlib-site/resources/i18n' },
+                { from: path.resolve(__dirname, 'node_modules/@adobe/aem-core-cif-product-recs-extension/i18n'), to: './clientlib-site/resources/i18n' }
             ])
         ],
         stats: {

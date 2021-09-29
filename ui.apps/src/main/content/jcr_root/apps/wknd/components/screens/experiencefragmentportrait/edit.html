@@ -1,0 +1,27 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2018 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+*/-->
+<sly data-sly-use.page="ExperienceFragment">
+    <div class="aem-Screens-editWrapper cq-dd-page cq-placeholder" data-emptytext="${'Experience Fragment - Portrait' @ i18n, locale=request.locale}" data-sly-test.placeholder="${!page.path}">
+    </div>
+    <div data-editpath="${page.path}" class="aem-Screens-editWrapper">
+        <div class="cq-Screens-page-title">${'Experience Fragment: ' @ i18n, locale=request.locale}${page.title}</div>
+        <img src="${request.contextPath}${page.path}.thumb.500.500.png" width="100%" />
+		<p class="aem-Screens-editWrapper-filepath">${page.path}</p>
+    </div>
+</sly>

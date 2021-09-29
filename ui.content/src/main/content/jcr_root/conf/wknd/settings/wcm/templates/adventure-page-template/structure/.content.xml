@@ -25,8 +25,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wknd/components/container"
-                editable="{Boolean}true">
-            </container>
+                editable="{Boolean}true"/>
             <experiencefragment-footer
                 cq:styleIds="[1568592503946]"
                 jcr:primaryType="nt:unstructured"

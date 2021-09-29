@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="f6045b3e-771f-3f73-b8da-825d2774dea4"
+    rep:authorizableId="projects-wefinance_offer_creation-copywriters"
+    rep:members="{WeakReference}[11e18cf3-b1f4-39de-9122-964b9dbdd00c]"
+    rep:principalName="projects-wefinance_offer_creation-copywriters">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        alternateTitle="Copywriters"
+        givenName="weFinance Offer Creation Copywriters"/>
+</jcr:root>

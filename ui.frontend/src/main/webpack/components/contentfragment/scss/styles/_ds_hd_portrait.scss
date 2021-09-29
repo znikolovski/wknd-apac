@@ -1,0 +1,95 @@
+    /* elements */
+
+
+    .cmp-contentfragment--ds_hd_portait.aem-GridColumn{
+        padding: 0px;
+    }
+
+    .cmp-contentfragment--ds_hd_portait {
+
+        width: 1080px;
+            
+        article {
+            background-size: cover;
+            background-position: center;
+            font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+            height: 1920px;
+            width: 1080px;
+            overflow: hidden;
+        }
+
+        .cmp-contentfragment__elements {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            color: white;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 100) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 10) 100%); 
+            //background-color: rgba(0, 0, 0, 0.3);
+            margin: 0px;
+            
+
+            
+            .cmp-contentfragment__element--heroImage{
+                display: none;
+            }
+
+
+            .cmp-contentfragment__element {
+
+            }
+    
+            .cmp-contentfragment__element-title {
+                display: none;
+            }
+    
+            .cmp-contentfragment__element-value {
+                margin-top: 10px;
+                margin-left: 80px;
+                margin-right: 80px;
+            }
+    
+            .cmp-contentfragment__element--headline {
+                font-size: 170px;
+                line-height: 160px;
+                text-transform: uppercase;
+                font-weight: 900;
+                padding-top: 220px;
+            
+            }
+
+            .cmp-contentfragment__element--callToAction {
+                display: none;
+
+            }
+
+            .cmp-contentfragment__element--detail {
+                font-size: 25px;
+                text-transform:none;
+                width: 500px;
+            }
+
+            .cmp-contentfragment__yellow-strip {
+                width: 24px;
+                background-color: $brand-primary;
+                height: 100%;
+                position: fixed;
+            }
+
+            .cmp-contentfragment__logo {
+                width: 358px;
+                position: absolute;
+                margin-left: 634px;
+                margin-top: 1690px;
+            }
+
+            //mobile
+            @media (max-width: $screen-medium) {
+                .cmp-contentfragment__element {
+             
+                }
+    
+            }
+
+        }
+    }

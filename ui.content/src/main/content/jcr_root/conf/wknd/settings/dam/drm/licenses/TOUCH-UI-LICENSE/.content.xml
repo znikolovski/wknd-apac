@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2011-08-02T15:52:49.684+02:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/dam/templates/license"
+        jcr:description="DRM Licence Page"
+        jcr:lastModified="{Date}2011-01-28T23:04:46.490+01:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="DRM License Page"
+        sling:resourceType="dam/components/drm/pages/touchuilicense">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <title
+                jcr:created="{Date}2011-08-02T15:27:23.051+02:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2011-08-02T15:29:31.959+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adobe Digital License"
+                sling:resourceType="foundation/components/title"
+                type="extralarge"/>
+            <image
+                jcr:created="{Date}2011-08-02T15:30:42.384+02:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2011-08-02T15:31:40.510+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/image"
+                alt="BY-NC 2.0"
+                imageRotate="0"
+                width="48rem">
+                <file/>
+            </image>
+            <text
+                jcr:created="{Date}2011-08-02T15:31:56.375+02:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2011-08-02T15:52:49.682+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&#xa;&lt;i>License&lt;/i>&lt;br>&#xa;&lt;br>&#xa;The work is provided under the terms of this creative commons public license (&amp;quot;CCPL&amp;quot; OR &amp;quot;LICENSE&amp;quot;). The work is protected by copyright and/or other applicable law. Any use of the work other than as authorized under this license or copyright law is prohibited.&lt;br>&#xa;&lt;br>&#xa;&lt;br>&#xa;&lt;/p>&#xa;"
+                textIsRich="true"/>
+        </par>
+    </jcr:content>
+</jcr:root>

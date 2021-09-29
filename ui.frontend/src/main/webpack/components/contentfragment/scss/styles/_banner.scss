@@ -1,0 +1,85 @@
+    /* elements */
+
+    .cmp-contentfragment--banner {
+
+        article {
+            background-size: cover;
+            font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .cmp-contentfragment__elements {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            padding-top: 120px;
+            color: white;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin: 0px;
+            
+
+            
+            .cmp-contentfragment__element--heroImage{
+                display: none;
+            }
+
+            .cmp-contentfragment__picture{
+                width:100%;
+                height: 500px;
+            }
+
+            .cmp-contentfragment__element {
+
+            }
+    
+            .cmp-contentfragment__element-title {
+                display: none;
+            }
+    
+            .cmp-contentfragment__element-value {
+                margin-top: 10px;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+    
+            .cmp-contentfragment__element--headline {
+                font-size: 36px;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+
+            .cmp-contentfragment__element--callToAction {
+                background-color: #ffea00;
+                color: #202020;
+                margin-left: 40px;
+                margin-top: 30px;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 600;
+                width: 8pc;
+                padding: 15px;
+
+                .cmp-contentfragment__element-value {
+                    margin: 0;
+                    text-align: center;
+                }
+
+            }
+
+            .cmp-contentfragment__element--detail {
+                font-size: 25px;
+                text-transform: capitalize;
+            }
+
+            //mobile
+            @media (max-width: $screen-medium) {
+                .cmp-contentfragment__element {
+             
+                }
+    
+            }
+
+        }
+    }

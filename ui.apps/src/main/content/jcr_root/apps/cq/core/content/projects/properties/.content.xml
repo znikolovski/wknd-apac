@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Project Properties"
+        sling:resourceType="granite/ui/components/shell/propertiespage"
+        backHref="${empty param.item ? header.Referer : granite:concat(&quot;/projects/details.html&quot;, granite:encodeURIPath(param.item))}"
+        formId="cq-projects-properties-form"
+        simpleSave="{Boolean}false">
+        <head jcr:primaryType="nt:unstructured">
+            <clientlibs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/includeclientlibs"
+                categories="[cq.projects.admin,cq.projects.admin.properties,cq.projects.admin.form]"/>
+        </head>
+        <redirector
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/admin/contentchecker"
+            allowed="[/content/projects,/content/projects/.*]"
+            path="${param.item}"
+            redirect="/projects.html/content/projects"/>
+        <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <form
+                    granite:id="cq-projects-properties-form"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form"
+                    action="${param.item}"
+                    dataPath="${param.item}/jcr:content"
+                    enctype="multipart/form-data"
+                    foundationForm="{Boolean}true"
+                    maximized="{Boolean}true"
+                    method="post"
+                    novalidate="{Boolean}true"
+                    style="vertical">
+                    <items jcr:primaryType="nt:unstructured">
+                        <columns
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <cover
+                                            granite:rel="cq-projects-wizard-fileupload"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/projects/admin/wizard/properties/thumbnail"
+                                            autoStart="{Boolean}false"
+                                            mimeTypes="[image/png,image/jpeg,image/gif]"
+                                            multiple="{Boolean}false"
+                                            name="coverImage"
+                                            sizeLimit="100000000"
+                                            text="Add Thumbnail"
+                                            uploadUrl="will_be_replaced"
+                                            useHTML5="{Boolean}false"/>
+                                    </items>
+                                </column1>
+                                <column2
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <name
+                                            granite:rel="cq-projects--required-nospaces"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Title"
+                                            name="jcr:title"
+                                            required="{Boolean}true"/>
+                                        <targetpath
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                            fieldLabel="Folder for Approved Assets"
+                                            name="targetPath"
+                                            required="{Boolean}true"
+                                            rootPath="/content/dam"/>
+                                        <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                            fieldLabel="Description"
+                                            name="jcr:description"
+                                            rows="4"/>
+                                        <active
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                            fieldDescription="Indicates if this project is active or not"
+                                            fieldLabel="Project Status"
+                                            name="active"
+                                            textOff="Inactive"
+                                            textOn="Active"
+                                            value="true"/>
+                                        <startdate
+                                            granite:rel="project-startdate"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                            displayedFormat="YYYY-MM-DD HH:mm"
+                                            fieldLabel="Start Date"
+                                            name="project.startDate"
+                                            required="{Boolean}false"
+                                            type="datetime"/>
+                                        <duedate
+                                            granite:rel="project-duedate"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                            displayedFormat="YYYY-MM-DD HH:mm"
+                                            fieldLabel="Due Date"
+                                            minDate="today"
+                                            name="project.dueDate"
+                                            required="{Boolean}false"
+                                            type="datetime"/>
+                                        <memberpicker
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="User"
+                                            sling:resourceType="cq/gui/components/projects/admin/simpletable"
+                                            class="simple-table cq-projects-member-picker">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <userpicker
+                                                    granite:id="collection-settings-userpicker"
+                                                    granite:rel="collection-settings-userpicker-id"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/userpicker"
+                                                    hideServiceUsers="{Boolean}true"
+                                                    impersonatesOnly="{Boolean}false"
+                                                    name="user"/>
+                                                <memberrole
+                                                    granite:id="member-role"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select">
+                                                    <datasource
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="cq/gui/components/projects/admin/datasource/projectroledatasource"/>
+                                                </memberrole>
+                                                <add
+                                                    granite:id="add-user"
+                                                    granite:rel="project-members-add-user"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/button"
+                                                    text="Add"
+                                                    title="Add"/>
+                                            </items>
+                                            <granite:rendercondition
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/projects/admin/renderconditions/withoutteamreference"
+                                                projectPath="${param.item}"/>
+                                        </memberpicker>
+                                        <projectmembers
+                                            granite:class="project-members"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/projects/admin/projectteam"
+                                            fieldLabel="Members"/>
+                                        <charset
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                            ignoreData="{Boolean}true"
+                                            name="_charset_"
+                                            value="utf-8"/>
+                                        <operation
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                            ignoreData="{Boolean}true"
+                                            name=":operation"
+                                            value="updateProject"/>
+                                    </items>
+                                </column2>
+                            </items>
+                        </columns>
+                    </items>
+                </form>
+            </items>
+        </content>
+        <editcondition
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/renderconditions/privilege"
+            path="${param.item}"
+            privileges="[jcr:write]"/>
+    </jcr:content>
+</jcr:root>

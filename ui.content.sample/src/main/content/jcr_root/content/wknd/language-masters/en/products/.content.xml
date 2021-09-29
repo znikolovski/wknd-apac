@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/wknd/settings/wcm/templates/category-page,/conf/wknd/settings/wcm/templates/product-page]"
+        cq:lastModified="{Date}2021-08-10T06:58:42.138Z"
+        cq:lastModifiedBy="nikolovs@adobe.com"
+        cq:lastReplicated="{Date}2021-08-10T07:04:41.020Z"
+        cq:lastReplicated_publish="{Date}2021-08-10T07:04:41.020Z"
+        cq:lastReplicated_scene7="{Date}2021-08-10T07:04:41.020Z"
+        cq:lastReplicatedBy="nikolovs@adobe.com"
+        cq:lastReplicatedBy_publish="nikolovs@adobe.com"
+        cq:lastReplicatedBy_scene7="nikolovs@adobe.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:lastReplicationAction_scene7="Activate"
+        cq:template="/conf/wknd/settings/wcm/templates/catalog-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Shop"
+        jcr:uuid="3072d6e8-9386-4a78-9c93-2ceb8e924952"
+        sling:resourceType="wknd/components/commerce/catalogpage"
+        pwaCachestrategy="staleWhileRevalidate"
+        pwaDisplay="standalone"
+        pwaOrientation="any"
+        showMainCategories="{Boolean}false">
+        <cq:BlueprintSyncConfig
+            cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
+            jcr:primaryType="cq:BlueprintSyncConfig"/>
+        <root jcr:primaryType="nt:unstructured">
+            <container jcr:primaryType="nt:unstructured">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd/components/container">
+                    <productcarousel
+                        jcr:created="{Date}2021-08-06T11:06:49.808+10:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-06T11:07:37.463+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wknd/components/commerce/productcarousel"
+                        product="[WP07#WP07-28-Black,MH09#MH09-L-Blue]"
+                        productType="[combinedSku,combinedSku]"
+                        titleType="h2"/>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+    <category-page/>
+    <product-page/>
+</jcr:root>

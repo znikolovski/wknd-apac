@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="e594b4bf-1b9d-409f-b755-4f90891bb649">
+    <jcr:content
+        cq:lastModified="{Date}2020-10-08T17:13:38.143+05:30"
+        cq:lastModifiedBy="admin"
+        cq:name="wknd-logo-light.png"
+        cq:parentPath="/content/dam/wknd/en/site"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2020-10-08T12:37:05.357+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:Comments="XML:com.adobe.xmp: &lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?>&#xa;&lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.6-c148 79.163858, 2019/03/06-03:18:36        &quot;>&#xa; &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;>&#xa;  &lt;rdf:Description rdf:about=&quot;&quot;&#xa;    xmlns:dam=&quot;http://www.day.com/dam/1.0&quot;&#xa;    xmlns:tiff=&quot;http://ns.adobe.com/tiff/1.0/&quot;&#xa;    xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;&#xa;   dam:Physicalheightininches=&quot;0.8819897770881653&quot;&#xa;   dam:Physicalwidthininches=&quot;2.007047653198242&quot;&#xa;   dam:Fileformat=&quot;PNG&quot;&#xa;   dam:Progressive=&quot;no&quot;&#xa;   dam:extracted=&quot;2019-10-25T16:50:33.711-07:00&quot;&#xa;   dam:Bitsperpixel=&quot;32&quot;&#xa;   dam:MIMEtype=&quot;image/png&quot;&#xa;   dam:Physicalwidthindpi=&quot;144&quot;&#xa;   dam:Physicalheightindpi=&quot;144&quot;&#xa;   dam:Numberofimages=&quot;1&quot;&#xa;   dam:Numberoftextualcomments=&quot;0&quot;&#xa;   dam:sha1=&quot;e4d5caeffacfaa5743d3011eacd4a35a454ad76d&quot;&#xa;   dam:size=&quot;3091&quot;&#xa;   tiff:ImageLength=&quot;127&quot;&#xa;   tiff:ImageWidth=&quot;289&quot;&#xa;   dc:format=&quot;image/png&quot;&#xa;   dc:modified=&quot;2019-10-25T16:50:48.998-07:00&quot;/>&#xa; &lt;/rdf:RDF>&#xa;&lt;/x:xmpmeta>&#xa;&lt;?xpacket end=&quot;r&quot;?>&#xa;"
+            dam:extracted="{Date}2020-10-08T12:37:04.739+05:30"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}144"
+            dam:Physicalheightininches="{Decimal}0.8819897770881653"
+            dam:Physicalwidthindpi="{Long}144"
+            dam:Physicalwidthininches="{Decimal}2.007047653198242"
+            dam:Progressive="no"
+            dam:sha1="34200f107b65001ef7ddb3bec534abeea03e8e45"
+            dam:size="{Long}4145"
+            dc:format="image/png"
+            dc:modified="{Date}2019-10-25T16:50:48.998-07:00"
+            jcr:lastModified="{Date}2020-10-08T12:37:05.268+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}127"
+            tiff:ImageWidth="{Long}289"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <usages
+            dam:score="{Long}1"
+            jcr:primaryType="nt:unstructured"
+            usedBy="[aem]">
+            <aem
+                jcr:primaryType="nt:unstructured"
+                count="{Long}1"
+                lastUsed="{Date}2019-09-26T07:06:19.420-07:00"/>
+        </usages>
+    </jcr:content>
+</jcr:root>

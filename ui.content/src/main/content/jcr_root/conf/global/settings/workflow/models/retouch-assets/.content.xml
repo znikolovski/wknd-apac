@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2021-02-02T00:17:00.254+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:description="Retouch asset"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Retouch Assets"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2021-02-02T00:17:01.706+05:30">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <participant
+                jcr:created="{Date}2021-02-02T00:13:26.757+05:30"
+                jcr:createdBy="admin"
+                jcr:description="Retouch asset"
+                jcr:lastModified="{Date}2021-02-02T00:13:54.860+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Retouch Asset Task"
+                sling:resourceType="cq/workflow/components/model/participant">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PARTICIPANT="retoucher"/>
+            </participant>
+            <dynamic_participant
+                jcr:created="{Date}2021-02-02T00:14:01.327+05:30"
+                jcr:createdBy="admin"
+                jcr:description="Review retouched asset"
+                jcr:lastModified="{Date}2021-02-02T00:14:33.999+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Review Retouched Asset"
+                sling:resourceType="cq/workflow/components/model/dynamic_participant">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    DYNAMIC_PARTICIPANT="/apps/workflow/scripts/InitiatorParticipantChooser.ecma"/>
+            </dynamic_participant>
+            <or
+                jcr:created="{Date}2021-02-02T00:14:42.179+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-02-02T00:15:02.596+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/workflow/components/model/or"
+                branches="3"
+                branchName1="Branch 1"
+                branchName2="Branch 2"
+                branchOrder="[0,1,]"
+                orSplit="true">
+                <_x0033_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <noopprocess
+                        jcr:created="{Date}2021-02-02T00:15:36.342+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-02-02T00:15:46.849+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Skip"
+                        sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="/libs/workflow/scripts/noop.ecma"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </noopprocess>
+                </_x0033_>
+                <tmp jcr:primaryType="nt:unstructured">
+                    <_x0031_
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/flow/components/parsys"/>
+                    <_x0032_
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/flow/components/parsys"/>
+                    <NaN jcr:primaryType="nt:unstructured"/>
+                </tmp>
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <noopprocess
+                        jcr:created="{Date}2021-02-02T00:15:15.743+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-02-02T00:15:24.578+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Approve"
+                        sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="/libs/workflow/scripts/noop.ecma"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </noopprocess>
+                    <process
+                        jcr:created="{Date}2021-02-02T00:15:58.174+05:30"
+                        jcr:createdBy="admin"
+                        jcr:description="Change asset status to approved"
+                        jcr:lastModified="{Date}2021-02-02T00:16:30.023+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Change asset status to approved"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.adobe.aem.guides.wknd.core.workflow.step.AssetsStatusChangeToApprovedProcess"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process>
+                </_x0031_>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <noopprocess
+                        jcr:created="{Date}2021-02-02T00:15:32.805+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-02-02T00:15:40.262+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Reject"
+                        sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="/libs/workflow/scripts/noop.ecma"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </noopprocess>
+                    <goto
+                        jcr:created="{Date}2021-02-02T00:16:37.568+05:30"
+                        jcr:createdBy="admin"
+                        jcr:description="Goto Step"
+                        jcr:lastModified="{Date}2021-02-02T00:17:00.233+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Goto Retouch Step"
+                        sling:resourceType="cq/workflow/components/model/goto">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                            PROCESS_AUTO_ADVANCE="false"
+                            script="function check() {&#xd;&#xa;    return true;&#xd;&#xa;}"
+                            TARGET_NODE_PATH="/conf/wknd/settings/workflow/models/retouch-assets/jcr:content/flow/participant"/>
+                    </goto>
+                </_x0032_>
+            </or>
+        </flow>
+    </jcr:content>
+</jcr:root>

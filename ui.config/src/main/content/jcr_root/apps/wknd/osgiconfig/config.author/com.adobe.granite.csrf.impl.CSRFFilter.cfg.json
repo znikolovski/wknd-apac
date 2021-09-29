@@ -14,8 +14,7 @@
   "filter.excluded.paths":[
     "/libs/dam/gui/content/assets/assetlinkshare",
     "/content/communities/scorm/RecordResults",
-    "/content/cq:graphql/global/endpoint",
-    "/content/cq:graphql/wknd/endpoint"
+    "/content/cq:graphql/global/endpoint"
   ],
   "filter.methods":[
     "POST",

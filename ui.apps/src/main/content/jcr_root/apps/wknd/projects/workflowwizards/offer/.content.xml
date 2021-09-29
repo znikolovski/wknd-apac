@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+        margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+            <column1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <details
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/projects/admin/card/workflowmodeldetailscard"
+                        workflowModelPath="${param.modelId}"/>
+                </items>
+            </column1>
+            <column2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <workflow
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <linkType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                name="linkType"
+                                value="cq/gui/components/projects/admin/card/launchcard"/>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Title"
+                                name="workflowTitle"
+                                required="{Boolean}true"/>
+                            <name
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/apps/wknd/projects/components/jobno"
+                                fieldLabel="Offer ID"
+                                name="pageLabel"
+                                required="{Boolean}true">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    bindToField="name"/>
+                            </name>
+                        </items>
+                    </workflow>
+                    <content
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <type
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Type"
+                                name="type">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <offer
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="{Boolean}true"
+                                        text="Offer"
+                                        value="OFF"/>
+                                    <message
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Message"
+                                        value="MSG"/>
+                                </items>
+                            </type>
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldLabel="Description"
+                                name="description"
+                                rows="6"/>
+                            <audience
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/autocomplete"
+                                emptyText="Select audience segments"
+                                fieldDescription="Select multiple audiences variations to be created (default will create one Fragment only)"
+                                fieldLabel="Audience Selection"
+                                mode="contains"
+                                multiple="{Boolean}true"
+                                name="contenttypes">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <student
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Student"
+                                        value="student"/>
+                                    <newworker
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Worker"
+                                        value="newworker"/>
+                                    <homebuyer
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Home Buyer"
+                                        value="homebuyer"/>
+                                    <familystarter
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Family Starter"
+                                        value="familystarter"/>
+                                </items>
+                                <values
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/autocomplete/tags"/>
+                                <options
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/autocomplete/list"/>
+                            </audience>
+                            <tags
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/autocomplete"
+                                fieldLabel="Tags"
+                                mode="contains"
+                                multiple="{Boolean}true"
+                                name="./cq:tags">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/common/datasources/tags"/>
+                                <values
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/autocomplete/tags"/>
+                                <options
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/autocomplete/list"/>
+                            </tags>
+                            <destination
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldLabel="Destination Path"
+                                name="contentPath"
+                                required="{Boolean}true"
+                                rootPath="/content/dam/wknd/en"
+                                value="/content/dam/wknd/en"/>
+                            <template
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldLabel="Content Fragment Template"
+                                name="template"
+                                required="{Boolean}true"
+                                rootPath="/conf/wknd/settings/dam/cfm/models"
+                                value="/conf/wknd/settings/dam/cfm/models/offer"/>
+                        </items>
+                    </content>
+                </items>
+            </column2>
+        </items>
+    </jcr:content>
+</jcr:root>

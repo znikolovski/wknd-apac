@@ -1,0 +1,4 @@
+{
+  "allow.only.system.user":"false",
+  "validator.id":"org.apache.sling.jcr.resource.internal.JcrSystemUserValidator"
+}

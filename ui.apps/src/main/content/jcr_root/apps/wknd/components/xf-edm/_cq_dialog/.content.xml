@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Experience Fragment"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.common.wcm,core.wcm.page.properties,cq.wcm.msm.properties,cq.siteadmin.admin.properties]"
+    mode="edit">
+    <content
+        granite:class="cq-dialog-content-page"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                granite:class="cq-siteadmin-admin-properties-tabs"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                size="L">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Title and Tags"
+                                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                cq:showOnCreate="{Boolean}true"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                name="./jcr:title"
+                                                required="{Boolean}true"/>
+                                            <pagename
+                                                cq:hideOnEdit="{Boolean}true"
+                                                cq:showOnCreate="{Boolean}true"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldLabel="Name"
+                                                name="pageName"
+                                                validation="foundation.jcr.name"/>
+                                            <description
+                                                cq:showOnCreate="{Boolean}true"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                allowBulkEdit="{Boolean}true"
+                                                fieldLabel="Description"
+                                                name="./jcr:description"/>
+                                            <tags
+                                                cq:showOnCreate="{Boolean}true"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                allowBulkEdit="{Boolean}true"
+                                                allowCreate="{Boolean}true"
+                                                fieldLabel="Tags"
+                                                multiple="true"
+                                                name="./cq:tags"/>
+                                            <charset
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                allowBulkEdit="{Boolean}true"
+                                                ignoreData="{Boolean}true"
+                                                name="_charset_"
+                                                value="utf-8"/>
+                                            <theme
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                                emptyText="Select"
+                                                fieldLabel="Theme"
+                                                name="./xfTheme"
+                                                renderReadOnly="{Boolean}true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="gss-commons/components/datasource/theme-client-libraries"
+                                                    addNone="{Boolean}true"/>
+                                            </theme>
+                                        </items>
+                                    </title>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <advanced
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Advanced"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <section1
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Settings"
+                                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <language
+                                                cq:showOnCreate="{Boolean}false"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                                class="language"
+                                                cq-msm-lockable="jcr:language"
+                                                emptyText="Select"
+                                                fieldLabel="Language"
+                                                name="./jcr:language"
+                                                renderReadOnly="{Boolean}true"
+                                                translateOptions="{Boolean}true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/common/datasources/languages"
+                                                    addNone="{Boolean}true"/>
+                                            </language>
+                                        </items>
+                                    </section1>
+                                </items>
+                            </column>
+                        </items>
+                    </advanced>
+                    <cloudservices
+                        cq:hideOnEdit="true"
+                        cq:showOnCreate="false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Cloud Services"
+                        sling:resourceType="granite/ui/components/foundation/section"/>
+                    <personalization
+                        cq:hideOnEdit="true"
+                        cq:showOnCreate="false"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/section"/>
+                    <permissions
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="/mnt/overlay/wcm/core/content/sites/properties/tabs/permissions"/>
+                    <livecopy
+                        cq:showOnCreate="{Boolean}false"
+                        granite:class="cq-siteadmin-admin-properties-livecopy"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Live Copy"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <granite:rendercondition
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/msm/components/touch-ui/renderconditions/islivecopy"
+                            path="${empty param.item ? requestPathInfo.suffix : param.item}"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <writelivecopyconfig
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                        name="msm:writeLiveCopyConfig"
+                                        value="true"/>
+                                    <suspendedNote
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <text
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/text"
+                                                text="The Live Copy has been suspended. No action will be performed on a roll out."/>
+                                        </items>
+                                        <granite:rendercondition
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/msm/components/touch-ui/renderconditions/islivecopy"
+                                            ignoreIfNotCancelled="{Boolean}true"
+                                            path="${empty param.item ? requestPathInfo.suffix : param.item}"/>
+                                    </suspendedNote>
+                                    <source
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Source"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <source
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="wcm/msm/components/coral/touch-ui/propertiesdialog/livecopy/source"
+                                                path="${empty param.item ? requestPathInfo.suffix : param.item }"/>
+                                        </items>
+                                    </source>
+                                    <status
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Status"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <status
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="wcm/msm/components/touch-ui/propertiesdialog/livecopy/status"
+                                                path="${empty param.item ? requestPathInfo.suffix : param.item }"/>
+                                        </items>
+                                    </status>
+                                    <configuration
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Configuration"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <deepinheritance
+                                                granite:class="cq-siteadmin-admin-properties-livecopy-isdeep"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="wcm/msm/components/touch-ui/propertiesdialog/livecopy/deepinheritance"
+                                                fieldDescription="If checked Live Copy configuration is effective on all children"
+                                                name="msm:isDeep"
+                                                path="${empty param.item ? requestPathInfo.suffix : param.item }"
+                                                text="Live Copy Inheritance"/>
+                                            <inhertrolloutconfigs
+                                                granite:class="cq-siteadmin-admin-properties-livecopy-inheritrolloutconfigs"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="wcm/msm/components/touch-ui/propertiesdialog/livecopy/inheritrolloutconfigs"
+                                                name="msm:inheritRolloutConfigs"
+                                                path="${empty param.item ? requestPathInfo.suffix : param.item }"
+                                                renderReadOnly="{Boolean}true"
+                                                target="cq-siteadmin-admin-properties-livecopy-rolloutconfigs"
+                                                text="Inherit Rollout Configs from Parent"
+                                                value="true"/>
+                                            <rolloutconfigs
+                                                granite:class="cq-siteadmin-admin-properties-livecopy-rolloutconfigs"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="wcm/msm/components/touch-ui/propertiesdialog/livecopy/rolloutconfigs"
+                                                emptyText="Choose Rollout Config"
+                                                name="msm:liveCopyRolloutConfigs"
+                                                path="${empty param.item ? requestPathInfo.suffix : param.item }"
+                                                required="true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="wcm/msm/components/datasources/rolloutconfig"/>
+                                            </rolloutconfigs>
+                                        </items>
+                                        <granite:rendercondition
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/msm/components/touch-ui/renderconditions/islivecopy"
+                                            ignoreIfCancelled="{Boolean}true"
+                                            path="${empty param.item ? requestPathInfo.suffix : param.item}"/>
+                                    </configuration>
+                                </items>
+                            </column>
+                        </items>
+                    </livecopy>
+                    <blueprint
+                        cq:hideOnEdit="true"
+                        cq:showOnCreate="{Boolean}false"
+                        granite:class="cq-siteadmin-admin-properties-blueprint"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Blueprint"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

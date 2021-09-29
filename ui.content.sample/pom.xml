@@ -23,7 +23,7 @@
     <parent>
         <groupId>com.adobe.aem.guides</groupId>
         <artifactId>aem-guides-wknd</artifactId>
-        <version>1.0.0</version>
+        <version>0.2.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -58,7 +58,7 @@
                         </jackrabbit-nodetypes>
                         <jackrabbit-filter>
                             <options>
-                                <validRoots>/conf,/content,/content/experience-fragments,/content/dam,/content/cq:tags,/home/groups,/home/users</validRoots>
+                                <validRoots>/conf,/content,/content/experience-fragments,/content/dam</validRoots>
                             </options>
                         </jackrabbit-filter>
                     </validatorsSettings>

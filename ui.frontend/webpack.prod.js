@@ -6,8 +6,13 @@ const common                  = require('./webpack.common.js');
 module.exports = merge(common, {
    mode: 'production',
    optimization: {
+      minimize: true, 
       minimizer: [
-          new TerserPlugin(),
+          new TerserPlugin({
+            terserOptions: {
+                mangle: false
+            },
+          }),
           new OptimizeCSSAssetsPlugin({
               cssProcessorPluginOptions: {
                   cssProcessor: require('cssnano'),

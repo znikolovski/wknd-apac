@@ -2,10 +2,14 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="cq:Page">
+    <experience-fragment-pinterest-variation/>
+    <experience-fragment-facebook-variation/>
+    <spa-remote-app/>
     <content-page-template/>
     <adventure-page-template/>
     <rep:policy/>
     <article-page-template/>
     <landing-page-template/>
     <experience-fragment-web-variation-template/>
+    <experience-fragment-screen-variation-template/>
 </jcr:root>

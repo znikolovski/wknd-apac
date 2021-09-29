@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/conf/wknd" mode="merge"/>
+    <filter root="/conf/wknd" mode="update"/>
+    <filter root="/conf/global/settings/dam/adminui-extension" mode="merge"/>
+    <filter root="/conf/global/settings/dam/dm" mode="merge"/>
+    <filter root="/conf/global/settings/dam/processing" mode="merge"/>
+    <filter root="/conf/global/settings/dam/search" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/models/request-assets" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/models/retouch-assets" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/models/review-assets" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/models/publish-assets" mode="merge"/>
     <filter root="/content/wknd" mode="merge"/>
+    <filter root="/content/wknd-spa" mode="merge"/>
     <filter root="/content/dam/wknd" mode="merge"/>
+    <filter root="/content/dam/wknd-assets" mode="merge"/>
     <filter root="/content/experience-fragments/wknd" mode="merge"/>
     <filter root="/content/cq:tags/wknd" mode="merge"/>
     <filter root="/content/cq:graphql" mode="merge" />
+    <filter root="/content/projects/request-assets-for-new-wknd-adventure" mode="merge"/>
+    <filter root="/content/dam/projects/request-assets-for-new-wknd-adventure" mode="merge"/>
+    <filter root="/content/dam/collections" mode="merge"/>
+    <filter root="/etc/map.publish" mode="merge"/>
+    <filter root="/home/groups/projects" mode="merge"/>
+    <filter root="/home/users/system/wefinance-service-user" mode="merge"/>
+    <filter root="/var/workflow/models/conf/wknd"/>
 </workspaceFilter>

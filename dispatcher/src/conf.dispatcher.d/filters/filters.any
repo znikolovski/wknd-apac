@@ -20,12 +20,27 @@ $include "./default_filters.any"
 
 # Allow GraphQL global endpoint & preflight requests
 # GraphQL also supports GET requests, if you intend to use GET include it in the rule below
-/0164 { /type "allow" /method '(POST|OPTIONS)' /url "/content/graphql/global/endpoint.json" /extension "json"}
-/0165 { /type "allow" /method '(POST|OPTIONS)' /url "/content/cq:graphql/wknd/endpoint.json" /extension "json"}
+/0164 { /type "allow" /method '(POST|OPTIONS)' /url "/content/graphql/*/endpoint.json" /extension "json"}
+/0165 { /type "allow" /method '(POST|OPTIONS)' /url "/content/cq:graphql/*/endpoint.json" /extension "json"}
 
 # GraphQL Persisted Queries
 /0170 { /type "allow" /method '(POST|OPTIONS)' /url "/graphql/execute.json/*" }
 /0171 { /type "allow" /url "/graphql/execute.json/*" }
 
+# Allow video files
+/0176 { /type "allow" /extension '(mp4|mov|m4v)' /path "/content/*" }
+
 # Allow to download web manifest for PWA
-/0180 { /type "allow" /extension "webmanifest" }
+/0180 { /type "allow" /extension "webmanifest" /path "*"}
+
+#Allow Screens Fragment usage
+/0190 { /type "allow" /method "GET" /query "wcmmode=*" }
+/0192 { /type "allow" /extension "html" /selectors "standalone" /path "/content/*" }
+
+#
+# WKND specific filter for category pages and header
+#
+/0200 { /type "allow" /method "GET" /path "/content/wknd/*" /selectors '[0-9-]+' /extension "html" }
+/0201 { /type "allow" /method "GET" /path "/conf/wknd/settings/wcm/templates/*" /extension "svg" }
+
+/0202 { /type "allow" /method "GET" /url "/libs/granite/dispatcher/content/vanityUrls.html" }  # allow vanity URL info to be retrieved

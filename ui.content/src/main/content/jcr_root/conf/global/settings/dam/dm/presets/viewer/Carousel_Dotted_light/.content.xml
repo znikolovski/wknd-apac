@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:conf="/conf/global"
+        cq:lastReplicated="{Date}2020-10-12T16:27:49.718Z"
+        cq:lastReplicatedBy="dynamic-media-s7sync"
+        cq:lastReplicationAction="Activate"
+        dam:lastS7Synced="{Date}2020-10-12T16:27:49.952Z"
+        dam:lastS7SyncStatus="success"
+        dam:s7damType="ViewerPreset"
+        dam:scene7LastPublished="{Date}2020-10-12T16:27:49.697Z"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="db3a8d69-26f7-4741-af0a-78e6620ba6b3"
+        category="CAROUSEL_SET"
+        isactive="{Boolean}true"
+        iscustom="{Boolean}false"
+        platform="HTML5">
+        <metadata
+            dam:scene7CloudConfigPath="/conf/global/settings/cloudconfigs/dmscene7"
+            dam:scene7File="DynamicMediaNA/Carousel_Dotted_light"
+            dam:scene7ID="a|547541047"
+            dam:scene7RootID="DynamicMediaNA"
+            jcr:primaryType="nt:unstructured"/>
+        <userdata
+            jcr:primaryType="nt:unstructured"
+            SetIndicator.mode="dotted"
+            style="content/dam/_CSS/_OOTB/html5_carouselviewer_dotted_light.css"/>
+    </jcr:content>
+</jcr:root>

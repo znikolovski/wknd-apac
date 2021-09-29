@@ -1,0 +1,82 @@
+/*
+ * ADOBE CONFIDENTIAL
+ *
+ * Copyright 2018 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+
+@title-background-color: #2583D8;
+@title-font-color: #ffffff;
+
+
+
+
+ .cq-Screens-page,
+ .parbase.page {
+     overflow: hidden;
+     text-align: center;
+
+     .aem-Screens-editWrapper {
+         position: relative;
+         min-width: 100%;
+         min-height: 100%;
+
+         &.cq-placeholder {
+             height: 100%;
+         }
+
+       .cq-Screens-page-title {
+         position: absolute;
+         width: 100%;
+         text-align: center;
+
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         overflow: hidden;
+
+         padding-top: 3px;
+         // borders are a trick to make the ellipsis work properly (i.e. with proper right padding).
+         border-left: 10px solid @title-background-color;
+         border-right: 10px solid @title-background-color;
+         max-width: 300px;
+         max-height: 34px;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+
+         font-family: Arial,sans-serif;
+         font-weight: normal;
+         font-style: normal;
+         color: @title-font-color;
+         background-color: @title-background-color;
+         line-height: 2rem;
+         font-size: 0.8rem;
+       }
+         
+     }
+
+        .aem-Screens-editWrapper-filepath {
+        font-size: 0.6rem;
+    	font-family: adobe-clean,'Source Sans Pro',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Trebuchet MS','Lucida Grande',sans-serif;
+		color: gray;
+    }
+
+
+ }
+
+
+.cq-Screens-experiencefragment-portrait {
+    min-height: 600px;
+}
+

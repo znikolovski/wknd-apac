@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:title="weFinance Offer Creation"
+    jcr:uuid="5f2cb4d3-cd93-3a31-8544-9ab1c7c2acd3"
+    rep:authorizableId="projects-wefinance_offer_creation"
+    rep:members="{WeakReference}[21232f29-7a57-35a7-8389-4a0e4a801fc3,0c44d27b-ea6d-397a-873b-8d297617ba6d,11e18cf3-b1f4-39de-9122-964b9dbdd00c,fa4797a6-c44c-3591-a1de-b331a4b041a3,6c618b3b-8147-3a1b-90c9-9f836678dfca]"
+    rep:principalName="projects-wefinance_offer_creation">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        alternateTitle="Observers"
+        givenName="weFinance Offer Creation Observers"/>
+</jcr:root>

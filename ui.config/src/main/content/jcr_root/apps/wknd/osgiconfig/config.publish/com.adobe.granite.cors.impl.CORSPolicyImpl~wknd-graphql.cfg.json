@@ -1,4 +1,3 @@
-// Configuration created by Apache Sling JCR Installer
 {
   "supportscredentials":false,
   "exposedheaders":[
@@ -7,25 +6,31 @@
   "supportedmethods":[
     "GET",
     "HEAD",
-    "POST"
+    "POST",
+    "OPTIONS"
   ],
   "alloworigin":[
     ""
   ],
   "maxage:Integer":1800,
   "alloworiginregexp":[
-    "http://localhost:.*"
+    "http://localhost:.*",
+    "https://node.au.ngrok.io",
+    "https://delightful-moss-09b85441e.azurestaticapps.net",
+    "https://polite-water-082fe1e00.azurestaticapps.net",
+    "https://white-moss-0f6103d1e.azurestaticapps.net"
   ],
   "allowedpaths":[
-    "/content/graphql/global/endpoint.json",
-    "/content/cq:graphql/wknd/endpoint.json"
+    ".*"
   ],
   "supportedheaders":[
     "Origin",
     "Accept",
     "X-Requested-With",
-    "Content-Type",
+    "content-type",
     "Access-Control-Request-Method",
-    "Access-Control-Request-Headers"
+    "Access-Control-Request-Headers",
+    "Access-Control-Request-Origin",
+    "authorization"
   ]
 }

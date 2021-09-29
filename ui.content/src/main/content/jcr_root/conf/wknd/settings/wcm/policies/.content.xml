@@ -5,6 +5,23 @@
     <rep:policy/>
     <wknd jcr:primaryType="nt:unstructured">
         <components jcr:primaryType="nt:unstructured">
+            <page-cif jcr:primaryType="nt:unstructured">
+                <policy_1570140199406
+                    jcr:lastModified="{Date}2021-08-05T15:55:31.248+10:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="WKND Site Theme"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="wknd.site"
+                    clientlibsJsHead="wknd.dependencies">
+                    <jcr:content
+                        cq:lastReplicated="{Date}2019-10-22T13:34:50.533-07:00"
+                        cq:lastReplicatedBy="admin"
+                        cq:lastReplicationAction="Activate"
+                        jcr:mixinTypes="[cq:ReplicationStatus]"
+                        jcr:primaryType="nt:unstructured"/>
+                </policy_1570140199406>
+            </page-cif>
             <container jcr:primaryType="nt:unstructured">
                 <content-default
                     jcr:description="Policy for editable layout containers"
@@ -36,14 +53,15 @@
                 </content-default>
                 <policy_213106331986985
                     cq:styleDefaultElement="main"
-                    jcr:lastModified="{Date}2020-07-09T08:11:09.069-07:00"
+                    jcr:lastModified="{Date}2021-08-06T09:42:38.215+10:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="WKND Content"
                     sling:resourceType="wcm/core/components/policy/policy"
                     backgroundColorEnabled="true"
                     backgroundImageEnabled="true"
-                    components="[group:WKND.Content]">
+                    components="[group:WKND - Commerce,group:WKND.Content]"
+                    layoutDisabled="false">
                     <jcr:content
                         cq:lastReplicated="{Date}2019-10-22T13:34:50.533-07:00"
                         cq:lastReplicatedBy="admin"
@@ -716,7 +734,7 @@
             <contentfragment jcr:primaryType="nt:unstructured">
                 <policy_1571166588834
                     cq:styleDefaultElement="article"
-                    jcr:lastModified="{Date}2020-07-09T08:10:48.812-07:00"
+                    jcr:lastModified="{Date}2021-07-05T20:00:28.703+10:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="WKND Content Fragment"
@@ -734,6 +752,30 @@
                                     cq:styleElement="div"
                                     cq:styleId="1571166694176"
                                     cq:styleLabel="Elements"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-contentfragment--banner"
+                                    cq:styleElement="div"
+                                    cq:styleId="1625401533915"
+                                    cq:styleLabel="Banner"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-contentfragment--ds_hd_portait"
+                                    cq:styleElement="div"
+                                    cq:styleId="1625401537516"
+                                    cq:styleLabel="Signage - Portrait"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-contentfragment--alexa"
+                                    cq:styleElement="div"
+                                    cq:styleId="1625479044538"
+                                    cq:styleLabel="Alexa"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-contentfragment--nativeapp"
+                                    cq:styleElement="div"
+                                    cq:styleId="1625479048319"
+                                    cq:styleLabel="Native App"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
@@ -791,7 +833,7 @@
             <experiencefragment jcr:primaryType="nt:unstructured">
                 <policy_1568592468447
                     cq:styleDefaultElement="div"
-                    jcr:lastModified="{Date}2020-07-07T17:39:36.365-07:00"
+                    jcr:lastModified="{Date}2021-08-06T09:43:04.260+10:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="WKND Experience Fragment - Site"
@@ -1145,6 +1187,168 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy_1594238204926>
             </tabs>
+            <commerce jcr:primaryType="nt:unstructured">
+                <productlist jcr:primaryType="nt:unstructured">
+                    <default
+                        cq:styleDefaultClasses="category__style_grid"
+                        jcr:lastModified="{Date}2019-04-01T15:42:05.554+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Product List"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        showImage="true"
+                        showTitle="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Layout"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="category__style_grid"
+                                        cq:styleId="1570700958199"
+                                        cq:styleLabel="Grid"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="category__style_list"
+                                        cq:styleId="1570700958900"
+                                        cq:styleLabel="List"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </default>
+                </productlist>
+                <productcarousel jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-09-28T15:37:21.146+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Product Carousel"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </default>
+                </productcarousel>
+                <relatedproducts jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-09-28T15:37:21.146+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Related Products"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </default>
+                </relatedproducts>
+                <featuredcategorylist jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-09-28T15:37:21.146+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Featured Category List"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </default>
+                </featuredcategorylist>
+                <categorycarousel jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-10-05T13:12:01.134+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Category Carousel"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </default>
+                </categorycarousel>
+                <teaser jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-08-31T17:45:15.554+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Commerce Teaser"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-teaser-banner-light"
+                                        cq:styleId="1598234697359"
+                                        cq:styleLabel="Banner - Light"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-teaser-banner-dark"
+                                        cq:styleId="1598234697563"
+                                        cq:styleLabel="Banner - Dark"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="cmp-teaser-feature-left"
+                                        cq:styleId="1598234698241"
+                                        cq:styleLabel="Feature - Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="cmp-teaser-feature-right"
+                                        cq:styleId="1598234699118"
+                                        cq:styleLabel="Feature - Right"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </default>
+                </teaser>
+                <contentfragment jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2021-06-11T11:26:16.004+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Content Fragments"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Content"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cf-style-1"
+                                        cq:styleId="1623400699511"
+                                        cq:styleLabel="Table - 1 Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cf-style-2"
+                                        cq:styleId="1623400707844"
+                                        cq:styleLabel="Table - 2 Columns"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Header"
+                                cq:styleGroupMultiple="true"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cf-style-hide-title"
+                                        cq:styleId="1623400982190"
+                                        cq:styleLabel="Hide Title"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cf-style-hide-fieldnames"
+                                        cq:styleId="1623401047939"
+                                        cq:styleLabel="Hide Field Names"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </default>
+                </contentfragment>
+            </commerce>
         </components>
     </wknd>
     <cq jcr:primaryType="nt:unstructured">
@@ -1189,6 +1393,23 @@
                         components="[/libs/cq/experience-fragments/editor/components/buildingblock,/apps/wknd/components/contentfragment,/apps/wknd/components/image,/apps/wknd/components/text]">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </social-media>
+                    <policy_13928703649428
+                        jcr:lastModified="{Date}2021-07-13T07:03:53.668Z"
+                        jcr:lastModifiedBy="nikolovs@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="WKND SPA Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd/components/button,/apps/wknd/components/container,/apps/wknd/components/image,/apps/wknd/components/list,/apps/wknd/components/separator,/apps/wknd/components/tabs,/apps/wknd/components/teaser,/apps/wknd/components/text,/apps/wknd/components/title]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_13928703649428>
+                    <spa-default
+                        jcr:description="Includes only SPA-Enabled components."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SPA Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd/components/text]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </spa-default>
                 </responsivegrid>
             </components>
         </foundation>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="51bd2f63-72bc-418a-a339-6730b87cbfee">
+    <jcr:content
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2021-07-06T19:07:35.078+10:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2021-07-06T19:07:34.107+10:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}26.66666603088379"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}15.0"
+            dam:Progressive="no"
+            dam:sha1="bcf4628e56b8fca67dc0a9fcf9aa5273becc6a74"
+            dam:size="{Long}252761"
+            dc:format="image/jpeg"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            photoshop:ICCProfile="sRGB IEC61966-2.1"
+            tiff:ImageLength="{Long}1920"
+            tiff:ImageWidth="{Long}1080"
+            xmp:CreateDate="{Date}2021-06-24T10:57:31.000Z"
+            xmp:CreatorTool="Adobe Creative Imaging Service"
+            xmp:MetadataDate="{Date}2021-06-24T10:57:31.000Z"
+            xmp:ModifyDate="{Date}2021-06-24T10:57:31.000Z"
+            xmpMM:DocumentID="adobe:docid:photoshop:c04c5a6e-3e27-2542-a12f-f8d3ab2d2ec0"
+            xmpMM:InstanceID="xmp.iid:a292b93c-9ad8-45e6-a8d9-641f943b315d"
+            xmpMM:OriginalDocumentID="xmp.did:140ff366-5333-4a34-a8ff-53298338dfed">
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}2"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="created"
+                    stEvt:instanceID="xmp.iid:140ff366-5333-4a34-a8ff-53298338dfed"
+                    stEvt:softwareAgent="Adobe Creative Imaging Service"
+                    stEvt:when="{Date}2021-06-24T10:57:31.000Z"
+                    xmpNodeType="xmpStruct"/>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:a292b93c-9ad8-45e6-a8d9-641f943b315d"
+                    stEvt:softwareAgent="Adobe Creative Imaging Service"
+                    stEvt:when="{Date}2021-06-24T10:57:31.000Z"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

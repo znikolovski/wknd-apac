@@ -1,0 +1,8 @@
+{
+  "require.validation":true,
+  "user.enable.default.mapping":false,
+  "user.default":"",
+  "user.mapping":[
+    "aem-guides-wknd.core=admin"
+  ]
+}

@@ -19,7 +19,7 @@
     <groupId>com.adobe.aem.guides</groupId>
     <artifactId>aem-guides-wknd</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>0.2.1-SNAPSHOT</version>
      <name>WKND Sites Project - Reactor Project</name>
     <description>WKND Sites Project</description>
     <url>https://github.com/adobe/aem-guides-wknd</url>
@@ -55,14 +55,28 @@
         <sling.password>admin</sling.password>
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
+        <frontend-maven-plugin.version>1.12.0</frontend-maven-plugin.version>
         <bnd.version>5.1.2</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <aem.sdk.api>2021.5.5343.20210524T070738Z-210527</aem.sdk.api>
+        <spa.project.core.version>1.2.0</spa.project.core.version>
+        <aem.sdk.api>2020.11.4506.20201112T235200Z-201028</aem.sdk.api>
+        <core.cif.components.version>2.2.0</core.cif.components.version>
+        <graphql.client.version>1.7.2</graphql.client.version>
+        <magento.graphql.version>9.0.0-magento242ee</magento.graphql.version>
         <componentGroupName>WKND Site</componentGroupName>
-        <core.wcm.components.version>2.16.4</core.wcm.components.version>
+        <core.wcm.components.version>2.17.2</core.wcm.components.version>
         <uber.jar.version>6.4.4</uber.jar.version>
-        <aemanalyser.version>0.9.2</aemanalyser.version>
+        <xerces>2.6.2</xerces>
+        <xerces.bundle>2.12.0_1</xerces.bundle>
+        <xmlresolver>1.2_5</xmlresolver>
+        <xml.apis>1.4.01</xml.apis>
+        <cssbox>4.14</cssbox>
+        <jsoup>1.5.2_2</jsoup>
+        <nekohtml>1.9.22</nekohtml>
+        <jstyleparser>3.2</jstyleparser>
+        <unbescape>1.1.5.RELEASE</unbescape>
+        <project.classifier>cloud</project.classifier>
     </properties>
 
     <organization>
@@ -80,10 +94,10 @@
     </developers>
 
      <scm>
-        <connection>scm:git:git@github.com:adobe/aem-guides-wknd.git</connection>
-        <developerConnection>scm:git:git@github.com:adobe/aem-guides-wknd.git</developerConnection>
+        <connection>scm:git:https://github.com/adobe/aem-guides-wknd.git</connection>
+        <developerConnection>scm:git:https://github.com/adobe/aem-guides-wknd.git</developerConnection>
         <url>https://github.com/adobe/aem-guides-wknd/tree/master</url>
-        <tag>aem-guides-wknd-1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
@@ -158,17 +172,17 @@
                     <!-- manually release in https://oss.sonatype.org/#stagingRepositories after the Maven release build -->
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
-            </plugin>
+            </plugin> 
         </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>com.github.eirslett</groupId>
                     <artifactId>frontend-maven-plugin</artifactId>
-                    <version>1.11.3</version>
+                    <version>${frontend-maven-plugin.version}</version>
                     <configuration>
-                        <nodeVersion>v10.13.0</nodeVersion>
-                        <npmVersion>6.9.0</npmVersion>
+                        <nodeVersion>v14.17.0</nodeVersion>
+                        <npmVersion>6.14.13</npmVersion>
                     </configuration>
                     <executions>
                         <execution>
@@ -182,6 +196,13 @@
                             <goals>
                                 <goal>npm</goal>
                             </goals>
+                            <configuration>
+                                <!-- optional: The default argument is actually
+                                "install", so unless you need to run some other npm command,
+                                you can remove this whole <configuration> section.
+                                -->
+                                <arguments>install --legacy-peer-deps</arguments>
+                            </configuration>
                         </execution>
                     </executions>
                 </plugin>
@@ -329,13 +350,6 @@ Bundle-DocURL:
                             <version>6.5.5.0</version>
                         </dependency>
                     </dependencies>
-                </plugin>
-                <!-- AEM Analyser Plugin -->
-                <plugin>
-                    <groupId>com.adobe.aem</groupId>
-                    <artifactId>aemanalyser-maven-plugin</artifactId>
-                    <version>${aemanalyser.version}</version>
-                    <extensions>true</extensions>
                 </plugin>
                 <!-- Content Package Plugin -->
                 <plugin>
@@ -709,7 +723,113 @@ Bundle-DocURL:
     <dependencyManagement>
         <dependencies>
 
-        <!-- AEM as a Cloud Service SDK -->
+            <!-- SPA Project Core (includes hierarchy page model) -->
+            <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>spa.project.core.ui.apps</artifactId>
+                <type>zip</type>
+                <version>${spa.project.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>spa.project.core.core</artifactId>
+                <version>${spa.project.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr.annotations</artifactId>
+                <version>1.9.8</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Adobe CIF Dependencies -->
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-apps</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-extensions-product-recs-content</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-config</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-core</artifactId>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-extensions-product-recs-bundle</artifactId>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>graphql-client</artifactId>
+                <version>${graphql.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>magento-graphql</artifactId>
+                <version>${magento.graphql.version}</version>
+            </dependency>
+
+            <!-- CSS Parser -->
+            <dependency>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-runtime</artifactId>
+                <version>4.5.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.xmlresolver</artifactId>
+                <version>1.2_5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.xerces</artifactId>
+                <version>2.12.0_1</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>1.4.01</version>
+            </dependency>
+			<dependency>
+				<groupId>net.sf.cssbox</groupId>
+				<artifactId>cssbox</artifactId>
+				<version>4.14</version>
+			</dependency>
+            <dependency>
+				<groupId>org.apache.servicemix.bundles</groupId>
+				<artifactId>org.apache.servicemix.bundles.jsoup</artifactId>
+				<version>1.5.2_2</version>
+			</dependency>
+            <dependency>
+				<groupId>net.sourceforge.nekohtml</groupId>
+				<artifactId>nekohtml</artifactId>
+				<version>1.9.22</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.cssbox</groupId>
+				<artifactId>jstyleparser</artifactId>
+				<version>3.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.unbescape</groupId>
+				<artifactId>unbescape</artifactId>
+				<version>1.1.5.RELEASE</version>
+			</dependency>
+
+            <!-- AEM as a Cloud Service SDK -->
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>aem-sdk-api</artifactId>
@@ -736,6 +856,47 @@ Bundle-DocURL:
                 <type>zip</type>
                 <version>${core.wcm.components.version}</version>
             </dependency>
+
+        <!-- Adobe CIF Dependencies -->
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-apps</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-extensions-product-recs-content</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-config</artifactId>
+                <type>zip</type>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-core</artifactId>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-extensions-product-recs-bundle</artifactId>
+                <version>${core.cif.components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>graphql-client</artifactId>
+                <version>${graphql.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>magento-graphql</artifactId>
+                <version>${magento.graphql.version}</version>
+            </dependency>
+
 
             <!-- Testing -->
             <dependency>
