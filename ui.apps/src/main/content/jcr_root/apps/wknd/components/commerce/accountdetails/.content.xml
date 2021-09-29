@@ -2,7 +2,7 @@
           xmlns:cq="http://www.day.com/jcr/cq/1.0"
           xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="cq:Component"
-          sling:resourceSuperType="core/cif/components/commerce/accountdetails/v1/accountdetails"
+          sling:resourceSuperType="core/cif/components/commerce/accountdetails/v2/accountdetails"
           componentGroup="WKND - Commerce"
           jcr:title="Account Details">
 </jcr:root>

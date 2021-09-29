@@ -4,5 +4,5 @@
     xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Component"
     jcr:title="Commerce Address Book"
-    sling:resourceSuperType="core/cif/components/commerce/addressbook/v1/addressbook"
+    sling:resourceSuperType="core/cif/components/commerce/addressbook/v2/addressbook"
     componentGroup="WKND - Commerce" />
