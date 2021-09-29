@@ -1,0 +1,21 @@
+.searchbar__root {
+    padding-top: 11px;
+}
+
+span.searchbar__input-container {
+    float: left;
+    width: 1rem;
+}
+
+input.searchbar__input {
+    width: 120px;
+}
+
+span.searchbar__input-before {
+    float: right;
+    margin-left: 1rem;
+}
+
+button.searchbar__trigger {
+    display: none;
+}
