@@ -196,6 +196,13 @@
                             <goals>
                                 <goal>npm</goal>
                             </goals>
+                            <configuration>
+                                <!-- optional: The default argument is actually
+                                "install", so unless you need to run some other npm command,
+                                you can remove this whole <configuration> section.
+                                -->
+                                <arguments>install --legacy-peer-deps</arguments>
+                            </configuration>
                         </execution>
                     </executions>
                 </plugin>
