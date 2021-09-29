@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2021-08-05T16:59:25.814+10:00"
-        cq:lastModifiedBy="admin"
+        cq:lastModified="{Date}2021-09-29T03:07:41.879Z"
+        cq:lastModifiedBy="nikolovs@adobe.com"
+        cq:lastReplicated="{Date}2021-09-29T02:53:32.662Z"
+        cq:lastReplicated_preview="{Date}2021-08-09T22:46:30.395Z"
+        cq:lastReplicated_publish="{Date}2021-09-29T02:53:32.662Z"
+        cq:lastReplicated_scene7="{Date}2021-08-10T04:36:22.680Z"
+        cq:lastReplicatedBy="nikolovs@adobe.com"
+        cq:lastReplicatedBy_preview="nikolovs@adobe.com"
+        cq:lastReplicatedBy_publish="nikolovs@adobe.com"
+        cq:lastReplicatedBy_scene7="nikolovs@adobe.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_preview="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:lastReplicationAction_scene7="Activate"
         cq:tags="[]"
         cq:template="/conf/wknd/settings/wcm/templates/experience-fragment-web-variation-template"
         cq:xfMasterVariation="{Boolean}true"
         cq:xfVariantType="web"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Header"
+        jcr:uuid="3e09e8f0-f451-476d-9c5b-f88fd9bb3e6e"
         sling:resourceType="wknd/components/xfpage">
         <root
             jcr:primaryType="nt:unstructured"
@@ -17,10 +32,11 @@
             <container
                 jcr:created="{Date}2019-09-13T14:22:51.213-07:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-09-13T14:23:01.260-07:00"
-                jcr:lastModifiedBy="admin"
+                jcr:lastModified="{Date}2021-09-29T03:03:38.793Z"
+                jcr:lastModifiedBy="nikolovs@adobe.com"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wknd/components/container">
+                sling:resourceType="wknd/components/container"
+                layout="responsiveGrid">
                 <container
                     cq:styleIds="[1568592113898]"
                     jcr:created="{Date}2019-09-15T16:50:18.496-07:00"
@@ -113,10 +129,11 @@
                                 width="2"/>
                             <tablet
                                 jcr:primaryType="nt:unstructured"
-                                width="6"/>
+                                width="4"/>
                             <phone
                                 jcr:primaryType="nt:unstructured"
-                                width="6"/>
+                                offset="0"
+                                width="5"/>
                         </cq:responsive>
                     </image>
                     <navigation
@@ -157,10 +174,10 @@
                                 width="2"/>
                             <tablet
                                 jcr:primaryType="nt:unstructured"
-                                width="6"/>
+                                width="3"/>
                             <phone
                                 jcr:primaryType="nt:unstructured"
-                                width="6"/>
+                                width="4"/>
                         </cq:responsive>
                     </search>
                     <miniaccount
@@ -172,9 +189,11 @@
                                 width="1"/>
                             <tablet
                                 jcr:primaryType="nt:unstructured"
-                                width="6"/>
+                                width="2"/>
                             <phone
                                 jcr:primaryType="nt:unstructured"
+                                behavior="hide"
+                                offset="0"
                                 width="6"/>
                         </cq:responsive>
                     </miniaccount>
@@ -187,9 +206,10 @@
                                 width="1"/>
                             <tablet
                                 jcr:primaryType="nt:unstructured"
-                                width="6"/>
+                                width="2"/>
                             <phone
                                 jcr:primaryType="nt:unstructured"
+                                behavior="hide"
                                 width="6"/>
                         </cq:responsive>
                     </minicart>
