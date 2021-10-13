@@ -14,114 +14,123 @@ const alias = Object.keys(pkg.dependencies)
     .reduce((obj, key) => ({ ...obj, [key]: path.resolve('node_modules', key) }), {});
 
 
-module.exports = {
-        resolve: {
-            extensions: ['.webpack.js', '.web.js', '.mjs', '.json','.js', '.ts'],
-            plugins: [new TSConfigPathsPlugin({
-                configFile: "./tsconfig.json"
-            })],
-            alias: {
-                ...alias,
-                // messages are all in ast already, so we can save some bytes like that
-                '@formatjs/icu-messageformat-parser': '@formatjs/icu-messageformat-parser/no-parser'
-            }
+module.exports = (env) => ({
+    mode: env,
+    resolve: {
+        extensions: ['.webpack.js', '.web.js', '.mjs', '.json','.js', '.ts', '.ee.js', '.wasm'],
+        plugins: [new TSConfigPathsPlugin({
+            configFile: "./tsconfig.json"
+        })],
+        alias: {
+            ...alias,
+            // messages are all in ast already, so we can save some bytes like that
+            '@formatjs/icu-messageformat-parser': '@formatjs/icu-messageformat-parser/no-parser'
+        }
+    },
+    entry: {
+        site: SOURCE_ROOT + '/site/main.js'
+    },
+    // output: {
+    //     filename: 'clientlib-site/js/[name].bundle.js',
+    //     path: path.resolve(__dirname, 'dist')
+    // },
+    output: {
+        filename: chunkData => {
+            return chunkData.chunk.name === 'dependencies'
+                ? 'clientlib-dependencies/[name].js'
+                : 'clientlib-site/[name].js';
         },
-        entry: {
-            site: SOURCE_ROOT + '/site/main.js'
-        },
-        // output: {
-        //     filename: 'clientlib-site/js/[name].bundle.js',
-        //     path: path.resolve(__dirname, 'dist')
-        // },
-        output: {
-            filename: chunkData => {
-                return chunkData.chunk.name === 'dependencies'
-                    ? 'clientlib-dependencies/[name].js'
-                    : 'clientlib-site/[name].js';
-            },
-            chunkFilename: 'clientlib-site/[name].js',
-            path: path.resolve(__dirname, 'dist')
-        },
-        optimization: {
-            splitChunks: {
-                   chunks: 'all'
-                 }
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.tsx?$/,
-                    exclude: [
-                        /(node_modules)/
-                    ],
-                    use: [
-                        {
-                            loader: "ts-loader"
-                        },
-                        {
-                            loader: "webpack-import-glob-loader",
-                            options: {
-                                url: false
-                            }
+        chunkFilename: 'clientlib-site/[name].js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    optimization: {
+        splitChunks: {
+                chunks: 'all'
+                }
+    },
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                exclude: [
+                    /(node_modules)/
+                ],
+                use: [
+                    {
+                        loader: "ts-loader"
+                    },
+                    {
+                        loader: "webpack-import-glob-loader",
+                        options: {
+                            url: false
                         }
-                    ]
-                },
-                {
-                    test: /\.js$/,
-                    include: /src/,
-                    loader: ['babel-loader']
-                },
-                {
-                    test: /\.scss$/,
-                    use: [
-                        MiniCssExtractPlugin.loader,
-                        {
-                            loader: "css-loader",
-                            options: {
-                                url: false,
-                                import: true
-                            }
-                        },
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                plugins() {
-                                    return [
-                                        require('autoprefixer')
-                                    ];
-                                }
-                            }
-                        },
-                        {
-                            loader: "sass-loader",
-                            options: {
-                                url: false
-                            }
-                        },
-                        {
-                            loader: "webpack-import-glob-loader",
-                            options: {
-                                url: false
-                            }
-                        }
-                    ]
-                },
-                {
-                    test: /\.mjs$/,
-                    include: /node_modules/,
-                    type: "javascript/auto",
-                },
-                {
-                    test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-                    use: {
-                      loader: 'file-loader',
-                      options: {
-                        name: '[path][name].[ext]'
-                      }
                     }
-                },
-            ]
-        },
+                ]
+            },
+            {
+                test: /\.js$/,
+                include: /src/,
+                loader: ['babel-loader']
+            },
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules\/(?!@magento\/)/,
+                loader: 'babel-loader',
+                options: {
+                    envName: env,
+                }
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                        options: {
+                            url: false,
+                            import: true
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins() {
+                                return [
+                                    require('autoprefixer')
+                                ];
+                            }
+                        }
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            url: false
+                        }
+                    },
+                    {
+                        loader: "webpack-import-glob-loader",
+                        options: {
+                            url: false
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.mjs$/,
+                include: /node_modules/,
+                type: "javascript/auto",
+            },
+            {
+                test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                    name: '[path][name].[ext]'
+                    }
+                }
+            },
+        ]
+    },
         plugins: [
             new CleanWebpackPlugin(),
             new webpack.NoEmitOnErrorsPlugin(),
@@ -154,4 +163,4 @@ module.exports = {
             source: false,
             warnings: true
         }
-};
+});
