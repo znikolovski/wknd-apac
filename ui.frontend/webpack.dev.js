@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const SOURCE_ROOT = __dirname + '/src/main/webpack';
 
-module.exports = merge(common, {
+module.exports = merge(common('development'), {
    mode: 'development',
    devtool: 'inline-source-map',
    performance: {hints: "warning"},
