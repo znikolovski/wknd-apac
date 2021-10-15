@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <appbuilder
+        jcr:primaryType="nt:unstructured"
+        jcr:title="App Catalog"
+        jcr:title_commentI18n="Capability Name"
+        href="https://experience.adobe.com/custom-apps/"
+        icon="railLeft"
+        id="cq-screens-screens"
+        order="5000"
+        target="_blank"/>
+</jcr:root>
