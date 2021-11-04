@@ -34,6 +34,9 @@ $include "./default_filters.any"
 # Allow to download web manifest for PWA
 /0180 { /type "allow" /extension "webmanifest" /path "*"}
 
+# Allow Forms Submissions
+/0185 { /type "allow" /method "POST" /path "/content/forms/af/wknd/*" /extension "jsp" }
+
 #Allow Screens Fragment usage
 /0190 { /type "allow" /method "GET" /query "wcmmode=*" }
 /0192 { /type "allow" /extension "html" /selectors "standalone" /path "/content/*" }
@@ -43,3 +46,4 @@ $include "./default_filters.any"
 #
 /0200 { /type "allow" /method "GET" /path "/content/wknd/*" /selectors '[0-9-]+' /extension "html" }
 /0201 { /type "allow" /method "GET" /path "/conf/wknd/settings/wcm/templates/*" /extension "svg" }
+/0202 { /type "allow" /method "GET" /url "/libs/granite/dispatcher/content/vanityUrls.html" }  # allow vanity URL info to be retrieved
