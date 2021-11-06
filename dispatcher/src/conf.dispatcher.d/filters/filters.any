@@ -36,6 +36,7 @@ $include "./default_filters.any"
 
 # Allow Forms Submissions
 /0185 { /type "allow" /method "POST" /path "/content/forms/af/wknd/*" /extension "jsp" }
+/0186 { /type "allow" /method "GET" /path "/us/en/*" /extension "js" }
 
 #Allow Screens Fragment usage
 /0190 { /type "allow" /method "GET" /query "wcmmode=*" }
