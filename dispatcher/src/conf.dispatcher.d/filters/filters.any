@@ -38,10 +38,8 @@ $include "./default_filters.any"
 /0190 { /type "allow" /method "GET" /query "wcmmode=*" }
 /0192 { /type "allow" /extension "html" /selectors "standalone" /path "/content/*" }
 
-#
 # WKND specific filter for category pages and header
-#
 /0200 { /type "allow" /method "GET" /path "/content/wknd/*" /selectors '[0-9-]+' /extension "html" }
 /0201 { /type "allow" /method "GET" /path "/conf/wknd/settings/wcm/templates/*" /extension "svg" }
-
 /0202 { /type "allow" /method "GET" /url "/libs/granite/dispatcher/content/vanityUrls.html" }  # allow vanity URL info to be retrieved
+/0203 { /type "allow" /method "GET" /url "/is/image/*" } # allow Dynamic Media proxy

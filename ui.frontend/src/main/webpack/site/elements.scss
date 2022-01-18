@@ -24,21 +24,24 @@
   color: $text-color;
   line-height: $line-height-base;
 
+  > div.root:first-of-type {
+    padding-top:$header-height;
+
+    @media (max-width: $screen-medium) {
+      padding-top:$header-mobile-height;     
+    }
+  }
+
   .root {
     
      max-width: $max-body-width;
      margin: 0 auto;
-     padding-top:$header-height;
-
-      @media (max-width: $screen-medium) {
-          padding-top:$header-mobile-height;     
-      }
   }
 }
 
 /* remove padding for experience fragment editor */
 
-body.xf-web-container {
+.xf-web-container {
   .root {
     padding-top: 0;
     margin: 0;
@@ -106,7 +109,7 @@ p {
 margin: 0 0 ($line-height-computed / 2);
 font-size: $font-size-base;
 line-height: $line-height-base + 1;
-text-align: justify;
+text-align: left;
 }
 
 // VENIA - CLEANUP
