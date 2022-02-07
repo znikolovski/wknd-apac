@@ -489,7 +489,8 @@
                     isDecorative="false"
                     jpegQuality="{Long}60"
                     titleValueFromDAM="true"
-                    uuidDisabled="true">
+                    enableDmFeatures="true"
+                    uuidDisabled="false">
                     <plugins jcr:primaryType="nt:unstructured">
                         <rotate
                             jcr:primaryType="nt:unstructured"

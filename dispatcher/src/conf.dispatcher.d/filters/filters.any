@@ -43,3 +43,4 @@ $include "./default_filters.any"
 /0201 { /type "allow" /method "GET" /path "/conf/wknd/settings/wcm/templates/*" /extension "svg" }
 /0202 { /type "allow" /method "GET" /url "/libs/granite/dispatcher/content/vanityUrls.html" }  # allow vanity URL info to be retrieved
 /0203 { /type "allow" /method "GET" /url "/is/image/*" } # allow Dynamic Media proxy
+/0203 { /type "allow" /method "GET" /selectors 'sitemap' /extension "xml" } # allow sitemap
