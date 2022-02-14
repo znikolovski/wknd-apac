@@ -27,6 +27,7 @@
     "Origin",
     "Accept",
     "X-Requested-With",
+    "Content-Type",
     "content-type",
     "Access-Control-Request-Method",
     "Access-Control-Request-Headers",

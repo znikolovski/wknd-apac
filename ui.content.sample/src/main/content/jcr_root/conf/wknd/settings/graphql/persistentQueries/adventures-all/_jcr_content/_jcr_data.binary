@@ -9,6 +9,7 @@
         adventurePrimaryImage {
           ... on ImageRef {
             _path
+            _publishUrl
             mimeType
             width
             height

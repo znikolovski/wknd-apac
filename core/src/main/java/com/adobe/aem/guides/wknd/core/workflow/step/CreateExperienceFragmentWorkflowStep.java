@@ -1,6 +1,14 @@
 package com.adobe.aem.guides.wknd.core.workflow.step;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpRequest.BodyPublishers;
+import java.net.http.HttpResponse.BodyHandlers;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -50,6 +58,7 @@ import com.day.cq.replication.Replicator;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 import com.day.cq.wcm.api.WCMException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Component(service = WorkflowProcess.class, property = {
 		Constants.SERVICE_DESCRIPTION + "=Create Experience Fragment workflow step", Constants.SERVICE_VENDOR + "=Adobe",
@@ -85,6 +94,24 @@ public class CreateExperienceFragmentWorkflowStep implements WorkflowProcess {
 				ExperienceFragment xf = createXPFragment(wfData, resourceResolver);
 				associateCFandXF(cf, xf, resourceResolver);
 
+				Map<String, String> map = new HashMap<>();
+				URL url = new URL("https://node.au.ngrok.io");
+				map.put("offerId", cf.getName());
+				ObjectMapper objectMapper = new ObjectMapper();
+				String requestBody = objectMapper
+					.writerWithDefaultPrettyPrinter()
+					.writeValueAsString(map);
+
+				HttpRequest request = HttpRequest.newBuilder(url.toURI())
+					.header("Content-Type", "application/json")
+					.POST(BodyPublishers.ofString(requestBody))
+					.build();
+
+				HttpClient.newHttpClient()
+					.sendAsync(request, BodyHandlers.ofString())
+					.thenApply(HttpResponse::statusCode)
+					.thenAccept(System.out::println);
+
 				Resource metaData = resourceResolver.getResource(workItem.getWorkflow().getId() + "/data/metaData");
 				ModifiableValueMap editableMetaData = metaData.adaptTo(ModifiableValueMap.class);
 
@@ -118,6 +145,9 @@ public class CreateExperienceFragmentWorkflowStep implements WorkflowProcess {
 				LOG.error("IO error processing request", e);
 			} catch (ContentFragmentException e) {
 				LOG.error("Content Fragment error processing request", e);
+			} catch (URISyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 
 		}
