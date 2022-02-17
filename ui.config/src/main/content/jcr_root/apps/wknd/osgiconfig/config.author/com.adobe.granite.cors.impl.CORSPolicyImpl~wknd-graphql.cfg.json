@@ -10,17 +10,16 @@
     "OPTIONS"
   ],
   "alloworigin":[
-    "http://localhost:3000",
-    "http://localhost:3001",
+    ""
+  ],
+  "maxage:Integer":1800,
+  "alloworiginregexp":[
+    "http://localhost:.*",
     "https://node.au.ngrok.io",
     "https://delightful-moss-09b85441e.azurestaticapps.net",
     "https://polite-water-082fe1e00.azurestaticapps.net",
     "https://white-moss-0f6103d1e.azurestaticapps.net",
     "https://editor.unlayer.com"
-  ],
-  "maxage:Integer":1800,
-  "alloworiginregexp":[
-    ".*"
   ],
   "allowedpaths":[
     ".*"
