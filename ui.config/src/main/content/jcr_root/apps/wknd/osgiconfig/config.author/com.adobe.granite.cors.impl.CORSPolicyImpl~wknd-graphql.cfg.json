@@ -21,7 +21,7 @@
     "https://white-moss-0f6103d1e.azurestaticapps.net",
     "https://author-p35322-e137669.adobeaemcloud.com",
     "https://author-p45915-e209239.adobeaemcloud.com",
-    "https://editor.unlayer.com/"
+    "https://editor.unlayer.com"
   ],
   "allowedpaths":[
     ".*"
