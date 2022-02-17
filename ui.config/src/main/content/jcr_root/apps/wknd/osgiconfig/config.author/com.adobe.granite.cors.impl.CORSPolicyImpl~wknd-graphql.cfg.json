@@ -20,7 +20,8 @@
     "https://polite-water-082fe1e00.azurestaticapps.net",
     "https://white-moss-0f6103d1e.azurestaticapps.net",
     "https://author-p35322-e137669.adobeaemcloud.com",
-    "https://author-p45915-e209239.adobeaemcloud.com"
+    "https://author-p45915-e209239.adobeaemcloud.com",
+    "https://editor.unlayer.com/"
   ],
   "allowedpaths":[
     ".*"
@@ -30,7 +31,6 @@
     "Accept",
     "X-Requested-With",
     "Content-Type",
-    "content-type",
     "Access-Control-Request-Method",
     "Access-Control-Request-Headers",
     "Access-Control-Request-Origin",
