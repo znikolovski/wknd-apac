@@ -1,0 +1,14 @@
+{
+    "scripts": [
+        "create service user wknd-service-user",
+        "set ACL on /conf/global\n allow jcr:read for wefinance-service-user\n end",
+        "set ACL on /conf\n allow jcr:read for wefinance-service-user\n end",
+        "set ACL on /content\n allow jcr:all for wefinance-service-user\n end",
+        "set ACL on /content/dam\n allow jcr:all for wefinance-service-user\n end",
+        "set ACL on /content/cq:tags\n allow jcr:all for wefinance-service-user\n end",
+        "set ACL on /content/experience-fragments\n allow jcr:all for wefinance-service-user\n end",
+        "set ACL on /home/groups\n allow jcr:read for wefinance-service-user\n end",
+        "set ACL on /home/users\n allow jcr:read for wefinance-service-user\n end",
+        "set ACL on /var/workflow\n allow jcr:all for wefinance-service-user\n end"
+    ]
+}

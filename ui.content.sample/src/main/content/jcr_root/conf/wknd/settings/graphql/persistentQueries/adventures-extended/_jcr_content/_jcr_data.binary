@@ -1,0 +1,25 @@
+
+  {
+    adventureList {
+      items {
+        _path
+        adventureTitle
+        adventurePrice
+        adventureTripLength
+        adventureActivity
+        adventureDescription {
+          plaintext
+        }
+        adventureType
+        adventurePrimaryImage {
+          ... on ImageRef {
+            _path
+            _publishUrl
+            mimeType
+            width
+            height
+          }
+        }
+      }
+    }
+  }
