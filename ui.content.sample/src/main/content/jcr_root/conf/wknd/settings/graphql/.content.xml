@@ -11,6 +11,15 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="graphql/persistent/query/content"/>
         </adventures-all>
+        <adventures-extended
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="graphql/persistent/query">
+            <jcr:content
+                jcr:data="{Binary}"
+                jcr:mimeType="text/html"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="graphql/persistent/query/content"/>
+        </adventures-extended>
         <plain-article-query
             jcr:created="{Date}2021-05-31T02:09:49.717Z"
             jcr:primaryType="nt:unstructured"
