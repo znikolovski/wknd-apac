@@ -8,7 +8,9 @@ $include "./default_filters.any"
 
 
 # Allow components JSON model
-/0101 { /type "allow" /extension "json" /method '(POST|GET|OPTIONS)' /selectors "model" /path "/content/*" }
+/0101 { /type "allow" /extension "json" /selectors "model" /path "/content/*" }
+
+/0110 { /type "allow" /extension "html" /selectors "standalone" /path "/content/*" }
 
 # Allow Quick Search
 /0102 { /type "allow" /extension "json" /selectors "searchresults" /path "/content/*" }
@@ -21,12 +23,14 @@ $include "./default_filters.any"
 
 # Allow GraphQL global endpoint & preflight requests
 # GraphQL also supports GET requests, if you intend to use GET include it in the rule below
-/0164 { /type "allow" /method '(POST|OPTIONS)' /path "/content/graphql/*"}
+/0164 { /type "allow" /method '(GET|POST|OPTIONS)' /path "/content/graphql/*"}
 /0165 { /type "allow" /method '(POST|OPTIONS)' /path "/content/cq:graphql/*"}
 
 # GraphQL Persisted Queries
+# GraphQL Persisted Queries
 /0170 { /type "allow" /method '(POST|OPTIONS)' /url "/graphql/execute.json/*" }
 /0171 { /type "allow" /url "/graphql/execute.json/*" }
+/0172 { /type "allow" /url "/graphql/list.json" }
 
 # Allow video files
 /0176 { /type "allow" /extension '(mp4|mov|m4v)' /path "/content/*" }
