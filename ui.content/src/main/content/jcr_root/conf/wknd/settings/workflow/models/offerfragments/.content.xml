@@ -6,9 +6,9 @@
         cq:lastModified="{Date}2018-03-18T16:25:20.169+11:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/cq/workflow/templates/model"
-        jcr:description="Workflow for requesting an Content &amp; Experience Fragments."
+        jcr:description="Workflow for requesting a new Adventure Page."
         jcr:primaryType="cq:PageContent"
-        jcr:title="Offer Creation &amp; Approval"
+        jcr:title="Adventure Page Creation &amp; Approval"
         sling:resourceType="cq/workflow/components/pages/model">
         <flow
             jcr:primaryType="nt:unstructured"
@@ -23,39 +23,9 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.adobe.aem.guides.wknd.core.workflow.step.CreateContentFragmentWorkflowStep"
+                    PROCESS="com.adobe.aem.guides.wknd.core.workflow.step.CreateAdventurePageWorkflowStep"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process>
-            <taskworkflowstep
-                jcr:created="{Date}2018-03-16T15:29:29.889+11:00"
-                jcr:createdBy="admin"
-                jcr:description="Project Task Creation Step"
-                jcr:lastModified="{Date}2018-03-16T16:03:11.829+11:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                jcr:title="Copywriter Update Step"
-                sling:resourceType="cq/projects/taskworkflowstep">
-                <metaData
-                    jcr:primaryType="nt:unstructured"
-                    argTaskName="Offer Fragment: Enter the content"
-                    argTaskPriority="Medium"
-                    PROCESS="com.adobe.cq.projects.impl.workflow.ProjectTaskWorkflowProcess"
-                    PROCESS_AUTO_ADVANCE="false"
-                    PROCESS_PERSIST_ANONYMOUS_WORKITEM="true"/>
-            </taskworkflowstep>
-            <process_1788363445
-                jcr:created="{Date}2018-03-16T15:35:49.037+11:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2018-03-18T16:25:20.165+11:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                jcr:title="Create Experience Fragment Variations"
-                sling:resourceType="cq/workflow/components/model/process">
-                <metaData
-                    jcr:primaryType="nt:unstructured"
-                    PROCESS="com.adobe.aem.guides.wknd.core.workflow.step.CreateExperienceFragmentWorkflowStep"
-                    PROCESS_AUTO_ADVANCE="true"/>
-            </process_1788363445>
         </flow>
         <image
             jcr:lastModified="2016-12-6T07:59:56.626-05:00"

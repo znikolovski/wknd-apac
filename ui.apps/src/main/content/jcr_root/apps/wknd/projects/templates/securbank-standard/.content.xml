@@ -103,6 +103,11 @@
                 jcr:primaryType="nt:unstructured"
                 modelId="/var/workflow/models/conf/wknd/settings/workflow/models/offerfragments/jcr:content/model"
                 wizard="/apps/wknd/projects/workflowwizards/offer.html"/>
+            
+            <request-page
+                jcr:primaryType="nt:unstructured"
+                modelId="/var/workflow/models/conf/wknd/settings/workflow/models/pagerequest/jcr:content/model"
+                wizard="/apps/wknd/projects/workflowwizards/pagerequest.html"/>
             <job
                 jcr:primaryType="nt:unstructured"
                 modelId="/var/workflow/models/conf/wknd/settings/workflow/models/job/jcr:content/model"
