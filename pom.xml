@@ -742,6 +742,15 @@ Bundle-DocURL:
                 <scope>provided</scope>
             </dependency>
 
+            <dependency>
+                <groupId>digital.hoodoo</groupId>
+                <artifactId>workfront-tools.ui.apps</artifactId>
+                <type>zip</type>
+                <version>1.9.2</version>
+                <scope>system</scope>
+                <systemPath>${project.basedir}/ui.apps/src/main/resources/workfront-tools.ui.apps.zip</systemPath>
+            </dependency>
+
             <!-- Adobe CIF Dependencies -->
             <dependency>
                 <groupId>com.adobe.commerce.cif</groupId>

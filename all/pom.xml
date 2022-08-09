@@ -127,6 +127,13 @@
                             <artifactId>magento-graphql</artifactId>
                             <target>/apps/wknd-vendor-packages/application/install</target>
                         </embedded>
+                        <!-- Workfront Tools -->
+                        <embedded>
+                            <groupId>digital.hoodoo</groupId>
+                            <artifactId>workfront-tools.ui.apps</artifactId>
+                            <type>zip</type>
+                            <target>/apps/wknd-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -336,6 +343,14 @@
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.core</artifactId>                
+        </dependency>
+
+        <dependency>
+            <groupId>digital.hoodoo</groupId>
+            <artifactId>workfront-tools.ui.apps</artifactId>
+            <type>zip</type>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../ui.apps/src/main/resources/workfront-tools.ui.apps.zip</systemPath>
         </dependency>
         <!-- Adobe CIF Dependencies -->
         <dependency>
