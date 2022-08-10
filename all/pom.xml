@@ -134,6 +134,18 @@
                             <type>zip</type>
                             <target>/apps/wknd-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.adobe.cq</groupId>
+                            <artifactId>core.email.components.all</artifactId>
+                            <type>zip</type>
+                             <target>/apps/wknd-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.cq</groupId>
+                            <artifactId>core.email.components.examples</artifactId>
+                            <type>zip</type>
+                             <target>/apps/wknd-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -352,6 +364,24 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/../ui.apps/src/main/resources/workfront-tools.ui.apps.zip</systemPath>
         </dependency>
+
+        <dependency>
+                <groupId>com.adobe.cq</groupId>
+                <artifactId>core.email.components.all</artifactId>
+                <type>zip</type>
+                <version>0.14.0</version>
+                <scope>system</scope>
+                <systemPath>${project.basedir}/../ui.apps/src/main/resources/core.email.components.all-0.14.0.zip</systemPath>
+            </dependency>
+
+            <dependency>
+                <groupId>com.adobe.cq</groupId>
+                <artifactId>core.email.components.examples</artifactId>
+                <type>zip</type>
+                <version>0.14.0</version>
+                <scope>system</scope>
+                <systemPath>${project.basedir}/../ui.apps/src/main/resources/core.email.components.examples.all-0.14.0.zip</systemPath>
+            </dependency>
         <!-- Adobe CIF Dependencies -->
         <dependency>
             <groupId>com.adobe.commerce.cif</groupId>
