@@ -371,7 +371,7 @@
                 <type>zip</type>
                 <version>0.14.0</version>
                 <scope>system</scope>
-                <systemPath>${project.basedir}/../ui.apps/src/main/resources/core.email.components.all-0.14.0.zip</systemPath>
+                <systemPath>${project.basedir}/../ui.apps/src/main/resources/core.email.components.all-0.15.0.zip</systemPath>
             </dependency>
 
             <dependency>
@@ -380,7 +380,7 @@
                 <type>zip</type>
                 <version>0.14.0</version>
                 <scope>system</scope>
-                <systemPath>${project.basedir}/../ui.apps/src/main/resources/core.email.components.examples.all-0.14.0.zip</systemPath>
+                <systemPath>${project.basedir}/../ui.apps/src/main/resources/core.email.components.examples.all-0.15.0.zip</systemPath>
             </dependency>
         <!-- Adobe CIF Dependencies -->
         <dependency>
