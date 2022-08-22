@@ -50,3 +50,7 @@ $include "./default_filters.any"
 /0204 { /type "allow" /method "GET" /selectors 'sitemap' /extension "xml" } # allow sitemap
 
 /0300 { /type "allow" /method "GET|POST|PUT" /path "/bin/workfront-tools"}
+
+/0400 { /type "allow" /method "POST" /path "/content/campaigns/*" /selectors "campaign|metadata" /extension "json"}
+
+
