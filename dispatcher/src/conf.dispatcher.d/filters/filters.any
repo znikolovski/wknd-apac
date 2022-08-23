@@ -53,4 +53,6 @@ $include "./default_filters.any"
 
 /0400 { /type "allow" /method "POST" /path "/content/campaigns/*" /selectors "campaign|metadata|content" /extension "json"}
 
+/0500 { /type "allow" /method "GET" /url "/etc/clientlibs/*" }
+
 
