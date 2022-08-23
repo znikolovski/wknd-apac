@@ -161,10 +161,29 @@ public class CreateExperienceFragmentWorkflowStep implements WorkflowProcess {
 			throws LoginException, PersistenceException {
 		List<ExperienceFragmentVariation> variations = xf.getVariations();
 
-		for (ExperienceFragmentVariation variation : variations) {
-			Resource xfResource = resourceResolver.getResource(variation.getPath() + "/jcr:content/root/container/contentfragment");
-			ModifiableValueMap properties = xfResource.adaptTo(ModifiableValueMap.class);
-			properties.replace("fragmentPath", cf.adaptTo(Resource.class).getPath());
+		// for (ExperienceFragmentVariation variation : variations) {
+		// 	Resource xfResource = resourceResolver.getResource(variation.getPath() + "/jcr:content/root/container/contentfragment");
+		// 	ModifiableValueMap properties = xfResource.adaptTo(ModifiableValueMap.class);
+		// 	properties.replace("fragmentPath", cf.adaptTo(Resource.class).getPath());
+		// }
+		for (ExperienceFragmentVariation xfVariation : variations) {
+			ValueMap xfVarProperties = xfVariation.getProperties();
+			if(xfVarProperties.get("jcr:title").equals("Email")) {
+				Resource xfEmailImageResource = resourceResolver.getResource(xfVariation.getPath() + "/jcr:content/root/container/container/col-0/image");
+				ModifiableValueMap imageProperties = xfEmailImageResource.adaptTo(ModifiableValueMap.class);
+				imageProperties.replace("fileReference", cf.getElement("heroImage").getContent());
+				imageProperties.replace("linkURL", cf.getElement("ctaUrl").getContent()+".html");
+				Resource xfEmailTitleResource = resourceResolver.getResource(xfVariation.getPath() + "/jcr:content/root/container/container/col-1/title");
+				ModifiableValueMap titleProperties = xfEmailTitleResource.adaptTo(ModifiableValueMap.class);
+				titleProperties.replace("jcr:title", cf.getElement("headline").getContent());
+				Resource xfEmailTextResource = resourceResolver.getResource(xfVariation.getPath() + "/jcr:content/root/container/container/col-1/text");
+				ModifiableValueMap textProperties = xfEmailTextResource.adaptTo(ModifiableValueMap.class);
+				textProperties.replace("text", cf.getElement("detail").getContent());
+			} else {
+				Resource xfResource = resourceResolver.getResource(xfVariation.getPath() + "/jcr:content/root/container/contentfragment");
+				ModifiableValueMap properties = xfResource.adaptTo(ModifiableValueMap.class);
+				properties.replace("fragmentPath", cf.adaptTo(Resource.class).getPath());
+			}
 		}
 
 		if (resourceResolver.hasChanges()) {
