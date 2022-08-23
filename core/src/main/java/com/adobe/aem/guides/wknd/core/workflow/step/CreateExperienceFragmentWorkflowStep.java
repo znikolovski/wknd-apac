@@ -18,6 +18,7 @@ import org.apache.sling.api.resource.PersistenceException;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
+import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.resource.collection.ResourceCollection;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
@@ -200,11 +201,25 @@ public class CreateExperienceFragmentWorkflowStep implements WorkflowProcess {
 
 			List<ExperienceFragmentVariation> xfVariations = xf.getVariations();
 			for (ExperienceFragmentVariation xfVariation : xfVariations) {
-				Resource xfResource = resourceResolver.getResource(xfVariation.getPath() + "/jcr:content/root/container/contentfragment");
-				ModifiableValueMap properties = xfResource.adaptTo(ModifiableValueMap.class);
-				properties.replace(JcrConstants.JCR_TITLE, variation.getTitle());
-				properties.replace("fragmentPath", cf.adaptTo(Resource.class).getPath());
-				properties.put("variationName", variation.getName());
+				ValueMap xfVarProperties = xfVariation.getProperties();
+				if(xfVarProperties.get("jcr:title").equals("Email")) {
+					Resource xfEmailImageResource = resourceResolver.getResource(xfVariation.getPath() + "/jcr:content/root/container/container/col-0/image");
+					ModifiableValueMap imageProperties = xfEmailImageResource.adaptTo(ModifiableValueMap.class);
+					imageProperties.replace("fileReference", cf.getElement("heroImage").getVariation(variation.getName()).getContent());
+					imageProperties.replace("linkURL", cf.getElement("ctaUrl").getVariation(variation.getName()).getContent()+".html");
+					Resource xfEmailTitleResource = resourceResolver.getResource(xfVariation.getPath() + "/jcr:content/root/container/container/col-1/title");
+					ModifiableValueMap titleProperties = xfEmailTitleResource.adaptTo(ModifiableValueMap.class);
+					titleProperties.replace("jcr:title", cf.getElement("headline").getVariation(variation.getName()).getContent());
+					Resource xfEmailTextResource = resourceResolver.getResource(xfVariation.getPath() + "/jcr:content/root/container/container/col-1/text");
+					ModifiableValueMap textProperties = xfEmailTextResource.adaptTo(ModifiableValueMap.class);
+					textProperties.replace("text", cf.getElement("detail").getVariation(variation.getName()).getContent());
+				} else {
+					Resource xfResource = resourceResolver.getResource(xfVariation.getPath() + "/jcr:content/root/container/contentfragment");
+					ModifiableValueMap properties = xfResource.adaptTo(ModifiableValueMap.class);
+					properties.replace(JcrConstants.JCR_TITLE, variation.getTitle());
+					properties.replace("fragmentPath", cf.adaptTo(Resource.class).getPath());
+					properties.put("variationName", variation.getName());
+				}
 			}
 
 			if (resourceResolver.hasChanges()) {
