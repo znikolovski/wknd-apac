@@ -2,7 +2,6 @@
 <workspaceFilter version="1.0">
     <filter root="/conf/wknd" mode="update"/>
     <filter root="/conf/global/settings/dam/adminui-extension" mode="merge"/>
-    <filter root="/conf/global/settings/dam/dm" mode="merge"/>
     <filter root="/conf/global/settings/dam/processing" mode="merge"/>
     <filter root="/conf/global/settings/dam/search" mode="merge"/>
     <filter root="/conf/global/settings/workflow/models/request-assets" mode="merge"/>
