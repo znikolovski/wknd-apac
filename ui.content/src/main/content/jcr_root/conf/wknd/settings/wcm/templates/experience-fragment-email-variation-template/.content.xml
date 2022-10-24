@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2022-08-25T07:14:19.499Z"
+        cq:lastModifiedBy="nikolovs@adobe.com"
+        cq:templateType="/conf/wknd/settings/wcm/template-types/empty-experience-fragment"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Experience Fragment Email Variation Template"
+        status="enabled"/>
+</jcr:root>

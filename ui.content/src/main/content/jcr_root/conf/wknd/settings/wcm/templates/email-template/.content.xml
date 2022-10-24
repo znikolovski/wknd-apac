@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2022-09-01T01:25:54.536Z"
+        cq:lastModifiedBy="nikolovs@adobe.com"
+        cq:templateType="/conf/core-email-components-examples/settings/wcm/template-types/email-template-types"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Email Page"
+        status="enabled"/>
+</jcr:root>
