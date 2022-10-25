@@ -5,7 +5,9 @@ import java.util.Map;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.ValueMap;
+import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Via;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.Self;
@@ -19,6 +21,7 @@ import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
 import com.drew.lang.annotations.NotNull;
 import com.drew.lang.annotations.Nullable;
 
+@Model(adaptables = SlingHttpServletRequest.class, adapters = TargetContainer.class, resourceType = TargetContainerImpl.RESOURCE_TYPE)
 public class TargetContainerImpl implements TargetContainer {
 
     protected static final String RESOURCE_TYPE = "wknd/components/targetcontainer";
