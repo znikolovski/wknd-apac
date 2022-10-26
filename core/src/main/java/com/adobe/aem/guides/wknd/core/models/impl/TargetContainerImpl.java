@@ -16,6 +16,7 @@ import org.apache.sling.models.annotations.via.ResourceSuperType;
 import com.adobe.aem.guides.wknd.core.models.TargetContainer;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.wcm.core.components.models.Container;
+import com.adobe.cq.wcm.core.components.models.LayoutContainer;
 import com.adobe.cq.wcm.core.components.models.ListItem;
 import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
 import com.drew.lang.annotations.NotNull;
@@ -29,10 +30,38 @@ public class TargetContainerImpl implements TargetContainer {
 
     @Self
     @Via(type = ResourceSuperType.class)
-    private Container container;
+    private LayoutContainer container;
 
     @ScriptVariable
     private ValueMap properties;
+
+    private String mBoxName;
+
+    @PostConstruct
+    public void initModel() {
+        mBoxName = properties.get(MBOX_NAME_PROPERTY, String.class);
+    }
+
+    @Override
+    public @Nullable String getMboxName() {
+        return mBoxName != null ? mBoxName : "";
+    }
+
+    @Override
+    public String getAccessibilityLabel() {
+        // TODO Auto-generated method stub
+        return container.getAccessibilityLabel();
+    }
+
+    @Override
+    public @NotNull LayoutType getLayout() {
+        return container.getLayout();
+    }
+
+    @Override
+    public String getRoleAttribute() {
+        return container.getRoleAttribute();
+    }
 
     @Override
     public @Nullable String getBackgroundStyle() {
@@ -74,16 +103,6 @@ public class TargetContainerImpl implements TargetContainer {
         return container.getId();
     }
 
-    private String mBoxName;
-
-    @PostConstruct
-    public void initModel() {
-        mBoxName = properties.get(MBOX_NAME_PROPERTY, String.class);
-    }
-
-    @Override
-    public String getMboxName() {
-        return mBoxName != null ? mBoxName : "";
-    }
+    
     
 }
