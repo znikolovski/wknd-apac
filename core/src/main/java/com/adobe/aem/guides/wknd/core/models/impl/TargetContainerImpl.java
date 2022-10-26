@@ -24,7 +24,7 @@ import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
 import com.drew.lang.annotations.NotNull;
 import com.drew.lang.annotations.Nullable;
 
-@Model(adaptables = SlingHttpServletRequest.class, adapters = TargetContainer.class, resourceType = TargetContainerImpl.RESOURCE_TYPE)
+@Model(adaptables = SlingHttpServletRequest.class, adapters = {TargetContainer.class, ComponentExporter.class}, resourceType = TargetContainerImpl.RESOURCE_TYPE)
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
         extensions = ExporterConstants.SLING_MODEL_EXTENSION)
 public class TargetContainerImpl implements TargetContainer {
