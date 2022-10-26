@@ -17,6 +17,7 @@ import org.apache.sling.models.annotations.via.ResourceSuperType;
 
 import com.adobe.aem.guides.wknd.core.models.TargetContainer;
 import com.adobe.cq.export.json.ComponentExporter;
+import com.adobe.cq.export.json.ContainerExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.adobe.cq.wcm.core.components.models.LayoutContainer;
 import com.adobe.cq.wcm.core.components.models.ListItem;
@@ -24,7 +25,7 @@ import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
 import com.drew.lang.annotations.NotNull;
 import com.drew.lang.annotations.Nullable;
 
-@Model(adaptables = SlingHttpServletRequest.class, adapters = {TargetContainer.class, ComponentExporter.class}, resourceType = TargetContainerImpl.RESOURCE_TYPE)
+@Model(adaptables = SlingHttpServletRequest.class, adapters = {TargetContainer.class, ContainerExporter.class}, resourceType = TargetContainerImpl.RESOURCE_TYPE)
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
         extensions = ExporterConstants.SLING_MODEL_EXTENSION)
 public class TargetContainerImpl implements TargetContainer {
