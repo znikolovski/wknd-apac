@@ -9,13 +9,15 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Via;
+import org.apache.sling.models.annotations.Exporter;
+import org.apache.sling.models.annotations.ExporterOption;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.via.ResourceSuperType;
 
 import com.adobe.aem.guides.wknd.core.models.TargetContainer;
 import com.adobe.cq.export.json.ComponentExporter;
-import com.adobe.cq.wcm.core.components.models.Container;
+import com.adobe.cq.export.json.ExporterConstants;
 import com.adobe.cq.wcm.core.components.models.LayoutContainer;
 import com.adobe.cq.wcm.core.components.models.ListItem;
 import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
@@ -23,6 +25,8 @@ import com.drew.lang.annotations.NotNull;
 import com.drew.lang.annotations.Nullable;
 
 @Model(adaptables = SlingHttpServletRequest.class, adapters = TargetContainer.class, resourceType = TargetContainerImpl.RESOURCE_TYPE)
+@Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
+        extensions = ExporterConstants.SLING_MODEL_EXTENSION)
 public class TargetContainerImpl implements TargetContainer {
 
     protected static final String RESOURCE_TYPE = "wknd/components/targetcontainer";
@@ -49,7 +53,6 @@ public class TargetContainerImpl implements TargetContainer {
 
     @Override
     public String getAccessibilityLabel() {
-        // TODO Auto-generated method stub
         return container.getAccessibilityLabel();
     }
 
