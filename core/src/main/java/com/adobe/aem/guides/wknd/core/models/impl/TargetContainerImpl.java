@@ -24,6 +24,7 @@ import com.adobe.cq.wcm.core.components.models.ListItem;
 import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
 import com.drew.lang.annotations.NotNull;
 import com.drew.lang.annotations.Nullable;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 @Model(adaptables = SlingHttpServletRequest.class, adapters = {TargetContainer.class, ComponentExporter.class, ContainerExporter.class}, resourceType = TargetContainerImpl.RESOURCE_TYPE)
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
@@ -48,6 +49,7 @@ public class TargetContainerImpl implements TargetContainer {
     }
 
     @Override
+    @JsonInclude
     public @Nullable String getMboxName() {
         return mBoxName != null ? mBoxName : "";
     }
@@ -99,7 +101,7 @@ public class TargetContainerImpl implements TargetContainer {
 
     @Override
     public @NotNull String getExportedType() {
-        return container.getExportedType();
+        return RESOURCE_TYPE;
     }
 
     @Override
