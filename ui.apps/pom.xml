@@ -142,7 +142,16 @@
             <groupId>com.adobe.aem</groupId>
             <artifactId>aem-sdk-api</artifactId>
         </dependency>
-
+        <!-- AEM SPA Core Depenendenices-->
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.ui.apps</artifactId>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.core</artifactId>
+        </dependency>
         <!-- Adobe CIF Dependencies -->
         <dependency>
             <groupId>com.adobe.commerce.cif</groupId>
