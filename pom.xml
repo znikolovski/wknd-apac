@@ -65,7 +65,8 @@
         <graphql.client.version>1.7.2</graphql.client.version>
         <magento.graphql.version>9.0.0-magento242ee</magento.graphql.version>
         <componentGroupName>WKND Site</componentGroupName>
-        <core.wcm.components.version>2.21.2</core.wcm.components.version>
+        <core.wcm.components.version>2.20.8</core.wcm.components.version>
+        <core.email.components.version>1.0.0</core.email.components.version>
         <uber.jar.version>6.4.4</uber.jar.version>
         <xerces>2.6.2</xerces>
         <xerces.bundle>2.12.0_1</xerces.bundle>
@@ -755,18 +756,18 @@ Bundle-DocURL:
                 <groupId>com.adobe.cq</groupId>
                 <artifactId>core.email.components.all</artifactId>
                 <type>zip</type>
-                <version>1.0.0</version>
+                <version>${core.email.components.version}</version>
                 <scope>system</scope>
-                <systemPath>${project.basedir}/ui.apps/src/main/resources/core.email.components.all-1.0.0.zip</systemPath>
+                <systemPath>${project.basedir}/ui.apps/src/main/resources/core.email.components.all-${core.email.components.version}.zip</systemPath>
             </dependency>
 
             <dependency>
                 <groupId>com.adobe.cq</groupId>
                 <artifactId>core.email.components.examples</artifactId>
                 <type>zip</type>
-                <version>1.0.0</version>
+                <version>${core.email.components.version}</version>
                 <scope>system</scope>
-                <systemPath>${project.basedir}/ui.apps/src/main/resources/core.email.components.examples.all-1.0.0.zip</systemPath>
+                <systemPath>${project.basedir}/ui.apps/src/main/resources/core.email.components.examples.all-${core.email.components.version}.zip</systemPath>
             </dependency>
 
             <!-- Adobe CIF Dependencies -->
