@@ -1,0 +1,3 @@
+{
+    "org.apache.sling.engine.impl.SlingMainServlet": ["X-Content-Type-Options=nosniff"] 
+}
