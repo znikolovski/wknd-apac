@@ -15,7 +15,7 @@
   "maxage:Integer":1800,
   "alloworiginregexp":[
     "http://localhost:.*",
-    "https://localhost:/*",
+    "https://localhost:.*",
     "https://node.au.ngrok.io",
     "https://delightful-moss-09b85441e.azurestaticapps.net",
     "https://polite-water-082fe1e00.azurestaticapps.net",
