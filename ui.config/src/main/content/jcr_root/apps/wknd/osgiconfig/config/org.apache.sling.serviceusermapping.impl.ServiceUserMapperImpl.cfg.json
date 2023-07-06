@@ -3,6 +3,7 @@
   "user.enable.default.mapping":false,
   "user.default":"",
   "user.mapping":[
-    "aem-guides-wknd.core=admin"
+    "aem-guides-wknd.core=admin",
+    "aem-guides-wknd.core=indesign-system-user"
   ]
 }
