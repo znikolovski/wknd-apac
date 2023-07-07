@@ -25,6 +25,7 @@ import org.apache.sling.engine.SlingRequestProcessor;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.propertytypes.ServiceDescription;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,6 +49,7 @@ import static com.day.cq.commons.jcr.JcrConstants.JCR_CONTENT;
         Constants.SERVICE_DESCRIPTION + "=Process Indesign File",
         "process.label" + "=Process Indesign File"
 })
+@ServiceDescription("Process Indesign File")
 public class PhotoshopApiProcess implements WorkflowProcess {
 
     public static final String INDESIGN_SYSTEM_USER = "indesign-system-user";
