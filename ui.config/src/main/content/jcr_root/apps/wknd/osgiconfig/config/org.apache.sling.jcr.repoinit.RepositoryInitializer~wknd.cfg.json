@@ -10,6 +10,6 @@
         "set ACL on /home/groups\n allow jcr:read for wefinance-service-user\n end",
         "set ACL on /home/users\n allow jcr:read for wefinance-service-user\n end",
         "set ACL on /var/workflow\n allow jcr:all for wefinance-service-user\n end",
-        "create service user indesign-system-user\n add indesign-system-user to group administrators\n end"
+        "create service user indesign-system-user\n add indesign-system-user to group administrators"
     ]
 }
