@@ -1,10 +1,10 @@
   
 name: Cloud Manager Sync from GitHub
 env:
-  USER_NAME: Mark Szulc
-  USER_EMAIL: mszulc@adobe.com
-  MAIN_REPOSITORY: git.cloudmanager.adobe.com/mark-szulc/WKNDAPAC-p24704
-  CMGITUSERNAME: mszulc-adobe-com
+  USER_NAME: Zoran Nikolovski
+  USER_EMAIL: nikolovs@adobe.com
+  MAIN_REPOSITORY: git.cloudmanager.adobe.com/ags050/WKNDAPAC-p24704
+  CMGITUSERNAME: nikolovs-adobe-com
  
 # Only run on a push to this branch
 on:
